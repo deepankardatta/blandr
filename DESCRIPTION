@@ -3,10 +3,10 @@ Type: Package
 Title: A package to carry out Bland Altman analyses.
 Version: 0.4
 Date: 2017-06-30
-Authors@R: person("Datta", "Deepankar", email = "deepankardatta@nhs.net",
+Authors@R: person("Datta", "Deepankar", email = "deepankardatta@users.noreply.github.com",
   role = c("aut", "cre"))
 Author: Deepankar Datta
-Maintainer: Deepankar Datta <deepankardatta@nhs.net>
+Maintainer: Deepankar Datta <deepankardatta@users.noreply.github.com>
 URL: https://github.com/deepankardatta/blandr
 BugReports: https://github.com/deepankardatta/blandr/issues
 Description: BlandAltmanEdinburgh. A package to carry out Bland Altman analyses (also known as a 
