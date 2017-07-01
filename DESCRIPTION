@@ -7,6 +7,8 @@ Authors@R: person("Datta", "Deepankar", email = "deepankardatta@nhs.net",
   role = c("aut", "cre"))
 Author: Deepankar Datta
 Maintainer: Deepankar Datta <deepankardatta@nhs.net>
+URL: https://github.com/deepankardatta/blandr
+BugReports: https://github.com/deepankardatta/blandr/issues
 Description: BlandAltmanEdinburgh. A package to carry out Bland Altman analyses (also known as a 
     Tukey mean-difference plot). This package was created in 2015 as existing Bland-Altman 
     analyses did not calculate confidence intervals. This package was created to rectify this and 
