@@ -25,11 +25,3 @@ Further information can be found in the function help files in the package, as w
 ## Future improvements
 
 I need to take out the last references to *BlandAltmanEdinburgh* and change it to *blandr*. There are a further few deprecated functions to delete (I just need to finish a few projects first!!). The package needs to have to go through some validation and testing, and I need to write some *testhtat* modules. There will be a lot of iterative improvements to come.
-
-## Version history
-
-* 2015 - first preliminary coding
-* 2015-11-14 - first proper R packaged version
-* 2016-02-04 - updated for a few stuides
-* 2017-06-30 - finally got round to updating it to use ggplot2, and updating to version 0.4
-* 2017-07-01 - first version uploaded to GitHub
