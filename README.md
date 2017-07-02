@@ -25,3 +25,7 @@ Further information can be found in the function help files in the package, as w
 ## Future improvements
 
 I need to take out the last references to *BlandAltmanEdinburgh* and change it to *blandr*. There are a further few deprecated functions to delete (I just need to finish a few projects first!!). The package needs to have to go through some validation and testing, and I need to write some *testhtat* modules. There will be a lot of iterative improvements to come.
+
+## Help wanted!
+
+Comments on the code, suggestions for improvement, verification tests, validation studies, and even code contributions would be gratefully accepted. Email me at deepankardatta@users.noreply.github.com and I'll try and get back to you as soon as possible. Please do bear in mind this is a side-project, and I can be otherwise busy with a lot of other work.
