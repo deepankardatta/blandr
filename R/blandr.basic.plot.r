@@ -14,6 +14,9 @@
 #' @param normalHigh (Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its higher boundary
 #' @param point_size (Optional) Size of marker for each dot. Default is cex=0.8
 #'
+#' @importFrom grDevices rgb
+#' @importFrom graphics abline mtext par plot rect
+#'
 #' @export
 
 blandr.basic.plot <- function(statistics.results, plot.limits, method1name = "Method 1", method2name = "Method 2",

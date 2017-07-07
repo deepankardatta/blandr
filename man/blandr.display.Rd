@@ -2,7 +2,7 @@
 % Please edit documentation in R/blandr.display.r
 \name{blandr.display}
 \alias{blandr.display}
-\title{Bland-Altman display for R}
+\title{Bland-Altman summary statistics display function}
 \usage{
 blandr.display(method1, method2, sig.level = 0.95)
 }

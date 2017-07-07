@@ -1,28 +1,21 @@
 Package: blandr
-Type: Package
-Title: A package to carry out Bland Altman analyses.
-Version: 0.4
-Date: 2017-06-30
-Authors@R: person("Datta", "Deepankar", email = "deepankardatta@users.noreply.github.com",
-  role = c("aut", "cre"))
-Author: Deepankar Datta
-Maintainer: Deepankar Datta <deepankardatta@users.noreply.github.com>
-URL: https://github.com/deepankardatta/blandr
-BugReports: https://github.com/deepankardatta/blandr/issues
-Description: BlandAltmanEdinburgh. A package to carry out Bland Altman analyses (also known as a 
-    Tukey mean-difference plot). This package was created in 2015 as existing Bland-Altman 
-    analyses did not calculate confidence intervals. This package was created to rectify this and 
-    create replicable plots.
-Imports: ggplot2
-Suggests:
-  knitr,
-  rmarkdown,
-  testthat
-VignetteBuilder: knitr
+Title: blandr: a Bland-Altman method comparison function for r
+Version: 0.4.1
+Description: blandr. A package to carry out Bland Altman analyses (also known as a 
+    Tukey mean-difference plot). This package was created in 2015 as existing 
+    Bland-Altman analyses did not calculate confidence intervals. This package was 
+    created to rectify this and create replicable plots.
+Depends: R (>= 3.4.0)
+Authors@R: person("Deepankar", "Datta", email = "deepankardatta@users.noreply.github.com",
+                  role = c("aut", "cre"))
 License: GPL-3
-URL: 
-LazyData: TRUE
-RoxygenNote: 6.0.1
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/deepankardatta/blandr/
+BugReports: https://github.com/deepankardatta/blandr/issues
+Imports: ggplot2, knitr
+Recommends: rmarkdown
+VignetteBuilder: knitr
 Collate: 
     'blandr.basic.plot.r'
     'blandr.data.preparation.r'
@@ -36,3 +29,4 @@ Collate:
     'blandr.method.comparison.r'
     'blandr.plot.r'
     'blandr.proportional.bias.r'
+RoxygenNote: 6.0.1

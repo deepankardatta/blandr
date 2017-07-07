@@ -1,0 +1,26 @@
+---
+title: "cran-comments"
+author: "Deepankar Datta"
+date: "07/07/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is version 0.4.1 of "blendr"
+This is a FIRST SUBMISSION
+
+## Test environments
+* local OS X install, Mac OS X 10.12.5, R 3.4.0
+* win-builder (devel and release) - via devtools::build_win()
+
+## R CMD check results
+using R version 3.4.0 (2017-04-21)
+using platform: x86_64-apple-darwin15.6.0 (64-bit)
+using session charset: UTF-8
+
+There were no ERRORs or WARNINGs or NOTEs.
+No erros from revdep
+

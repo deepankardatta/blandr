@@ -1,2 +1,14 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^unused$
+^tests$
+^data-raw$
+^cran-comments\.Rmd$
+^cran-comments-.*\.png$
+^cran-comments\.md$
+^revdep$
+^README\.Rmd$
+^README-.*\.png$
+^NEWS\.Rmd$
+^NEWS-.*\.png$
+^NEWS\.md$

@@ -6,27 +6,18 @@
 #' @note Last update 2015-11-19
 #' @note Originally designed for LAVAS and CVLA
 #'
-#' @param method1 A list of numbers.
-#' @param method2 A list of numbers.
-#' @param plotter (Optional) Switch to note if uses R's built in drawing functions, or ggplot2. Options = 'rplot' or 'ggplot'. Defaults to 'ggplot'. rplot currently has more available options.
-#' @param method1name (Optional) Plotting name for 1st method, default 'Method 1'
-#' @param method2name (Optional) Plotting name for 2nd method, default 'Method 2'
-#' @param plotTitle (Optional) Title name, default 'Bland-Altman plot for comparison of 2 methods'
-#' @param sig.level (Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.
-#' @param LoA.mode (Optional) Switch to change how accurately the limits of agreement (LoA) are calculated from the bias and its standard deviation. The default is LoA.mode=1 which calculates LoA with the more accurate 1.96x multiplier. LoA.mode=2 uses the 2x multiplier which was used in the original papers.
-#' @param annotate (Optional) TRUE/FALSE switch to provides annotations to plot, default=FALSE
-#' @param ciDisplay (Optional) TRUE/FALSE switch to plot confidence intervals for bias and limits of agreement, default=TRUE
-#' @param ciShading (Optional) TRUE/FALSE switch to plot confidence interval shading to plot, default=TRUE
-#' @param normalLow (Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its lower boundary
-#' @param normalHigh (Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its higher boundary
-#' @param lowest_y_axis (Optional) If given a continuous variable will use this as the lower boundary of the y axis. Useful if need multiple plots with equivalent y-axes. Defaults to FALSE.
-#' @param highest_y_axis (Optional) If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes. Defaults to FALSE.
-#' @param point_size (Optional) Size of marker for each dot. Default is cex=0.8
+#' @param plotter (Optional- default="ggplot") Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are "ggplot" or "rplot". If unknown parameter sent, will default to "ggplot"
+#'
+#' @inheritParams blandr.statistics
+#' @inheritParams blandr.plot.limits
+#' @inheritParams blandr.basic.plot
+#' @inheritParams blandr.ggplot
 #'
 #' @include blandr.statistics.r
 #' @include blandr.plot.limits.r
 #' @include blandr.basic.plot.r
 #' @include blandr.ggplot.r
+#'
 #' @export
 
 blandr.draw <- function(method1, method2, plotter = "ggplot", method1name = "Method 1", method2name = "Method 2",
@@ -50,8 +41,14 @@ blandr.draw <- function(method1, method2, plotter = "ggplot", method1name = "Met
     } else {
 
         # Pass data to the blandr.ggplot function to use ggplot2 graphics system
-        ba.plot <- blandr.ggplot(statistics.results, method1name, method2name, plotTitle, ciDisplay,
-            ciShading, normalLow, normalHigh)
+        ba.plot <- blandr.ggplot( statistics.results = statistics.results ,
+                                  method1name = method1name ,
+                                  method2name = method2name ,
+                                  plotTitle = plotTitle ,
+                                  ciDisplay = ciDisplay ,
+                                  ciShading = ciShading ,
+                                  normalLow = normalLow ,
+                                  normalHigh = normalHigh )
         ba.plot
 
     }

@@ -21,6 +21,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This manual functions as a series of vignettes to instruct on how to best use the functions. Further details can be gleaned for the auto-generated descriptions for each function. Some functions aren't meant to be used directly by the user, but are internal functions for the package.
 
+## Why should I use it?
+
+To get an open-source library that allows replicable Bland-Altman analysises using R. Further it generates and plots confidence intervals for Bland-Altman method comparisons: something that other libraries do not seem to generate.
+
+## Installation
+
+You can install blandr from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("deepankardatta/blandr")
+```
+
+Currently the code is hosted at https://github.com/deepankardatta/blandr/ - in future I hope it will be available on CRAN for easy integration into R
+
 ## Loading the library
 
 I assume as you're here you have loaded the library, but *just in case* what you need to do is type this in:
@@ -46,13 +61,13 @@ The drawing function using R's built in tools is still in the package (but not s
 
 The package contains the PEFR data set in the 1986 Lancet paper written by Bland and Altman. (Bland, J. M., & Altman, D. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The Lancet, 327(8476), 307-310. http://dx.doi.org/10.1016/S0140-6736(86)90837-8) I do not claim any copyright on the data - this is meant to allow testing of the function. I encourage future package authors to use the .rda file if they so wish.
 
-To load the sample PEFR data use the following command:
+To load the sample Bland-Altman data use the following command:
 ```
-load(file="Data/bland.altman.1986.PEFR.rda")
+load(file="Data/bland.altman.PEFR.1986.rda")
 load(file="Data/giavarina.2015.rda")
 ```
 
-This will give you four data sets for comparison: WrightFirst, WrightSecond, MiniWrightFirst, and MiniWrightSecond. We can calculate agreement between WrightFirst and MiniWrightFirst.
+We want to use the Bland-Altman 1986 data which provides comparative PEFR data as 4 numeric vectors in a data frame: WrightFirst, WrightSecond, MiniWrightFirst, and MiniWrightSecond. We can calculate agreement between two methods: WrightFirst and MiniWrightFirst.
 
 ## Basic use of the Bland-Altman functions
 
@@ -63,13 +78,13 @@ The function relies on 2 mandatory parameters, and an optional significance leve
 You can see the output the function generates below.
 
 ```{r}
-blandr.statistics ( WrightFirst , MiniWrightFirst , sig.level=0.95 )
+blandr.statistics ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , sig.level=0.95 )
 ```
 
 The function allows you to transfer the values to a list. This can be useful if you want to use your own custom graphing routines.
 
 ```{r}
-stats.data <- blandr.statistics ( WrightFirst , MiniWrightFirst , sig.level=0.95 )
+stats.data <- blandr.statistics ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , sig.level=0.95 )
 summary(stats.data)
 stats.data
 ```
@@ -88,20 +103,20 @@ stats.data[6]
 The Bland-Altman display function takes the output of the 'blandr.statistics' function, and formats it into a nice form.
 
 ```{r}
-blandr.display ( WrightFirst , MiniWrightFirst , sig.level=0.95 )
+blandr.display ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , sig.level=0.95 )
 ```
 
 ## Bland-Altman plots
 To draw basic Bland-Altman plots use the *blandr.draw* function. The function only has two mandatory parameters.
 
 ```{r, fig.width=6, fig.height=5}
-blandr.draw( WrightFirst , MiniWrightFirst )
+blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst )
 ```
 
 As can be seen from above, the display of confidence intervals, and shading of these intervals is turned on by default. You can turn these off using the following options.
 
 ```{r, fig.width=6, fig.height=5}
-blandr.draw( WrightFirst , MiniWrightFirst , ciDisplay = FALSE , ciShading = FALSE )
+blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , ciDisplay = FALSE , ciShading = FALSE )
 ```
 
 Whilst the vignette only serves as an introduction to the *blandr.draw* function, you can read through the R auto-generated manual to get an idea of the breadth of optional parameters that can be passed through.
@@ -110,7 +125,7 @@ Whilst the vignette only serves as an introduction to the *blandr.draw* function
 
 One of the most useful uses of the *blandr.draw* function, when used in the default ggplot2 mode, is to output and save the raw ggplot drawing instructions. Further graphics can then be appended in the usual ggplot manner e.g.:
 ```{r, fig.width=6, fig.height=5}
-vignette.chart <- blandr.draw( WrightFirst , MiniWrightFirst )
+vignette.chart <- blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst )
 vignette.chart
 vignette.chart <- vignette.chart + geom_vline( xintercept = 300 , linetype = 4 , col=6 )
 vignette.chart
@@ -121,7 +136,7 @@ vignette.chart
 Another method of creating custom charts is to call all the functions separately, and then plotting however you want with the data, e.g.,
 
 ```{r, fig.width=6, fig.height=5}
-wright.stats <- blandr.statistics( WrightFirst , MiniWrightFirst )
+wright.stats <- blandr.statistics( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst )
 wright.plot <- blandr.plot.limits (wright.stats )
 plot( x=wright.stats$means , y=wright.stats$differences )
 ```
@@ -137,7 +152,7 @@ The *blandr.plot.limits* forces limits on the rplot charts, but *not* the ggplot
 If we consider the default Bland-Altman chart again:
 
 ```{r, fig.width=6, fig.height=5}
-blandr.draw( WrightFirst , MiniWrightFirst , ciDisplay = FALSE )
+blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , ciDisplay = FALSE )
 ```
 
 The confidence intervals are switched off to allow comparison to figure 2 of Bland and Altman's 1986 paper. We can see the "calculated optimal" axes mean that the lowest value on the x-axis is roughly 200.
@@ -146,13 +161,13 @@ One method is calling the function, and appending further ggplot instructions to
 
 (1) This is the original chart, saved as a ggplot object
 ```{r, fig.width=6, fig.height=5}
-vignette.chart <- blandr.draw( WrightFirst , MiniWrightFirst , ciDisplay = FALSE )
+vignette.chart <- blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , ciDisplay = FALSE )
 vignette.chart
 ```
 
 (2) We can then change the chart to use the calculated plot limits. (In reality you can change this to any limits you want)
 ```{r, fig.width=6, fig.height=5}
-wright.stats <- blandr.statistics( WrightFirst , MiniWrightFirst )
+wright.stats <- blandr.statistics( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst )
 wright.plot <- blandr.plot.limits (wright.stats )
 vignette.chart.2 <- vignette.chart + ggplot2::coord_cartesian( xlim=c( wright.plot$x_lower , wright.plot$x_upper ) , ylim=c( wright.plot$y_lower , wright.plot$y_upper ) )
 vignette.chart.2
@@ -175,5 +190,5 @@ The benefits of forcing chart limits means that you can have multiple charts usi
 You can use R's built in plotting tools, but adding the switch *plotter="rplot"* as shown below:
 
 ```{r, fig.width=6, fig.height=5}
-blandr.draw( WrightFirst , MiniWrightFirst , plotter="rplot" )
+blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , plotter="rplot" )
 ```

@@ -2,7 +2,7 @@
 % Please edit documentation in R/blandr.ggplot.r
 \name{blandr.ggplot}
 \alias{blandr.ggplot}
-\title{Bland-Altman plotting function, using ggplot}
+\title{Bland-Altman plotting function, using ggplot2}
 \usage{
 blandr.ggplot(statistics.results, method1name = "Method 1",
   method2name = "Method 2",
@@ -31,5 +31,5 @@ blandr.ggplot(statistics.results, method1name = "Method 1",
 ba.plot Returns a ggplot data set that can then be plotted
 }
 \description{
-Draws a Bland-Altman plot using data calculated using the other functions, using ggplot
+Draws a Bland-Altman plot using data calculated using the other functions, using ggplot2
 }

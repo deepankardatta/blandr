@@ -34,6 +34,9 @@
 #' @return lowerLOA Lower limit of agreement
 #' @return lowerLOA_upperCI Upper confidence interval of the lower limit of agreement
 #' @return lowerLOA_lowerCI Lower confidence interval of the lower limit of agreement
+#'
+#' @importFrom  stats coef cor lm na.omit qnorm qt sd t.test
+#'
 #' @include blandr.data.preparation.r
 #'
 #' @export

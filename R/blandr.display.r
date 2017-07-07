@@ -1,11 +1,13 @@
-#' @title Bland-Altman display for R
+#' @title Bland-Altman summary statistics display function
 #'
 #' @description Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
 #'
 #' @param method1 A list of numbers.
 #' @param method2 A list of numbers.
 #' @param sig.level (Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.
+#'
 #' @include blandr.statistics.r
+#'
 #' @export
 
 blandr.display <- function(method1, method2, sig.level = 0.95) {

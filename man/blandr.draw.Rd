@@ -16,7 +16,7 @@ blandr.draw(method1, method2, plotter = "ggplot", method1name = "Method 1",
 
 \item{method2}{A list of numbers.}
 
-\item{plotter}{(Optional) Switch to note if uses R's built in drawing functions, or ggplot2. Options = 'rplot' or 'ggplot'. Defaults to 'ggplot'. rplot currently has more available options.}
+\item{plotter}{(Optional- default="ggplot") Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are "ggplot" or "rplot". If unknown parameter sent, will default to "ggplot"}
 
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 
@@ -26,7 +26,7 @@ blandr.draw(method1, method2, plotter = "ggplot", method1name = "Method 1",
 
 \item{sig.level}{(Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.}
 
-\item{LoA.mode}{(Optional) Switch to change how accurately the limits of agreement (LoA) are calculated from the bias and its standard deviation. The default is LoA.mode=1 which calculates LoA with the more accurate 1.96x multiplier. LoA.mode=2 uses the 2x multiplier which was used in the original papers.}
+\item{LoA.mode}{(Optional) Switch to change how accurately the limits of agreement (LoA) are calculated from the bias and its standard deviation. The default is LoA.mode=1 which calculates LoA with the more accurate 1.96x multiplier. LoA.mode=2 uses the 2x multiplier which was used in the original papers. This should really be kept at default, except to double check calculations in older papers.}
 
 \item{annotate}{(Optional) TRUE/FALSE switch to provides annotations to plot, default=FALSE}
 
@@ -38,9 +38,9 @@ blandr.draw(method1, method2, plotter = "ggplot", method1name = "Method 1",
 
 \item{normalHigh}{(Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its higher boundary}
 
-\item{lowest_y_axis}{(Optional) If given a continuous variable will use this as the lower boundary of the y axis. Useful if need multiple plots with equivalent y-axes. Defaults to FALSE.}
+\item{lowest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the lower boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
 
-\item{highest_y_axis}{(Optional) If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes. Defaults to FALSE.}
+\item{highest_y_axis}{(OptionaL) Defaults to NULL If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
 
 \item{point_size}{(Optional) Size of marker for each dot. Default is cex=0.8}
 }

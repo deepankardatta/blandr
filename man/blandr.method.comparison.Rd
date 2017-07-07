@@ -2,7 +2,7 @@
 % Please edit documentation in R/blandr.method.comparison.r
 \name{blandr.method.comparison}
 \alias{blandr.method.comparison}
-\title{Method comparison}
+\title{Bland-Altman method comparison}
 \usage{
 blandr.method.comparison(method1, method2, sig.level = 0.95)
 }

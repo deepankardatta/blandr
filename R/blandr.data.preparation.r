@@ -9,7 +9,6 @@
 #' @return method.comparison A data frame of paired values. These have been data checked, and empty rows omitted, from the originally supplied data.
 #'
 #' @export
-#'
 
 blandr.data.preparation <- function(method1, method2, sig.level) {
 
