@@ -35,7 +35,7 @@ blandr.proportional.bias(method1, method2, method1name = "Method 1",
 
 \item{lowest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the lower boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
 
-\item{highest_y_axis}{(OptionaL) Defaults to NULL If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
+\item{highest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
 }
 \description{
 Draws a Bland-Altman chart with regression line to look at proportional bias. Only uses ggplot2.

@@ -12,7 +12,7 @@ blandr.plot.limits(statistics.results, lowest_y_axis = FALSE,
 
 \item{lowest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the lower boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
 
-\item{highest_y_axis}{(OptionaL) Defaults to NULL If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
+\item{highest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
 }
 \value{
 x_upper The upper limit of the X-axis

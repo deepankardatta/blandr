@@ -40,7 +40,7 @@ blandr.draw(method1, method2, plotter = "ggplot", method1name = "Method 1",
 
 \item{lowest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the lower boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
 
-\item{highest_y_axis}{(OptionaL) Defaults to NULL If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
+\item{highest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
 
 \item{point_size}{(Optional) Size of marker for each dot. Default is cex=0.8}
 }
