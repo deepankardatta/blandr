@@ -1,10 +1,12 @@
 Package: blandr
-Title: Blandr: a Bland-Altman Method Comparison Function for r
+Title: Bland-Altman Method Comparison
 Version: 0.4.1
-Description: Carries out Bland Altman analyses (also known as a 
-    Tukey mean-difference plot). This package was created in 2015 as existing 
-    Bland-Altman analysis functions did not calculate confidence intervals.
-    This package was created to rectify this, and create reproducible plots.
+Description: Carries out Bland Altman analyses (also known as a Tukey
+    mean-difference plot) as described by JM Bland and DG Altman in
+    1986 (doi: 10.1016/S0140-6736(86)90837-8). This package was created in 
+    2015 as existing Bland-Altman analysis functions did not calculate 
+    confidence intervals. This package was created to rectify this, 
+    and create reproducible plots.
 Depends: R (>= 3.4.0)
 Authors@R: person("Deepankar", "Datta", email = "deepankardatta@nhs.net",
                   role = c("aut", "cre"))
