@@ -1,7 +1,7 @@
 Package: blandr
-Title: blandr: a Bland-Altman method comparison function for r
+Title: Blandr: a Bland-Altman Method Comparison Function for r
 Version: 0.4.1
-Description: blandr. A package to carry out Bland Altman analyses (also known as a 
+Description: This package carries out Bland Altman analyses (also known as a 
     Tukey mean-difference plot). This package was created in 2015 as existing 
     Bland-Altman analyses did not calculate confidence intervals. This package was 
     created to rectify this and create replicable plots.
@@ -14,7 +14,7 @@ LazyData: true
 URL: https://github.com/deepankardatta/blandr/
 BugReports: https://github.com/deepankardatta/blandr/issues
 Imports: ggplot2, knitr
-Recommends: rmarkdown
+Suggests: rmarkdown
 VignetteBuilder: knitr
 Collate: 
     'blandr.basic.plot.r'
