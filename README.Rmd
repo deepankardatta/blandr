@@ -12,11 +12,22 @@ knitr::opts_chunk$set(
 )
 ```
 
-# blandr: a Bland-Altman package for R
+# blandr: a Bland-Altman Method Comparison package for R
 
-*blandr* is a package to carry out Bland-Altman analyses (also known as a Tukey mean-difference plot) in R. This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals: my belief is that when drawing Bland-Altman plots, confidence intervals should be considered the gold-standard. *blandr* fulfils this need!
+*blandr* carries out Bland Altman analyses (also known as a Tukey mean-difference plot) as described by JM Bland and DG Altman in 1986 (doi: 10.1016/S0140-6736(86)90837-8).
 
-*blandr* further generates plotting data to allow easy generation of charts using ggplot, as well as R's in-built drawing capabilities.
+This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals: my belief is that when drawing Bland-Altman plots, confidence intervals should be considered the gold-standard. *blandr* fulfils this need!
+
+## The benefits
+
+* Calculates confidence intervals
+* Outputs ggplot2 information to create extensible plots
+* Has a function to chart for proportional bias
+* If you get me through GitHub, I will do my best to maintain and improve this package
+
+# Cite me?
+
+If you use this, it would be nice if you could kindly cite this package at its GitHub page (https://github.com/deepankardatta/blandr/).
 
 ## Installation
 

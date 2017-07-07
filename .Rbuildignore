@@ -3,6 +3,7 @@
 ^unused$
 ^tests$
 ^data-raw$
+^git-docs$
 ^cran-comments\.Rmd$
 ^cran-comments-.*\.png$
 ^cran-comments\.md$
