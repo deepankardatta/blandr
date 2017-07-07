@@ -13,7 +13,7 @@ Installation
 You can install blandr from github with:
 
 ``` r
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("deepankardatta/blandr")
 ```
 
@@ -57,9 +57,17 @@ Future improvements
 
 Whilst this package is good enough for use, there is the scope for iterative improvements.
 
-Future works include: \* I need to take out the last references to *BlandAltmanEdinburgh* and change it to *blandr*. \* There are a further few deprecated functions to delete (I just need to finish a few projects first!!). \* The package needs to have to go through some validation and testing \* For further testing I need to write some *testhtat* modules \* The function descriptions needs to be improved \* Some of the roxygen2 documentation can be improved by calling the import parameters function \* I want to add a few more sample data packs: including some of my own if possible!
+Future works include:
+
+-   I need to take out the last references to *BlandAltmanEdinburgh* and change it to *blandr*.
+-   There are a further few deprecated functions to delete (I just need to finish a few projects first!!).
+-   The package needs to have to go through some validation and testing
+-   For further testing I need to write some *testhtat* modules
+-   The function descriptions needs to be improved
+-   Some of the roxygen2 documentation can be improved by calling the import parameters function
+-   I want to add a few more sample data packs: including some of my own if possible!
 
 Help wanted!
 ------------
 
-Comments on the code, suggestions for improvement, verification tests, validation studies, and even code contributions would be gratefully accepted. Email me at <deepankardatta@users.noreply.github.com> and I'll try and get back to you as soon as possible. Please do bear in mind this is a side-project, and I can be otherwise busy with a lot of other work.
+Comments on the code, suggestions for improvement, verification tests, validation studies, and even code contributions would be gratefully accepted. Email me at <deepankardatta@nhs.net> and I'll try and get back to you as soon as possible. Please do bear in mind this is a side-project, and I can be otherwise busy with a lot of other work.

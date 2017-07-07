@@ -3,6 +3,7 @@
 # RUN-ONCE
 # devtools::use_readme_rmd()
 # devtools::use_build_ignore("NEWS.md")
+# devtools::use_cran_comments()
 
 # RUN every build
 devtools::document()

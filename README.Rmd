@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 You can install blandr from github with:
 
 ```{r gh-installation, eval = FALSE}
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("deepankardatta/blandr")
 ```
 
@@ -63,6 +63,7 @@ Further information can be found in the function help files in the package, as w
 Whilst this package is good enough for use, there is the scope for iterative improvements.
 
 Future works include:
+
 * I need to take out the last references to *BlandAltmanEdinburgh* and change it to *blandr*.
 * There are a further few deprecated functions to delete (I just need to finish a few projects first!!).
 * The package needs to have to go through some validation and testing
@@ -73,4 +74,4 @@ Future works include:
 
 ## Help wanted!
 
-Comments on the code, suggestions for improvement, verification tests, validation studies, and even code contributions would be gratefully accepted. Email me at deepankardatta@users.noreply.github.com and I'll try and get back to you as soon as possible. Please do bear in mind this is a side-project, and I can be otherwise busy with a lot of other work.
+Comments on the code, suggestions for improvement, verification tests, validation studies, and even code contributions would be gratefully accepted. Email me at deepankardatta@nhs.net and I'll try and get back to you as soon as possible. Please do bear in mind this is a side-project, and I can be otherwise busy with a lot of other work.

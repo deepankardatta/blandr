@@ -6,7 +6,7 @@ Description: This package carries out Bland Altman analyses (also known as a
     Bland-Altman analyses did not calculate confidence intervals. This package was 
     created to rectify this and create replicable plots.
 Depends: R (>= 3.4.0)
-Authors@R: person("Deepankar", "Datta", email = "deepankardatta@users.noreply.github.com",
+Authors@R: person("Deepankar", "Datta", email = "deepankardatta@nhs.net",
                   role = c("aut", "cre"))
 License: GPL-3
 Encoding: UTF-8
