@@ -35,7 +35,10 @@ using R version 3.4.0 (2017-04-21)
 using platform: x86_64-apple-darwin15.6.0 (64-bit)
 using session charset: UTF-8
 
-There were no ERRORs or WARNINGs or NOTEs.
+There were no ERRORs or WARNINGs.
+
+1 NOTE on win-builder: "Possibly mis-spelled words in DESCRIPTION". These words are not mis-spelled.
+
 No errors from revdep
 
 ## Reverse dependencies
