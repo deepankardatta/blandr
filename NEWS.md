@@ -6,6 +6,12 @@ Deepankar Datta
 NEWS for blandr
 ===============
 
+Version 0.4.2: 2017-07-08
+-------------------------
+
+-   Minor changes to documentation from CRAN submission feedback
+-   No changes to functions
+
 Version 0.4.1: 2017-07-05
 -------------------------
 
@@ -23,17 +29,17 @@ Version 0.4: 2017-06-30
 -   Start of changes to prepare to upload to GitHub and CRAN
 -   Name changed from BlandAltmanEdinburgh to blandr
 
-Version 2016-02-04
-------------------
+Version 0.3: 2016-02-04
+-----------------------
 
 -   updated to help with a few studies
 
-Version 2015-11-14
-------------------
+Version 0.2: 2015-11-14
+-----------------------
 
 -   first proper R packaged version
 
-Version early 2015
-------------------
+Version 0.1: early 2015
+-----------------------
 
 -   first preliminary coding

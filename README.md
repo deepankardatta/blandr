@@ -3,7 +3,7 @@
 blandr: a Bland-Altman Method Comparison package for R
 ======================================================
 
-*blandr* carries out Bland Altman analyses (also known as a Tukey mean-difference plot) as described by JM Bland and DG Altman in 1986 (doi: 10.1016/S0140-6736(86)90837-8).
+*blandr* carries out Bland Altman analyses (also known as a Tukey mean-difference plot) as described by JM Bland and DG Altman in 1986.
 
 This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals: my belief is that when drawing Bland-Altman plots, confidence intervals should be considered the gold-standard. *blandr* fulfils this need!
 
@@ -15,10 +15,32 @@ The benefits
 -   Has a function to chart for proportional bias
 -   If you get me through GitHub, I will do my best to maintain and improve this package
 
-Cite me?
-========
+Citations
+=========
 
-If you use this, it would be nice if you could kindly cite this package at its GitHub page (<https://github.com/deepankardatta/blandr/>).
+You can find the citation information through the usual R citation commands:
+
+``` r
+citation("blandr")
+#> 
+#> To cite blandr in publications, please use:
+#> 
+#>   Datta, D. (2017). blandr: a Bland-Altman Method Comparison
+#>   package for R. Zenodo. DOI:10.5281/zenodo.824514
+#>   https://github.com/deepankardatta/blandr
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {blandr: a Bland-Altman Method Comparison package for R},
+#>     author = {Deepankar Datta},
+#>     doi = {10.5281/zenodo.824514},
+#>     year = {2017},
+#>     url = {https://github.com/deepankardatta/blandr},
+#>   }
+```
+
+The DOI will refer to all versions of blandr. If you need to cite specific releases DOIs, the full versioning information can be found at Zenodo (<https://zenodo.org/record/824515>), with the full source code at the blandr GitHub page (<https://github.com/deepankardatta/blandr/>).
 
 Installation
 ------------
