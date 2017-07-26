@@ -2,6 +2,8 @@
 #'
 #' @description Everyone likes graphs, lines and T-tests. This uses the data provided to generate simple tests whilst trying to explain why they should be treated with caution in method comparison studies. This is hopefully the first step in getting people to use the Bland-Altman functions as I suspect everyone will try to do these tests anyway.
 #'
+#' @author Deepankar Datta <deepankardatta@nhs.net>
+#'
 #' @param method1 A list of numbers.
 #' @param method2 A list of numbers.
 #' @param sig.level (Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.
@@ -11,6 +13,14 @@
 #' @references Zaki R, Bulgiba A, Ismail R, Ismail NA. Statistical Methods Used to Test for Agreement of Medical Instruments Measuring Continuous Variables in Method Comparison Studies: A Systematic Review PLoS ONE 2012 7(5): e37908. doi: 10.1371/journal.pone.0037908
 #'
 #' @include blandr.data.preparation.r
+#'
+#' @examples
+#' # Generates two random measurements
+#' measurement1 <- rnorm(100)
+#' measurement2 <- rnorm(100)
+#'
+#' # Call the function
+#' blandr.method.comparison( measurement1 , measurement2 )
 #'
 #' @export
 

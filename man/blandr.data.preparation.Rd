@@ -19,3 +19,16 @@ method.comparison A data frame of paired values. These have been data checked, a
 \description{
 Prepares the data and runs error checks before the calling function runs whatever method analysis mode is wants.
 }
+\examples{
+# Generates two random measurements
+measurement1 <- rnorm(100)
+measurement2 <- rnorm(100)
+
+# Calls the function - do note that this function was really
+# meant to be called from other functions and not a stand-alone funtion
+blandr.data.preparation( measurement1 , measurement2, sig.level=0.95 )
+
+}
+\author{
+Deepankar Datta <deepankardatta@nhs.net>
+}

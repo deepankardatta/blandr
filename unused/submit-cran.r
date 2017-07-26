@@ -10,6 +10,6 @@ devtools::document()
 devtools::check()
 
 # RUN final build
-# devtools::build_win()
-# devtools::revdep_check()
+devtools::build_win()
+devtools::revdep_check()
 devtools::release()

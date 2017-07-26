@@ -89,7 +89,7 @@ summary(stats.data)
 stats.data
 ```
 
-You can then take the individual elements of the statistics output by appending a number in square brackets to the end when callign the list, e.g.:
+You can then take the individual elements of the statistics output by appending a number in square brackets to the end when calling the list, e.g.:
 
 ```{r}
 stats.data[1]

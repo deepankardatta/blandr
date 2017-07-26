@@ -16,3 +16,15 @@ blandr.display(method1, method2, sig.level = 0.95)
 \description{
 Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
 }
+\examples{
+# Generates two random measurements
+measurement1 <- rnorm(100)
+measurement2 <- rnorm(100)
+
+# Displays basic statistics for the two measurements in a readable form
+blandr.display( measurement1 , measurement2 )
+
+}
+\author{
+Deepankar Datta <deepankardatta@nhs.net>
+}

@@ -2,6 +2,8 @@
 #'
 #' @description (DEPRECATED) Re-directs to blandr.display.and.draw
 #'
+#' @author Deepankar Datta <deepankardatta@nhs.net>
+#'
 #' @inheritParams blandr.display.and.draw
 #'
 #' @include blandr.display.and.draw.r

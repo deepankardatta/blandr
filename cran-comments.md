@@ -1,7 +1,11 @@
-This is version 0.4.2 of "blandr"
-This is a FIRST SUBMISSION - I have updated it to version 0.4.2 from the previous submission yesterday (2017-07-07) to take into account suggestions from Uwe Ligges.
+This is version 0.4.3 of "blandr"
+This is a FIRST SUBMISSION to CRAN - I have updated the package in response to 
+comments by Uwe Ligges
 
-## Changes to 0.4.2 in response to CRAN suggestions
+## Changes in revised 0.4.3 in response to CRAN suggestions
+Examples and more comments put into R files, so that roxygen2 can put into manual
+
+## Changes in 0.4.2 in response to CRAN suggestions
 (1) "Suggestion: Bland-Altman Method Comparison"
 
 Title changed to: "Bland-Altman Method Comparison" as suggested
@@ -36,6 +40,8 @@ using platform: x86_64-apple-darwin15.6.0 (64-bit)
 using session charset: UTF-8
 
 There were no ERRORs or WARNINGs.
+
+1 NOTE on "Rd line widths" check
 
 1 NOTE on win-builder: "Possibly mis-spelled words in DESCRIPTION". These words are not mis-spelled.
 

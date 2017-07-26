@@ -26,3 +26,18 @@ y_lower The lower limit of the Y-axis
 \description{
 Works out plot limits for the Bland-Altman plots. Depends on the blandr.statistics function in the package.
 }
+\examples{
+# Generates two random measurements
+measurement1 <- rnorm(100)
+measurement2 <- rnorm(100)
+
+# Passes data to the blandr.statistics function to generate Bland-Altman statistics
+statistics.results <- blandr.statistics( measurement1 , measurement2 )
+
+# Calls the function
+blandr.plot.limits( statistics.results )
+
+}
+\author{
+Deepankar Datta <deepankardatta@nhs.net>
+}

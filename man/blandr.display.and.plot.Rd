@@ -43,3 +43,6 @@ blandr.display.and.plot(method1, method2, method1name = "Method 1",
 \description{
 (DEPRECATED) Re-directs to blandr.display.and.draw
 }
+\author{
+Deepankar Datta <deepankardatta@nhs.net>
+}

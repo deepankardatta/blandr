@@ -49,10 +49,15 @@ lowerLOA_upperCI Upper confidence interval of the lower limit of agreement
 lowerLOA_lowerCI Lower confidence interval of the lower limit of agreement
 }
 \description{
-Bland-Altman analysis function for R. Package created as existing functions don't suit my needs, and don't generate 95\% confidence intervals for bias and limits of agreement. This base function calculates the basic statistics, and generates return values which can be used in the related blandr.display and bland.altamn.plot functions. However the return results can be used to generate a custom chart if desired.
+Bland-Altman analysis function for R. Package created as existing
+functions don't suit my needs, and don't generate 95\% confidence intervals
+for bias and limits of agreement. This base function calculates the basic
+statistics, and generates return values which can be used in the related
+\code{blandr.display} and \code{bland.altamn.plot} functions. However
+the return results can be used to generate a custom chart if desired.
 }
 \note{
-The function will give similar answers when used on the original Bland-Altman PEFR data sets. They won't be exactly the same as (a) for 95% limits of agreement I have used +/-1.96, rather than 2, and (b) the computerised calculation means that the rounding that is present in each step of the original examples does not occur. This will give a more accurate answer, although I can understand why in 1986 rounding would occur at each step for ease of calculation.
+The function will give similar answers when used on the original Bland-Altman PEFR data sets. They won't be exactly the same as (a) for 95\% limits of agreement I have used +/-1.96, rather than 2, and (b) the computerised calculation means that the rounding that is present in each step of the original examples does not occur. This will give a more accurate answer, although I can understand why in 1986 rounding would occur at each step for ease of calculation.
 
 The function depends on paired values.
 
@@ -66,8 +71,20 @@ Last update 2016-02-04
 
 Originally designed for LAVAS and CVLA
 }
+\examples{
+# Generates two random measurements
+measurement1 <- rnorm(100)
+measurement2 <- rnorm(100)
+
+# Generates Bland-Altman statistics data of the two measurements
+blandr.statistics( measurement1 , measurement2 )
+
+}
 \references{
 Based on: (1) Bland, J. M., & Altman, D. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The Lancet, 327(8476), 307-310. http://dx.doi.org/10.1016/S0140-6736(86)90837-8
 
 Confidence interval work based on follow-up paper: (2) Altman, D. G., & Bland, J. M. (2002). Commentary on quantifying agreement between two methods of measurement. Clinical chemistry, 48(5), 801-802. http://www.clinchem.org/content/48/5/801.full.pdf
+}
+\author{
+Deepankar Datta <deepankardatta@nhs.net>
 }

@@ -16,6 +16,11 @@ knitr::opts_chunk$set(
 
 # NEWS for blandr
 
+## Version 0.4.3: 2017-07-26
+* Minor changes to roxygen2 documentation from CRAN submission feedback
+* This involves examples into R source files
+* Some minor spelling and formatting corrections
+
 ## Version 0.4.2: 2017-07-08
 * Minor changes to documentation from CRAN submission feedback
 * No changes to functions

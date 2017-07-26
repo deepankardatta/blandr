@@ -1,8 +1,15 @@
 #' @title Bland-Altman statistics for R
 #'
-#' @description Bland-Altman analysis function for R. Package created as existing functions don't suit my needs, and don't generate 95\% confidence intervals for bias and limits of agreement. This base function calculates the basic statistics, and generates return values which can be used in the related blandr.display and bland.altamn.plot functions. However the return results can be used to generate a custom chart if desired.
+#' @description Bland-Altman analysis function for R. Package created as existing
+#' functions don't suit my needs, and don't generate 95\% confidence intervals
+#' for bias and limits of agreement. This base function calculates the basic
+#' statistics, and generates return values which can be used in the related
+#' \code{blandr.display} and \code{bland.altamn.plot} functions. However
+#' the return results can be used to generate a custom chart if desired.
 #'
-#' @note The function will give similar answers when used on the original Bland-Altman PEFR data sets. They won't be exactly the same as (a) for 95% limits of agreement I have used +/-1.96, rather than 2, and (b) the computerised calculation means that the rounding that is present in each step of the original examples does not occur. This will give a more accurate answer, although I can understand why in 1986 rounding would occur at each step for ease of calculation.
+#' @author Deepankar Datta <deepankardatta@nhs.net>
+#'
+#' @note The function will give similar answers when used on the original Bland-Altman PEFR data sets. They won't be exactly the same as (a) for 95\% limits of agreement I have used +/-1.96, rather than 2, and (b) the computerised calculation means that the rounding that is present in each step of the original examples does not occur. This will give a more accurate answer, although I can understand why in 1986 rounding would occur at each step for ease of calculation.
 #' @note The function depends on paired values.
 #' @note It currently only can currently work out fixed bias.
 #' @note Improvements for the future: proportional bias charts will need further work
@@ -39,9 +46,17 @@
 #'
 #' @include blandr.data.preparation.r
 #'
+#' @examples
+#' # Generates two random measurements
+#' measurement1 <- rnorm(100)
+#' measurement2 <- rnorm(100)
+#'
+#' # Generates Bland-Altman statistics data of the two measurements
+#' blandr.statistics( measurement1 , measurement2 )
+#'
 #' @export
 
-blandr.statistics <- function(method1, method2, sig.level = 0.95, LoA.mode = 1) {
+blandr.statistics <- function( method1 , method2 , sig.level = 0.95 , LoA.mode = 1 ) {
 
     # This sends to the preparation function, which does some sense checks on the data And makes sure that the values
     # are prepared

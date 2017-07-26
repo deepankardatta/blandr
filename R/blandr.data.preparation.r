@@ -2,11 +2,22 @@
 #'
 #' @description Prepares the data and runs error checks before the calling function runs whatever method analysis mode is wants.
 #'
+#' @author Deepankar Datta <deepankardatta@nhs.net>
+#'
 #' @param method1 A list of numbers.
 #' @param method2 A list of numbers.
 #' @param sig.level Significance level. Is not optional in this function, as the calling package should have a default value to pass if needed
 #'
 #' @return method.comparison A data frame of paired values. These have been data checked, and empty rows omitted, from the originally supplied data.
+#'
+#' @examples
+#' # Generates two random measurements
+#' measurement1 <- rnorm(100)
+#' measurement2 <- rnorm(100)
+#'
+#' # Calls the function - do note that this function was really
+#' # meant to be called from other functions and not a stand-alone funtion
+#' blandr.data.preparation( measurement1 , measurement2, sig.level=0.95 )
 #'
 #' @export
 

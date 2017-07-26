@@ -2,17 +2,27 @@
 #'
 #' @description Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
 #'
+#' @author Deepankar Datta <deepankardatta@nhs.net>
+#'
 #' @param method1 A list of numbers.
 #' @param method2 A list of numbers.
 #' @param sig.level (Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.
 #'
 #' @include blandr.statistics.r
 #'
+#' @examples
+#' # Generates two random measurements
+#' measurement1 <- rnorm(100)
+#' measurement2 <- rnorm(100)
+#'
+#' # Displays basic statistics for the two measurements in a readable form
+#' blandr.display( measurement1 , measurement2 )
+#'
 #' @export
 
-blandr.display <- function(method1, method2, sig.level = 0.95) {
+blandr.display <- function( method1 , method2 , sig.level = 0.95) {
 
-    result <- blandr.statistics(method1, method2, sig.level)
+    result <- blandr.statistics( method1 , method2 , sig.level )
 
     # Print summary Bland-Altman statistics
     cat("Number of comparisons: ", length(result$differences), "\n")

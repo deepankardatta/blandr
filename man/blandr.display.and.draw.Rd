@@ -4,8 +4,8 @@
 \alias{blandr.display.and.draw}
 \title{Bland-Altman display and draw for R}
 \usage{
-blandr.display.and.draw(method1, method2, method1name = "Method 1",
-  method2name = "Method 2",
+blandr.display.and.draw(method1, method2, plotter = "ggplot",
+  method1name = "Method 1", method2name = "Method 2",
   plotTitle = "Bland-Altman plot for comparison of 2 methods",
   sig.level = 0.95, annotate = FALSE, ciDisplay = TRUE,
   ciShading = FALSE, normalLow = FALSE, normalHigh = FALSE,
@@ -15,6 +15,8 @@ blandr.display.and.draw(method1, method2, method1name = "Method 1",
 \item{method1}{A list of numbers.}
 
 \item{method2}{A list of numbers.}
+
+\item{plotter}{(Optional- default="ggplot") Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are "ggplot" or "rplot". If unknown parameter sent, will default to "ggplot"}
 
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 
@@ -44,4 +46,19 @@ blandr.display.and.draw(method1, method2, method1name = "Method 1",
 Stub function: calls both the display and plots functions (in that order). Uses the same parameters as the plot and display functions to allow easy all-in-one use.
 
 This function may be deprecated in future, as you really can use the functions easily separately.
+}
+\examples{
+# Generates two random measurements
+measurement1 <- rnorm(100)
+measurement2 <- rnorm(100)
+
+# Generates a plot, with no optional arguments
+blandr.display.and.draw( measurement1 , measurement2 )
+
+# Generates a plot, with title
+blandr.display.and.draw( measurement1 , measurement2 , plotTitle = "Bland-Altman example plot" )
+
+}
+\author{
+Deepankar Datta <deepankardatta@nhs.net>
 }

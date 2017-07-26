@@ -40,6 +40,21 @@ blandr.proportional.bias(method1, method2, method1name = "Method 1",
 \description{
 Draws a Bland-Altman chart with regression line to look at proportional bias. Only uses ggplot2.
 }
+\examples{
+# Generates two random measurements
+measurement1 <- rnorm(100)
+measurement2 <- rnorm(100)
+
+# Call the function, with no optional arguments
+blandr.proportional.bias( measurement1 , measurement2 )
+
+# Call the function, with title
+blandr.proportional.bias( measurement1 , measurement2 , plotTitle = "Bland-Altman example plot" )
+
+}
 \references{
 http://rforpublichealth.blogspot.co.uk/2013/11/ggplot2-cheatsheet-for-scatterplots.html
+}
+\author{
+Deepankar Datta <deepankardatta@nhs.net>
 }

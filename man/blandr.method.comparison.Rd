@@ -16,10 +16,22 @@ blandr.method.comparison(method1, method2, sig.level = 0.95)
 \description{
 Everyone likes graphs, lines and T-tests. This uses the data provided to generate simple tests whilst trying to explain why they should be treated with caution in method comparison studies. This is hopefully the first step in getting people to use the Bland-Altman functions as I suspect everyone will try to do these tests anyway.
 }
+\examples{
+# Generates two random measurements
+measurement1 <- rnorm(100)
+measurement2 <- rnorm(100)
+
+# Call the function
+blandr.method.comparison( measurement1 , measurement2 )
+
+}
 \references{
 Based on: (1) Bland, J. M., & Altman, D. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The Lancet, 327(8476), 307-310. http://dx.doi.org/10.1016/S0140-6736(86)90837-8
 
 Linnet K., Limitations of the paired t-test for evaluation of method comparison data. Clin Chem. 1999 Feb;45(2):314-5. PMID: 9931067
 
 Zaki R, Bulgiba A, Ismail R, Ismail NA. Statistical Methods Used to Test for Agreement of Medical Instruments Measuring Continuous Variables in Method Comparison Studies: A Systematic Review PLoS ONE 2012 7(5): e37908. doi: 10.1371/journal.pone.0037908
+}
+\author{
+Deepankar Datta <deepankardatta@nhs.net>
 }
