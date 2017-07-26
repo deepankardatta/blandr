@@ -49,7 +49,7 @@ measurement2 <- rnorm(100)
 blandr.proportional.bias( measurement1 , measurement2 )
 
 # Call the function, with title
-blandr.proportional.bias( measurement1 , measurement2 , plotTitle = "Bland-Altman example plot" )
+blandr.proportional.bias( measurement1 , measurement2 , plotTitle = 'Bland-Altman example plot' )
 
 }
 \references{

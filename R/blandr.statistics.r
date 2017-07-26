@@ -56,29 +56,30 @@
 #'
 #' @export
 
-blandr.statistics <- function( method1 , method2 , sig.level = 0.95 , LoA.mode = 1 ) {
-
-    # This sends to the preparation function, which does some sense checks on the data And makes sure that the values
-    # are prepared
+blandr.statistics <- function(method1, method2, sig.level = 0.95, LoA.mode = 1) {
+    
+    # This sends to the preparation function, which does some sense checks on the data And
+    # makes sure that the values are prepared
     ba.data <- blandr.data.preparation(method1, method2, sig.level)
-
+    
     # method1 and method2 are the measurements
     means <- (ba.data$method1 + ba.data$method2)/2
     differences <- ba.data$method1 - ba.data$method2
     bias <- mean(differences)
     biasStdDev <- sd(differences)
-
-    # Convert confidence interval to a two-tailed z-value Don't really need this but kept as a remnant of old version
-    # to possibly use in the future
+    
+    # Convert confidence interval to a two-tailed z-value Don't really need this but kept as
+    # a remnant of old version to possibly use in the future
     alpha <- 1 - sig.level
     sig.level.two.tailed <- 1 - (alpha/2)
     sig.level.convert.to.z <- qnorm(sig.level.two.tailed)
-
-    # Compute the 95% limits of agreement (based on 1st paper) Don't use the significance level supplied to the
-    # function here!  (The significance level is for confidence intervals, not for limits of agreement!)  We want to
-    # know in the sample what limits 95% of the pop resides within The LoA.mode switch can change before the +/-1.96
-    # multiplier used in more recent papers Or the estimated +/-2 multiplier used in the original paper The default
-    # is LoA.mode which gives a LoA.multiplier of 1.96
+    
+    # Compute the 95% limits of agreement (based on 1st paper) Don't use the significance
+    # level supplied to the function here!  (The significance level is for confidence
+    # intervals, not for limits of agreement!)  We want to know in the sample what limits 95%
+    # of the pop resides within The LoA.mode switch can change before the +/-1.96 multiplier
+    # used in more recent papers Or the estimated +/-2 multiplier used in the original paper
+    # The default is LoA.mode which gives a LoA.multiplier of 1.96
     if (LoA.mode == 2) {
         LoA.multiplier <- 2
     } else {
@@ -86,26 +87,29 @@ blandr.statistics <- function( method1 , method2 , sig.level = 0.95 , LoA.mode =
     }
     upperLOA <- bias + (LoA.multiplier * biasStdDev)
     lowerLOA <- bias - (LoA.multiplier * biasStdDev)
-
-    # Confidence intervals (based on 2nd paper) Based on significance level supplied (defaults to 95% CI) For mean
+    
+    # Confidence intervals (based on 2nd paper) Based on significance level supplied
+    # (defaults to 95% CI) For mean
     biasSEM <- sd(differences)/sqrt(length(differences))
     biasCI <- qt(sig.level.two.tailed, df = length(differences) - 1) * biasSEM
     biasUpperCI <- bias + biasCI
     biasLowerCI <- bias - biasCI
     # For limits of agreement LOAVariance from Carkeet
-    LOAVariance <- ((1/length(differences)) + ((sig.level.convert.to.z^2)/(2 * (length(differences) - 1)))) * biasStdDev^2
+    LOAVariance <- ((1/length(differences)) + ((sig.level.convert.to.z^2)/(2 * (length(differences) - 
+        1)))) * biasStdDev^2
     LOA_SEM <- sqrt(LOAVariance)
     LOA_CI <- qt(sig.level.two.tailed, df = length(differences) - 1) * LOA_SEM
     upperLOA_upperCI <- upperLOA + LOA_CI
     upperLOA_lowerCI <- upperLOA - LOA_CI
     lowerLOA_upperCI <- lowerLOA + LOA_CI
     lowerLOA_lowerCI <- lowerLOA - LOA_CI
-
-    return(list(means = means, differences = differences, sig.level = sig.level, sig.level.convert.to.z = sig.level.convert.to.z,
-        bias = bias, biasUpperCI = biasUpperCI, biasLowerCI = biasLowerCI, biasStdDev = biasStdDev, biasSEM = biasSEM,
-        LOA_SEM = LOA_SEM, upperLOA = upperLOA, upperLOA_upperCI = upperLOA_upperCI, upperLOA_lowerCI = upperLOA_lowerCI,
-        lowerLOA = lowerLOA, lowerLOA_upperCI = lowerLOA_upperCI, lowerLOA_lowerCI = lowerLOA_lowerCI)  #CLOSE OF LIST
+    
+    return(list(means = means, differences = differences, sig.level = sig.level, sig.level.convert.to.z = sig.level.convert.to.z, 
+        bias = bias, biasUpperCI = biasUpperCI, biasLowerCI = biasLowerCI, biasStdDev = biasStdDev, 
+        biasSEM = biasSEM, LOA_SEM = LOA_SEM, upperLOA = upperLOA, upperLOA_upperCI = upperLOA_upperCI, 
+        upperLOA_lowerCI = upperLOA_lowerCI, lowerLOA = lowerLOA, lowerLOA_upperCI = lowerLOA_upperCI, 
+        lowerLOA_lowerCI = lowerLOA_lowerCI)  #CLOSE OF LIST
 )  #CLOSE OF RETURN
-
+    
     # END OF FUNCTION
 }

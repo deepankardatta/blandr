@@ -16,7 +16,7 @@ blandr.display.and.draw(method1, method2, plotter = "ggplot",
 
 \item{method2}{A list of numbers.}
 
-\item{plotter}{(Optional- default="ggplot") Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are "ggplot" or "rplot". If unknown parameter sent, will default to "ggplot"}
+\item{plotter}{(Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'}
 
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 
@@ -56,7 +56,7 @@ measurement2 <- rnorm(100)
 blandr.display.and.draw( measurement1 , measurement2 )
 
 # Generates a plot, with title
-blandr.display.and.draw( measurement1 , measurement2 , plotTitle = "Bland-Altman example plot" )
+blandr.display.and.draw( measurement1 , measurement2 , plotTitle = 'Bland-Altman example plot' )
 
 }
 \author{

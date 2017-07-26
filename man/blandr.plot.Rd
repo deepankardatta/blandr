@@ -16,7 +16,7 @@ blandr.plot(method1, method2, plotter = "ggplot", method1name = "Method 1",
 
 \item{method2}{A list of numbers.}
 
-\item{plotter}{(Optional- default="ggplot") Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are "ggplot" or "rplot". If unknown parameter sent, will default to "ggplot"}
+\item{plotter}{(Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'}
 
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 

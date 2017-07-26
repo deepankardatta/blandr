@@ -36,7 +36,8 @@
 #' blandr.ggplot( statistics.results , plotTitle = "Bland-Altman example plot" )
 #'
 #' # Generates a ggplot, with title changed, and confidence intervals off
-#' blandr.ggplot( statistics.results , plotTitle = "Bland-Altman example plot" , ciDisplay = FALSE , ciShading = FALSE )
+#' blandr.ggplot( statistics.results , plotTitle = "Bland-Altman example plot" ,
+#' ciDisplay = FALSE , ciShading = FALSE )
 #'
 #' @export
 

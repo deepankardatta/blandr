@@ -41,8 +41,6 @@ using session charset: UTF-8
 
 There were no ERRORs or WARNINGs.
 
-1 NOTE on "Rd line widths" check
-
 1 NOTE on win-builder: "Possibly mis-spelled words in DESCRIPTION". These words are not mis-spelled.
 
 No errors from revdep

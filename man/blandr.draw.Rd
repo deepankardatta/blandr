@@ -16,7 +16,7 @@ blandr.draw(method1, method2, plotter = "ggplot", method1name = "Method 1",
 
 \item{method2}{A list of numbers.}
 
-\item{plotter}{(Optional- default="ggplot") Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are "ggplot" or "rplot". If unknown parameter sent, will default to "ggplot"}
+\item{plotter}{(Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'}
 
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 
@@ -63,13 +63,14 @@ measurement2 <- rnorm(100)
 blandr.draw( measurement1 , measurement2 )
 
 # Generates a plot, using the in-built R graphics
-blandr.draw( measurement1 , measurement2 , plotter = "rplot" )
+blandr.draw( measurement1 , measurement2 , plotter = 'rplot' )
 
 # Generates a plot, with title changed
-blandr.draw( measurement1 , measurement2 , plotTitle = "Bland-Altman example plot" )
+blandr.draw( measurement1 , measurement2 , plotTitle = 'Bland-Altman example plot' )
 
 # Generates a plot, with title changed, and confidence intervals off
-blandr.draw( measurement1 , measurement2 , plotTitle = "Bland-Altman example plot" , ciDisplay = FALSE , ciShading = FALSE )
+blandr.draw( measurement1 , measurement2 , plotTitle = 'Bland-Altman example plot' ,
+ciDisplay = FALSE , ciShading = FALSE )
 
 }
 \author{

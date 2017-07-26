@@ -26,19 +26,20 @@
 #' @export
 
 blandr.plot.limits <- function(statistics.results, lowest_y_axis = FALSE, highest_y_axis = FALSE) {
-
+    
     # Calculates a margin for error - therefore labelled bounds
     x_bounds <- (max(statistics.results$means) - min(statistics.results$means)) * 0.1  ### this is a margin of error for drawing the x axis
-    y_bounds <- (max(statistics.results$differences) - min(statistics.results$differences)) * 0.1  ### this is a margin of error for drawing the y axis
-
+    y_bounds <- (max(statistics.results$differences) - min(statistics.results$differences)) * 
+        0.1  ### this is a margin of error for drawing the y axis
+    
     # Sets limits for plot on the x-axis
     x_upper <- max(statistics.results$means) + x_bounds
     x_lower <- min(statistics.results$means) - x_bounds
-
+    
     # Sets limits for plot on the y-axis
     y_upper <- max(statistics.results$differences) + y_bounds
     y_lower <- min(statistics.results$differences) - y_bounds
-
+    
     # Ensures that y-axis includes the whole range of confidence intervals
     if (y_upper <= statistics.results$upperLOA_upperCI) {
         y_upper <- statistics.results$upperLOA_upperCI + y_bounds
@@ -46,18 +47,19 @@ blandr.plot.limits <- function(statistics.results, lowest_y_axis = FALSE, highes
     if (y_lower >= statistics.results$lowerLOA_lowerCI) {
         y_lower <- statistics.results$lowerLOA_lowerCI - y_bounds
     }
-
-    # If the user has requested specific limits to the y-axis the following 2 lines execute this
+    
+    # If the user has requested specific limits to the y-axis the following 2 lines execute
+    # this
     if (highest_y_axis != FALSE) {
         y_upper <- highest_y_axis
     }
     if (lowest_y_axis != FALSE) {
         y_lower <- lowest_y_axis
     }
-
+    
     return(list(x_upper = x_upper, x_lower = x_lower, y_upper = y_upper, y_lower = y_lower)  #CLOSE OF LIST
 )  #CLOSE OF RETURN
-
+    
     # END OF FUNCTION
 }
 

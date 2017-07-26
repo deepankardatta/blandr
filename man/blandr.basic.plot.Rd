@@ -54,9 +54,10 @@ plot.limits <- blandr.plot.limits( statistics.results )
 blandr.basic.plot( statistics.results , plot.limits )
 
 # Generates a basic plot, with title changed
-blandr.basic.plot( statistics.results , plot.limits , plotTitle = "Bland-Altman example plot" )
+blandr.basic.plot( statistics.results , plot.limits , plotTitle = 'Bland-Altman example plot' )
 # Generates a basic plot, with title changed, and confidence intervals off
-blandr.basic.plot( statistics.results , plot.limits , plotTitle = "Bland-Altman example plot" , ciDisplay = FALSE , ciShading = FALSE )
+blandr.basic.plot( statistics.results , plot.limits , plotTitle = 'Bland-Altman example plot' ,
+ciDisplay = FALSE , ciShading = FALSE )
 
 }
 \author{

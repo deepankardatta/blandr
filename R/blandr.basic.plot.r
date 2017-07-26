@@ -37,26 +37,26 @@
 #' blandr.basic.plot( statistics.results , plot.limits )
 #'
 #' # Generates a basic plot, with title changed
-#' blandr.basic.plot( statistics.results , plot.limits , plotTitle = "Bland-Altman example plot" )
+#' blandr.basic.plot( statistics.results , plot.limits , plotTitle = 'Bland-Altman example plot' )
 #' # Generates a basic plot, with title changed, and confidence intervals off
-#' blandr.basic.plot( statistics.results , plot.limits , plotTitle = "Bland-Altman example plot" , ciDisplay = FALSE , ciShading = FALSE )
+#' blandr.basic.plot( statistics.results , plot.limits , plotTitle = 'Bland-Altman example plot' ,
+#' ciDisplay = FALSE , ciShading = FALSE )
 #'
 #' @export
 
 blandr.basic.plot <- function(statistics.results, plot.limits, method1name = "Method 1",
-                              method2name = "Method 2",
-                              plotTitle = "Bland-Altman plot for comparison of 2 methods",
-                              annotate = FALSE, ciDisplay = TRUE, ciShading = TRUE,
-                              normalLow = FALSE, normalHigh = FALSE, point_size = 0.8) {
+    method2name = "Method 2", plotTitle = "Bland-Altman plot for comparison of 2 methods",
+    annotate = FALSE, ciDisplay = TRUE, ciShading = TRUE, normalLow = FALSE, normalHigh = FALSE,
+    point_size = 0.8) {
 
     # Plot data
     if (annotate == TRUE) {
         par.default <- par(no.readonly = TRUE)  # Original values
         par(oma = c(1.5, 0, 0, 0))  # 1.5 line2 at the bottom
     }
-    plot(statistics.results$differences ~ statistics.results$means, main = plotTitle, xlab = "Means", ylab = "Differences",
-        xaxs = "i", xlim = c(plot.limits$x_lower, plot.limits$x_upper), ylim = c(plot.limits$y_lower, plot.limits$y_upper),
-        pch = 21, bg = "black", cex = point_size )
+    plot(statistics.results$differences ~ statistics.results$means, main = plotTitle, xlab = "Means",
+        ylab = "Differences", xaxs = "i", xlim = c(plot.limits$x_lower, plot.limits$x_upper),
+        ylim = c(plot.limits$y_lower, plot.limits$y_upper), pch = 21, bg = "black", cex = point_size)
 
     # Drawing mean difference and limit of agreement lines
     ba.lines <- c(-statistics.results$sig.level.convert.to.z, 0, statistics.results$sig.level.convert.to.z)
@@ -70,12 +70,12 @@ blandr.basic.plot <- function(statistics.results, plot.limits, method1name = "Me
             lty = 3)
         # Shading areas for 95% confidence intervals (OPTIONAL)
         if (ciShading == TRUE) {
-            rect(plot.limits$x_lower, statistics.results$biasLowerCI, plot.limits$x_upper, statistics.results$biasUpperCI,
-                border = NA, col = rgb(0, 0, 1, 0.5))
-            rect(plot.limits$x_lower, statistics.results$upperLOA_lowerCI, plot.limits$x_upper, statistics.results$upperLOA_upperCI,
-                border = NA, col = rgb(0, 1, 0, 0.5))
-            rect(plot.limits$x_lower, statistics.results$lowerLOA_lowerCI, plot.limits$x_upper, statistics.results$lowerLOA_upperCI,
-                border = NA, col = rgb(1, 0, 0, 0.5))
+            rect(plot.limits$x_lower, statistics.results$biasLowerCI, plot.limits$x_upper,
+                statistics.results$biasUpperCI, border = NA, col = rgb(0, 0, 1, 0.5))
+            rect(plot.limits$x_lower, statistics.results$upperLOA_lowerCI, plot.limits$x_upper,
+                statistics.results$upperLOA_upperCI, border = NA, col = rgb(0, 1, 0, 0.5))
+            rect(plot.limits$x_lower, statistics.results$lowerLOA_lowerCI, plot.limits$x_upper,
+                statistics.results$lowerLOA_upperCI, border = NA, col = rgb(1, 0, 0, 0.5))
         }
     }
 
@@ -91,12 +91,14 @@ blandr.basic.plot <- function(statistics.results, plot.limits, method1name = "Me
     if (annotate == TRUE) {
         mtext(paste(" Bland-Altman plot for ", method1name, "minus", method2name, "- each plotted point may represent multiple values - with plotted bias, limits of agreement and respective confidence intervals",
             "\n", "In Bland-Altman analyses we want the difference to be as close to 0 as possible with narrow 95% limits of agreement (LOA).",
-            "\n", "n =", length(statistics.results$differences), "\n", "Upper 95% LOA (in green) =", round(statistics.results$upperLOA,
-                1), "(95% CI", round(statistics.results$upperLOA_lowerCI, 2), "-", round(statistics.results$upperLOA_upperCI,
-                2), ")", "\n", "Mean difference (in blue) =", round(statistics.results$bias, 1), "(95% CI", round(statistics.results$biasLowerCI,
-                2), "-", round(statistics.results$biasUpperCI, 2), ")", "\n", "Lower 95% LOA (in red) =", round(statistics.results$lowerLOA,
-                1), "(95% CI", round(statistics.results$lowerLOA_lowerCI, 2), "-", round(statistics.results$lowerLOA_upperCI,
-                2), ")"), cex = 0.3, line = 0, side = SOUTH <- 1, adj = 0, outer = TRUE)
+            "\n", "n =", length(statistics.results$differences), "\n", "Upper 95% LOA (in green) =",
+            round(statistics.results$upperLOA, 1), "(95% CI", round(statistics.results$upperLOA_lowerCI,
+                2), "-", round(statistics.results$upperLOA_upperCI, 2), ")", "\n", "Mean difference (in blue) =",
+            round(statistics.results$bias, 1), "(95% CI", round(statistics.results$biasLowerCI,
+                2), "-", round(statistics.results$biasUpperCI, 2), ")", "\n", "Lower 95% LOA (in red) =",
+            round(statistics.results$lowerLOA, 1), "(95% CI", round(statistics.results$lowerLOA_lowerCI,
+                2), "-", round(statistics.results$lowerLOA_upperCI, 2), ")"), cex = 0.3,
+            line = 0, side = SOUTH <- 1, adj = 0, outer = TRUE)
         par(par.default)  # Reset to original values
     }
 
