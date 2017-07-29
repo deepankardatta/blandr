@@ -28,6 +28,8 @@ I have changed the description to so: "Carries out Bland Altman analyses (also k
 
 (4) write the DOI as <doi:10.1016/S0140-6736(86)90837-8>
 
+=====
+
 Changes in the DESCRIPTION file
 
 ## Test environments

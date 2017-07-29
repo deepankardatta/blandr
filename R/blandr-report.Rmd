@@ -1,0 +1,21 @@
+---
+title: "Bland Altman report"
+author: "blandr automated tool"
+date: '`r strftime(Sys.time(), format = "%B %d, %Y")`'
+output: html_document
+params:
+    method1: NA
+    method2: NA
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+params$method1
+params$method2
+```
+
+## R Markdown
+
+```{r}
+method1
+```

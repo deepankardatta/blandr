@@ -6,6 +6,25 @@ Deepankar Datta
 NEWS for blandr
 ===============
 
+Version 0.4.4-devel: development version
+----------------------------------------
+
+-   0.4.4-devel will not be tagged on GitHub
+-   Development of rmarkdown auto-report function
+-   Development of testthat cases
+
+1st CRAN version - blandr 0.4.3 published on 2017-07-26
+-------------------------------------------------------
+
+-   First version of blandr on CRAN published on 2017-07-27 as version 0.4.3.
+
+Version 0.4.3: 2017-07-26
+-------------------------
+
+-   Minor changes to roxygen2 documentation from CRAN submission feedback
+-   This involves examples into R source files
+-   Some minor spelling and formatting corrections
+
 Version 0.4.2: 2017-07-08
 -------------------------
 
