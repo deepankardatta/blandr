@@ -12,3 +12,4 @@
 ^README-.*\.png$
 ^NEWS\.Rmd$
 ^NEWS-.*\.png$
+^R\blandr-report.html
