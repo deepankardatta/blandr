@@ -29,7 +29,7 @@ Questions to think about when interepreting the data include:
 
 1. Should the two methods be compared?
 2. Is the data correct?
-3. Pre-hoc, what can be thought of as acceptable practical agreement?
+3. *A priori*, what can be thought of as acceptable practical agreement?
 4. In the data is there statistical agreement? (For all intents and purposed this will not be true)
 5. In the data is there practical agreement?
 6. What conclusions can be drawn from the data?

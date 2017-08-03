@@ -9,7 +9,8 @@ blandr.draw(method1, method2, plotter = "ggplot", method1name = "Method 1",
   plotTitle = "Bland-Altman plot for comparison of 2 methods",
   sig.level = 0.95, LoA.mode = 1, annotate = FALSE, ciDisplay = TRUE,
   ciShading = TRUE, normalLow = FALSE, normalHigh = FALSE,
-  lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8)
+  lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8,
+  overlapping = FALSE)
 }
 \arguments{
 \item{method1}{A list of numbers.}
@@ -43,6 +44,8 @@ blandr.draw(method1, method2, plotter = "ggplot", method1name = "Method 1",
 \item{highest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
 
 \item{point_size}{(Optional) Size of marker for each dot. Default is cex=0.8}
+
+\item{overlapping}{(Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, deafult=FALSE. Not currently recommend until I can tweak the graphics to make them better}
 }
 \description{
 Bland-Altman drawing function. Depends on the blandr.statistics function in the package. Will generate a plot via the standard R plotting functions.

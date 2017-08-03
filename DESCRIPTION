@@ -15,12 +15,16 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/deepankardatta/blandr/
 BugReports: https://github.com/deepankardatta/blandr/issues
-Imports: ggplot2, knitr
+Imports: ggplot2, knitr, stringr
 Suggests: rmarkdown
 VignetteBuilder: knitr
 Collate: 
     'blandr.basic.plot.r'
     'blandr.data.preparation.r'
+    'blandr.dataset.fibre.r'
+    'blandr.dataset.o2sats.r'
+    'blandr.dataset.pefr.r'
+    'blandr.dataset.load.r'
     'blandr.ggplot.r'
     'blandr.plot.limits.r'
     'blandr.statistics.r'
@@ -31,4 +35,5 @@ Collate:
     'blandr.method.comparison.r'
     'blandr.plot.r'
     'blandr.proportional.bias.r'
+    'blandr.report.r'
 RoxygenNote: 6.0.1

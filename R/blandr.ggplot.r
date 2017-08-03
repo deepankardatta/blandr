@@ -12,6 +12,7 @@
 #' @param ciShading (Optional) TRUE/FALSE switch to plot confidence interval shading to plot, default=TRUE
 #' @param normalLow (Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its lower boundary
 #' @param normalHigh (Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its higher boundary
+#' @param overlapping (Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, deafult=FALSE. Not currently recommend until I can tweak the graphics to make them better
 #'
 #' @return ba.plot Returns a ggplot data set that can then be plotted
 #'
@@ -45,7 +46,8 @@ blandr.ggplot <- function ( statistics.results , method1name="Method 1" ,
                             method2name="Method 2" ,
                             plotTitle="Bland-Altman plot for comparison of 2 methods" ,
                             ciDisplay=TRUE , ciShading=TRUE ,
-                            normalLow=FALSE , normalHigh=FALSE ) {
+                            normalLow=FALSE , normalHigh=FALSE ,
+                            overlapping=FALSE ) {
 
   plot.data <- data.frame( statistics.results$differences , statistics.results$means )
 
@@ -91,6 +93,10 @@ blandr.ggplot <- function ( statistics.results , method1name="Method 1" ,
       ba.plot <- ba.plot + geom_vline( xintercept = normalHigh , linetype = 4 , col=6 )
     }
 
+  # If overlapping=TRUE uses geom_count
+  if( overlapping == TRUE ) {
+    ba.plot <- ba.plot + geom_count()
+  }
 
   return(ba.plot)
 

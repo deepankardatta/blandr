@@ -40,10 +40,17 @@
 #'
 #' @export
 
-blandr.draw <- function(method1, method2, plotter = "ggplot", method1name = "Method 1", method2name = "Method 2",
-    plotTitle = "Bland-Altman plot for comparison of 2 methods", sig.level = 0.95, LoA.mode = 1,
-    annotate = FALSE, ciDisplay = TRUE, ciShading = TRUE, normalLow = FALSE, normalHigh = FALSE,
-    lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8) {
+blandr.draw <- function( method1 , method2 ,
+                         plotter = "ggplot" ,
+                         method1name = "Method 1" ,
+                         method2name = "Method 2" ,
+                         plotTitle = "Bland-Altman plot for comparison of 2 methods",
+                         sig.level = 0.95, LoA.mode = 1,
+                         annotate = FALSE, ciDisplay = TRUE,
+                         ciShading = TRUE, normalLow = FALSE,
+                         normalHigh = FALSE, lowest_y_axis = FALSE,
+                         highest_y_axis = FALSE, point_size = 0.8,
+                         overlapping = FALSE) {
 
     # Passes data to the blandr.statistics function to generate Bland-Altman statistics
     statistics.results <- blandr.statistics(method1, method2, sig.level, LoA.mode)
@@ -62,9 +69,16 @@ blandr.draw <- function(method1, method2, plotter = "ggplot", method1name = "Met
     } else {
 
         # Pass data to the blandr.ggplot function to use ggplot2 graphics system
-        ba.plot <- blandr.ggplot(statistics.results = statistics.results, method1name = method1name,
-            method2name = method2name, plotTitle = plotTitle, ciDisplay = ciDisplay, ciShading = ciShading,
-            normalLow = normalLow, normalHigh = normalHigh)
+        ba.plot <- blandr.ggplot( statistics.results = statistics.results,
+                                  method1name = method1name,
+                                  method2name = method2name,
+                                  plotTitle = plotTitle,
+                                  ciDisplay = ciDisplay,
+                                  ciShading = ciShading,
+                                  normalLow = normalLow,
+                                  normalHigh = normalHigh ,
+                                  overlapping = overlapping
+                                  )
         ba.plot
 
     }
