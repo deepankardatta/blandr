@@ -47,6 +47,10 @@ lowerLOA Lower limit of agreement
 lowerLOA_upperCI Upper confidence interval of the lower limit of agreement
 
 lowerLOA_lowerCI Lower confidence interval of the lower limit of agreement
+
+proportion Differences/means*100
+
+count Number of observations
 }
 \description{
 Bland-Altman analysis function for R. Package created as existing

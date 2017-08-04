@@ -10,7 +10,7 @@ params:
 
 ```{r setup, include=FALSE}
 library(blandr)
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set( echo = TRUE , cache=TRUE )
 params$method1
 params$method2
 ```
@@ -33,6 +33,17 @@ Questions to think about when interepreting the data include:
 4. In the data is there statistical agreement? (For all intents and purposed this will not be true)
 5. In the data is there practical agreement?
 6. What conclusions can be drawn from the data?
+
+A suggestion by Chhapola et al. on reporting the data includes:
+
+1. correct representation of x-axis on B-A plot
+2. representation and correct definition of limits of agreement (LOA)
+3. reporting of confidence interval (CI) of LOA
+4. comparison of LOA with a priori defined clinical criteria
+5. evaluation of the pattern of the relationship between difference (y-axis) and average (x-axis)
+6. measures of repeatability.
+
+This paper can be found at doi:10.1177/0004563214553438
 
 ## Description of the plots
 
@@ -62,6 +73,7 @@ hist(method2)
 
 ## Comparison of the two data sets
 
+### Raw data output
 ```{r}
 blandr.display ( method1 , method2 , sig.level=0.95 )
 ```

@@ -4,7 +4,8 @@
 \alias{blandr.draw}
 \title{Bland-Altman drawing function for R}
 \usage{
-blandr.draw(method1, method2, plotter = "ggplot", method1name = "Method 1",
+blandr.draw(method1, method2, plotter = "ggplot",
+  y.plot.mode = "difference", method1name = "Method 1",
   method2name = "Method 2",
   plotTitle = "Bland-Altman plot for comparison of 2 methods",
   sig.level = 0.95, LoA.mode = 1, annotate = FALSE, ciDisplay = TRUE,
@@ -18,6 +19,8 @@ blandr.draw(method1, method2, plotter = "ggplot", method1name = "Method 1",
 \item{method2}{A list of numbers.}
 
 \item{plotter}{(Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'}
+
+\item{y.plot.mode}{(Optional) Switch to change y-axis from being plotted by difference (="difference") or by proportion magnitude of measurements (="proportion"). Default is "difference". Anything other than "proportional" will switch to default mode.}
 
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 

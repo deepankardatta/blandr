@@ -24,6 +24,8 @@ pefr.data <- blandr.dataset.pefr()
 https://www-users.york.ac.uk/~mb55/datasets/pefr.dct - The PEFR dataset from Martin Bland's website
 
 https://www-users.york.ac.uk/~mb55/datasets/datasets.htm - Martin Bland's example data-set webpage
+
+Bland JM, Altman DG. (1986) Statistical methods for assessing agreement between two methods of clinical measurement. Lancet i, 307-310.
 }
 \author{
 Deepankar Datta <deepankardatta@nhs.net>

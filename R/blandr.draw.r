@@ -42,6 +42,7 @@
 
 blandr.draw <- function( method1 , method2 ,
                          plotter = "ggplot" ,
+                         y.plot.mode = "difference" ,
                          method1name = "Method 1" ,
                          method2name = "Method 2" ,
                          plotTitle = "Bland-Altman plot for comparison of 2 methods",
@@ -70,6 +71,7 @@ blandr.draw <- function( method1 , method2 ,
 
         # Pass data to the blandr.ggplot function to use ggplot2 graphics system
         ba.plot <- blandr.ggplot( statistics.results = statistics.results,
+                                  y.plot.mode = y.plot.mode ,
                                   method1name = method1name,
                                   method2name = method2name,
                                   plotTitle = plotTitle,

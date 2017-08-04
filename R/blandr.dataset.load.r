@@ -4,7 +4,8 @@
 #'
 #' @note Dataset 1 ("1","PEFR","pefr") - Bland Altman PEFR dataset (from \code{blandr.dataset.pefr})
 #' @note Dataset 2 ("2","o2sats","sealey") - Selaey oxygen saturations dataset (from \code{blandr.dataset.o2sats})
-#' @note Dataset 2 ("3","fibre","darbela") - D'arbela mean velocity of circumferential fibre shortening dataset (from \code{blandr.dataset.fibre})
+#' @note Dataset 3 ("3","fibre","darbela") - D'arbela mean velocity of circumferential fibre shortening dataset (from \code{blandr.dataset.fibre})
+#' @note Dataset 4 ("4","sbp","close") - Close systolic blood pressure dataset (from \code{blandr.dataset.sbp})
 #'
 #' @author Deepankar Datta <deepankardatta@nhs.net>
 #'
@@ -15,6 +16,7 @@
 #' @include blandr.dataset.pefr.r
 #' @include blandr.dataset.o2sats.r
 #' @include blandr.dataset.fibre.r
+#' @include blandr.dataset.sbp.r
 #'
 #' @examples
 #' blandr.dataset.load( "pefr" )
@@ -37,6 +39,10 @@ blandr.dataset.load <- function( dataset.name ) {
   if( dataset.name=="fibre" ) { example.dataset <- blandr.dataset.fibre() }
   if( dataset.name=="darbela" ) { example.dataset <- blandr.dataset.fibre() }
   if( dataset.name=="3" ) { example.dataset <- blandr.dataset.fibre() }
+  # Systolic blood pressure
+  if( dataset.name=="sbp" ) { example.dataset <- blandr.dataset.sbp() }
+  if( dataset.name=="close" ) { example.dataset <- blandr.dataset.sbp() }
+  if( dataset.name=="4" ) { example.dataset <- blandr.dataset.sbp() }
 
   # STOP condition if no valid dataset name
   # Works this out by seeing if the example.dataset variable has been created

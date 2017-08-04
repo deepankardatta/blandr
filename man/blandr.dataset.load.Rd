@@ -20,7 +20,9 @@ Dataset 1 ("1","PEFR","pefr") - Bland Altman PEFR dataset (from \code{blandr.dat
 
 Dataset 2 ("2","o2sats","sealey") - Selaey oxygen saturations dataset (from \code{blandr.dataset.o2sats})
 
-Dataset 2 ("3","fibre","darbela") - D'arbela mean velocity of circumferential fibre shortening dataset (from \code{blandr.dataset.fibre})
+Dataset 3 ("3","fibre","darbela") - D'arbela mean velocity of circumferential fibre shortening dataset (from \code{blandr.dataset.fibre})
+
+Dataset 4 ("4","sbp","close") - Close systolic blood pressure dataset (from \code{blandr.dataset.sbp})
 }
 \examples{
 blandr.dataset.load( "pefr" )
