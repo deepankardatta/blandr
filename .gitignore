@@ -22,7 +22,7 @@ vignettes/*.html
 vignettes/*.pdf
 
 # produced reports
-R\blandr-report.html
+R/*.html
 
 # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
 .httr-oauth
