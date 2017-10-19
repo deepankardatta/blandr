@@ -20,10 +20,9 @@ This package was started in 2015 as existing Bland-Altman R functions did not ca
 
 ## The benefits
 
-* Calculates confidence intervals
+* Calculates and plots confidence intervals
 * Outputs ggplot2 information to create extensible plots
 * Has a function to chart for proportional bias
-* If you get me through GitHub, I will do my best to maintain and improve this package
 
 # Citations
 
@@ -58,13 +57,11 @@ blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWri
 
 ## Why release a version <1.0?
 
-I am believer that if the function is good enough to work, I should just publish, see if others can improve it and just iterate slowly to get to a version 1.0. What counts as a 1.0? Well I'd like other people to help validate it, and add a few more functions, to a point there should not be much more to add to this.
+The basic functions work - and so I am releasing this as a "Minimum Viable Product" (https://en.wikipedia.org/wiki/Minimum_viable_product). I'm hoping to iterate the package, add a few more functions and get them validated, leading to a 1.0 version I won't have to change.
 
-From what I've read this is what's called a "Minimum Viable Product" (https://en.wikipedia.org/wiki/Minimum_viable_product).
+## Why the odd name?
 
-## Why the name?
-
-Thinking of a unique name was difficult - and it wasn't worth spending/wasting time on this initially. Curiously it was going to be called BlandAltmanEdinburgh (as I was in Edinburgh at the time I made this) until I considerd uploading this to GitHub and CRAN.
+Thinking of a unique name was difficult - if you look through the history of the sources the package had a very 	cumbersome name. This had to change when uploading to CRAN as it seemed to be frowned upon.
 
 Hadley Wickham has an excellent set of documentation on creating packages. The one on naming (http://r-pkgs.had.co.nz/package.html) is worth a read. Reflecting on it a lot of the naming issues are to prevent collisions with similarly named packages, so using *blandaltman* in the name might have cause problems. Mirroring the pre-existing *plyr* and *knitr* I thought I'd just add a "r" to "bland": yes it doesn't involve Altman's name, but I couldn't think of anything better.
 
@@ -80,7 +77,6 @@ Whilst this package is good enough for use, there is the scope for iterative imp
 
 Future works include:
 
-* I need to take out the last references to *BlandAltmanEdinburgh* and change it to *blandr*.
 * There are a further few deprecated functions to delete (I just need to finish a few projects first!!).
 * The package needs to have to go through some validation and testing
 * For further testing I need to write some *testhtat* modules
