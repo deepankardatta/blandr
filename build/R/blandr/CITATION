@@ -1,0 +1,13 @@
+citHeader("To cite blandr in publications, please use:")
+
+citEntry(entry = "manual",
+    title = "blandr: a Bland-Altman Method Comparison package for R",
+    author = "Deepankar Datta",
+    doi = "10.5281/zenodo.824514",
+    year = "2017",
+    url = "https://github.com/deepankardatta/blandr",
+    textVersion  = paste("Datta, D. (2017).",
+        "blandr: a Bland-Altman Method Comparison package for R.",
+        "Zenodo. <DOI:10.5281/zenodo.824514>",
+        "https://github.com/deepankardatta/blandr")
+)

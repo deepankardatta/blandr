@@ -1,0 +1,27 @@
+---
+title: Bland-Altman Method Comparison For Jamovi
+name: blandr
+version: 0.0.1
+jms: '1.0'
+authors:
+  - Deepankar Datta
+maintainer: Deepankar Datta <yourself@somewhere.net>
+date: '2018-02-16'
+type: R
+description: >-
+  Implements Bland-Altman method comparison analysis in Jamovi using the blandr
+  R library from CRAN. The Jamovi library is now integrated into the main blandr
+  libary.
+analyses:
+  - title: Bland-Altman statistics
+    name: jamoviBAstats
+    ns: blandr
+    menuGroup: blandr
+    menuTitle: Bland-Altman statistics
+  - title: Bland-Altman analysis
+    name: jamoviBAanalysis
+    ns: blandr
+    menuGroup: blandr
+    menuTitle: Bland-Altman analysis
+
+...

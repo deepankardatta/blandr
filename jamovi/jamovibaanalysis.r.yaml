@@ -1,0 +1,33 @@
+---
+name:  jamoviBAanalysis
+title: Bland-Altman analysis
+jrs:   '1.1'
+
+items:
+    - name:  table
+      title: Bland-Altman table
+      type: Table
+      rows:  1
+      columns:
+        - name: observations
+          title: 'No of observations'
+          type: number
+        - name: bias
+          title: 'Bias'
+          type: number
+        - name: upperLOA
+          title: 'Upper limit of agreement'
+          type: number
+        - name: lowerLOA
+          title: 'Lower limit of agreement'
+          type: number
+
+    - name: plot
+      title: Bland-Altman Plot
+      type: Image
+      width:  400
+      height: 300
+      renderFun: .plot
+
+
+...

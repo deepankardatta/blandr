@@ -1,0 +1,11 @@
+---
+name:  jamoviBAstats
+title: Bland-Altman statistics
+jrs:   '1.1'
+
+items:
+    - name:  text
+      title: Bland-Altman statistics
+      type:  Preformatted
+
+...

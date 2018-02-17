@@ -1,0 +1,29 @@
+---
+name:  jamoviBAanalysis
+title: Bland-Altman analysis
+menuGroup: blandr
+version: '1.0.0'
+jas: '1.1'
+
+options:
+    - name: data
+      type: Data
+
+    - name: method1
+      title: Method 1
+      type: Variable
+
+    - name: method2
+      title: Method 2
+      type: Variable
+
+    - name: ciDisplay
+      title: Display confidence intervals
+      type: Bool
+      default: true
+
+    - name: ciShading
+      title: Display confidence interval shadings
+      type: Bool
+      default: true
+...

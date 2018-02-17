@@ -1,0 +1,39 @@
+bland.altman.PEFR.1986
+                        Sample PEFR comparison data from Bland-Altman
+                        (1986)
+blandr.basic.plot       Bland-Altman plotting function, using basic R
+                        drawing functions
+blandr.data.preparation
+                        Data preparation for method comparison analysis
+blandr.dataset.fibre    Function to load D'arbela mean velocity of
+                        circumferential fibre shortening dataset from
+                        internet
+blandr.dataset.load     Function to load example data sets
+blandr.dataset.o2sats   Function to load Bland-Altman oxygen saturation
+                        dataset from internet
+blandr.dataset.pefr     Function to load Bland-Altman PEFR dataset from
+                        internet
+blandr.dataset.sbp      Function to load Close systolic blood pressure
+                        dataset from internet
+blandr.display          Bland-Altman summary statistics display
+                        function
+blandr.display.and.draw
+                        Bland-Altman display and draw for R
+blandr.display.and.plot
+                        (DEPRECATED) Bland-Altman display and plot for
+                        R
+blandr.draw             Bland-Altman drawing function for R
+blandr.ggplot           Bland-Altman plotting function, using ggplot2
+blandr.method.comparison
+                        Bland-Altman method comparison
+blandr.plot             (DEPRECATED) Bland-Altman drawing function for
+                        R
+blandr.plot.limits      Bland-Altman plot limits for R
+blandr.proportional.bias
+                        Bland-Altman function to look for proportional
+                        bias
+blandr.report           Bland-Altman report generating function (BETA)
+blandr.statistics       Bland-Altman statistics for R
+giavarina.2015          Sample comparison data from Giavarina (2015)
+jamoviBAanalysis        Bland-Altman analysis
+jamoviBAstats           Bland-Altman statistics

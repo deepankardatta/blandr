@@ -7,7 +7,7 @@ Description: Carries out Bland Altman analyses (also known as a Tukey
     2015 as existing Bland-Altman analysis functions did not calculate 
     confidence intervals. This package was created to rectify this, 
     and create reproducible plots.
-Depends: R (>= 3.4.0)
+Depends: R (>= 3.3.0)
 Authors@R: person("Deepankar", "Datta", email = "deepankardatta@nhs.net",
                   role = c("aut", "cre"))
 License: GPL-3
@@ -15,7 +15,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/deepankardatta/blandr/
 BugReports: https://github.com/deepankardatta/blandr/issues
-Imports: ggplot2, knitr, stringr
+Imports: ggplot2, knitr, stringr, jmvcore (>= 0.5.5), R6
 Suggests: rmarkdown, testthat
 VignetteBuilder: knitr
 Collate: 
@@ -36,5 +36,9 @@ Collate:
     'blandr.method.comparison.r'
     'blandr.plot.r'
     'blandr.proportional.bias.r'
-    'blandr.report.r'
+    'blandr.report.R'
+    'jamovibaanalysis.b.R'
+    'jamovibaanalysis.h.R'
+    'jamovibastats.b.R'
+    'jamovibastats.h.R'
 RoxygenNote: 6.0.1
