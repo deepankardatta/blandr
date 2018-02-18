@@ -64,3 +64,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .Rproj.user
+
+# Jamovi build files
+/build/js
+/build/R
+/*.jmo
