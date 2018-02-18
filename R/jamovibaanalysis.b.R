@@ -40,7 +40,7 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
         },
 
-        .plot=function(image, ...) {  # <-- the plot function
+        .plot=function(image, ggtheme, ...) {
 
           if ( !is.null(self$options$method1) && !is.null(self$options$method2) ) {
 
@@ -48,6 +48,7 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           plot <-  blandr.ggplot( plotData ,
                                   ciDisplay = self$options$ciDisplay,
                                   ciShading = self$options$ciShading )
+          plot <- plot + ggtheme
           print(plot)
           TRUE
 
