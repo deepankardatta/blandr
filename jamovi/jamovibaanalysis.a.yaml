@@ -1,6 +1,6 @@
 ---
 name:  jamoviBAanalysis
-title: Bland-Altman analysis
+title: Bland-Altman Analysis
 menuGroup: blandr
 version: '1.0.0'
 jas: '1.1'
@@ -18,12 +18,12 @@ options:
       type: Variable
 
     - name: ciDisplay
-      title: Display confidence intervals
+      title: Confidence intervals
       type: Bool
       default: true
 
     - name: ciShading
-      title: Display confidence interval shadings
+      title: Confidence interval shadings
       type: Bool
       default: true
 ...

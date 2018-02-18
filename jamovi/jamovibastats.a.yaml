@@ -1,6 +1,6 @@
 ---
 name:  jamoviBAstats
-title: Bland-Altman statistics
+title: Bland-Altman Statistics
 menuGroup: blandr
 version: '1.0.0'
 jas: '1.1'
