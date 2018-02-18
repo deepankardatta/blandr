@@ -66,6 +66,6 @@ Temporary Items
 .Rproj.user
 
 # Jamovi build files
-/build/js
-/build/R
-/*.jmo
+/build/*.js
+/build/*.R
+*.jmo
