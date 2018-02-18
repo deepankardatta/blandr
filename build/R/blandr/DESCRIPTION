@@ -31,4 +31,4 @@ Collate: 'blandr.basic.plot.r' 'blandr.data.preparation.r'
 RoxygenNote: 6.0.1
 Author: Deepankar Datta [aut, cre]
 Maintainer: Deepankar Datta <deepankardatta@nhs.net>
-Built: R 3.3.0; ; 2018-02-18 00:40:04 UTC; unix
+Built: R 3.3.0; ; 2018-02-18 12:12:30 UTC; unix

@@ -2,7 +2,7 @@
 % Please edit documentation in R/jamovibastats.h.R
 \name{jamoviBAstats}
 \alias{jamoviBAstats}
-\title{Bland-Altman statistics}
+\title{Bland-Altman Statistics}
 \usage{
 jamoviBAstats(data, method1, method2)
 }
@@ -20,5 +20,5 @@ A results object containing:
 }
 }
 \description{
-Bland-Altman statistics
+Bland-Altman Statistics
 }

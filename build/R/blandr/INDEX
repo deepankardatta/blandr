@@ -35,5 +35,5 @@ blandr.proportional.bias
 blandr.report           Bland-Altman report generating function (BETA)
 blandr.statistics       Bland-Altman statistics for R
 giavarina.2015          Sample comparison data from Giavarina (2015)
-jamoviBAanalysis        Bland-Altman analysis
-jamoviBAstats           Bland-Altman statistics
+jamoviBAanalysis        Bland-Altman Analysis
+jamoviBAstats           Bland-Altman Statistics

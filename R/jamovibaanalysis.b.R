@@ -44,10 +44,17 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
           if ( !is.null(self$options$method1) && !is.null(self$options$method2) ) {
 
+            #
+            if ( self$options$titleOfPlot == "" ) {
+              titleOfPlot <- "Bland-Altman Plot"
+            }
+            else { titleOfPlot <- self$options$titleOfPlot }
+
           plotData <- image$state
           plot <-  blandr.ggplot( plotData ,
                                   ciDisplay = self$options$ciDisplay,
-                                  ciShading = self$options$ciShading )
+                                  ciShading = self$options$ciShading,
+                                  plotTitle = titleOfPlot )
           plot <- plot + ggtheme
           print(plot)
           TRUE

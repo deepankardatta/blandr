@@ -3,7 +3,7 @@
 
 'use strict';
 
-const options = [{"name":"data","type":"Data"},{"name":"method1","title":"Method 1","type":"Variable"},{"name":"method2","title":"Method 2","type":"Variable"},{"name":"ciDisplay","title":"Display confidence intervals","type":"Bool","default":true},{"name":"ciShading","title":"Display confidence interval shadings","type":"Bool","default":true}];
+const options = [{"name":"data","type":"Data"},{"name":"method1","title":"Method 1","type":"Variable"},{"name":"method2","title":"Method 2","type":"Variable"},{"name":"ciDisplay","title":"Confidence intervals","type":"Bool","default":true},{"name":"ciShading","title":"Confidence interval shadings","type":"Bool","default":true},{"name":"titleOfPlot","title":"Plot title","type":"String"}];
 
 const view = View.extend({
     jus: "2.0",
@@ -16,7 +16,7 @@ const view = View.extend({
 
 view.layout = ui.extend({
 
-    label: "Bland-Altman analysis",
+    label: "Bland-Altman Analysis",
     jus: "2.0",
     type: "root",
     stage: 0, //0 - release, 1 - development, 2 - proposed
@@ -63,6 +63,17 @@ view.layout = ui.extend({
 				{
 					type: DefaultControls.CheckBox,
 					name: "ciShading"
+				}
+			]
+		},
+		{
+			type: DefaultControls.LayoutBox,
+			margin: "large",
+			controls: [
+				{
+					type: DefaultControls.TextBox,
+					name: "titleOfPlot",
+					format: FormatDef.string
 				}
 			]
 		}

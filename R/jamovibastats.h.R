@@ -43,7 +43,7 @@ jamoviBAstatsResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             super$initialize(
                 options=options,
                 name="",
-                title="Bland-Altman statistics")
+                title="Bland-Altman Statistics")
             self$add(jmvcore::Preformatted$new(
                 options=options,
                 name="text",
@@ -68,7 +68,7 @@ jamoviBAstatsBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Bland-Altman statistics
+#' Bland-Altman Statistics
 #'
 #' 
 #' @param data .

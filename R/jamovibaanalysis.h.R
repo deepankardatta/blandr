@@ -9,7 +9,8 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
             method1 = NULL,
             method2 = NULL,
             ciDisplay = TRUE,
-            ciShading = TRUE, ...) {
+            ciShading = TRUE,
+            titleOfPlot = NULL, ...) {
 
             super$initialize(
                 package='blandr',
@@ -31,22 +32,28 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
                 "ciShading",
                 ciShading,
                 default=TRUE)
+            private$..titleOfPlot <- jmvcore::OptionString$new(
+                "titleOfPlot",
+                titleOfPlot)
 
             self$.addOption(private$..method1)
             self$.addOption(private$..method2)
             self$.addOption(private$..ciDisplay)
             self$.addOption(private$..ciShading)
+            self$.addOption(private$..titleOfPlot)
         }),
     active = list(
         method1 = function() private$..method1$value,
         method2 = function() private$..method2$value,
         ciDisplay = function() private$..ciDisplay$value,
-        ciShading = function() private$..ciShading$value),
+        ciShading = function() private$..ciShading$value,
+        titleOfPlot = function() private$..titleOfPlot$value),
     private = list(
         ..method1 = NA,
         ..method2 = NA,
         ..ciDisplay = NA,
-        ..ciShading = NA)
+        ..ciShading = NA,
+        ..titleOfPlot = NA)
 )
 
 jamoviBAanalysisResults <- if (requireNamespace('jmvcore')) R6::R6Class(
@@ -60,33 +67,37 @@ jamoviBAanalysisResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             super$initialize(
                 options=options,
                 name="",
-                title="Bland-Altman analysis")
+                title="Bland-Altman Analysis")
             self$add(jmvcore::Table$new(
                 options=options,
                 name="table",
-                title="Bland-Altman table",
+                title="Bland-Altman",
                 rows=1,
+                clearWith=list(
+                    "method1",
+                    "method2"),
                 columns=list(
                     list(
                         `name`="observations", 
-                        `title`="No of observations", 
+                        `title`="N", 
                         `type`="number"),
                     list(
                         `name`="bias", 
                         `title`="Bias", 
                         `type`="number"),
                     list(
-                        `name`="upperLOA", 
-                        `title`="Upper limit of agreement", 
+                        `name`="lowerLOA", 
+                        `superTitle`="Limit of Agreement", 
+                        `title`="Lower", 
                         `type`="number"),
                     list(
-                        `name`="lowerLOA", 
-                        `title`="Lower limit of agreement", 
+                        `name`="upperLOA", 
+                        `superTitle`="Limit of Agreement", 
+                        `title`="Upper", 
                         `type`="number"))))
             self$add(jmvcore::Image$new(
                 options=options,
                 name="plot",
-                title="Bland-Altman Plot",
                 width=400,
                 height=300,
                 renderFun=".plot"))}))
@@ -110,7 +121,7 @@ jamoviBAanalysisBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Bland-Altman analysis
+#' Bland-Altman Analysis
 #'
 #' 
 #' @param data .
@@ -118,6 +129,7 @@ jamoviBAanalysisBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @param method2 .
 #' @param ciDisplay .
 #' @param ciShading .
+#' @param titleOfPlot .
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$table} \tab \tab \tab \tab \tab a table \cr
@@ -136,7 +148,8 @@ jamoviBAanalysis <- function(
     method1,
     method2,
     ciDisplay = TRUE,
-    ciShading = TRUE) {
+    ciShading = TRUE,
+    titleOfPlot) {
 
     if ( ! requireNamespace('jmvcore'))
         stop('jamoviBAanalysis requires jmvcore to be installed (restart may be required)')
@@ -145,7 +158,8 @@ jamoviBAanalysis <- function(
         method1 = method1,
         method2 = method2,
         ciDisplay = ciDisplay,
-        ciShading = ciShading)
+        ciShading = ciShading,
+        titleOfPlot = titleOfPlot)
 
     results <- jamoviBAanalysisResults$new(
         options = options)
