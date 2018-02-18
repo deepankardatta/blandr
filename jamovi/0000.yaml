@@ -13,15 +13,15 @@ description: >-
   R library from CRAN. The Jamovi library is now integrated into the main blandr
   libary.
 analyses:
-  - title: Bland-Altman statistics
+  - title: Bland-Altman Statistics
     name: jamoviBAstats
     ns: blandr
     menuGroup: blandr
-    menuTitle: Bland-Altman statistics
-  - title: Bland-Altman analysis
+    menuTitle: Bland-Altman Statistics
+  - title: Bland-Altman Analysis
     name: jamoviBAanalysis
     ns: blandr
     menuGroup: blandr
-    menuTitle: Bland-Altman analysis
+    menuTitle: Bland-Altman Analysis
 
 ...
