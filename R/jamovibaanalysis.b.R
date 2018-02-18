@@ -7,6 +7,8 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
     private = list(
         .run = function() {
 
+          if ( !is.null(self$options$method1) && !is.null(self$options$method2) ) {
+
           # read the option values into shorter variable names
           method1 <- self$options$method1
           method2 <- self$options$method2
@@ -34,15 +36,22 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           image <- self$results$plot
           image$setState(results)
 
+          } # close if function for calculations
 
         },
+
         .plot=function(image, ...) {  # <-- the plot function
+
+          if ( !is.null(self$options$method1) && !is.null(self$options$method2) ) {
+
           plotData <- image$state
           plot <-  blandr.ggplot( plotData ,
                                   ciDisplay = self$options$ciDisplay,
                                   ciShading = self$options$ciShading )
           print(plot)
           TRUE
+
+        } # close if function for plot
 
         })
 )

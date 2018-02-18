@@ -7,6 +7,8 @@ jamoviBAstatsClass <- if (requireNamespace('jmvcore')) R6::R6Class(
     private = list(
         .run = function() {
 
+          if ( !is.null(self$options$method1) && !is.null(self$options$method2) ) {
+
           # read the option values into shorter variable names
           method1 <- self$options$method1
           method2 <- self$options$method2
@@ -26,6 +28,7 @@ jamoviBAstatsClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           print(results)
           # following for Jamovi output
           self$results$text$setContent(results)
+        }
 
         })
 )
