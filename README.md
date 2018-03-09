@@ -5,13 +5,16 @@ blandr: a Bland-Altman Method Comparison package for R
 
 *blandr* carries out Bland Altman analyses (also known as a Tukey mean-difference plot) as described by JM Bland and DG Altman in 1986.
 
-This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals: my belief is that when drawing Bland-Altman plots, confidence intervals should be considered the gold-standard. *blandr* fulfils this need!
+This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals. The *blandr* was created to fulfil this need.
+
+*blandr* has been improved iteratively over time, and hopefully this library will be useful to researchers as an open-source and reproducible package.
 
 The benefits
 ------------
 
 -   Calculates confidence intervals
 -   Outputs ggplot2 information to create extensible plots
+-   Has a basic Jamovi module, to allow GUI analysis for those not comfortable with command line tools
 -   Has a function to chart for proportional bias
 -   If you get me through GitHub, I will do my best to maintain and improve this package
 
@@ -45,14 +48,19 @@ The DOI will refer to all versions of blandr. If you need to cite specific relea
 Installation
 ------------
 
-You can install blandr from github with:
+blandr is available as a package from CRAN and can be installed with the following commands:
+
+``` r
+install.packages("blandr")
+library(blandr)
+```
+
+You can install the blandr development version, hosted on github at <https://github.com/deepankardatta/blandr/>, with the following commands:
 
 ``` r
 install.packages("devtools")
 devtools::install_github("deepankardatta/blandr")
 ```
-
-Currently the code is hosted at <https://github.com/deepankardatta/blandr/> - in future I hope it will be available on CRAN for easy integration into R
 
 Example
 -------
@@ -66,12 +74,15 @@ blandr.display ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$Min
 blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst )
 ```
 
-Why release a version &lt;1.0?
-------------------------------
+The Jamovi module
+-----------------
+One of the benefits of the current version is that it includes a basic module for the Jamovi GUI statistical spreadsheet (<https://www.jamovi.org/>). I'm a believer in making this tool more accesible and Jamovi is a way to do this. The Jamovi module is still under development, and will be submitted to the Jamovi module repository soon. However until this is done, it can be installed using the following commands:
 
-I am believer that if the function is good enough to work, I should just publish, see if others can improve it and just iterate slowly to get to a version 1.0. What counts as a 1.0? Well I'd like other people to help validate it, and add a few more functions, to a point there should not be much more to add to this.
-
-From what I've read this is what's called a "Minimum Viable Product" (<https://en.wikipedia.org/wiki/Minimum_viable_product>).
+``` r
+install.packages('jmvtools', repos=c('https://repo.jamovi.org', 'https://cran.r-project.org'))
+library(jmvtools)
+jmvtools::install()
+```
 
 Why the name?
 -------------
@@ -94,13 +105,14 @@ Whilst this package is good enough for use, there is the scope for iterative imp
 
 Future works include:
 
--   I need to take out the last references to *BlandAltmanEdinburgh* and change it to *blandr*.
 -   There are a further few deprecated functions to delete (I just need to finish a few projects first!!).
 -   The package needs to have to go through some validation and testing
 -   For further testing I need to write some *testhtat* modules
 -   The function descriptions needs to be improved
 -   Some of the roxygen2 documentation can be improved by calling the import parameters function
--   I want to add a few more sample data packs: including some of my own if possible!
+-   I want to add a few more sample data packs: including some of my own if possible
+-   Development of a report generator
+-   Development of the Jamovi module
 
 Help wanted!
 ------------

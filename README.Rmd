@@ -16,13 +16,17 @@ knitr::opts_chunk$set(
 
 *blandr* carries out Bland Altman analyses (also known as a Tukey mean-difference plot) as described by JM Bland and DG Altman in 1986.
 
-This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals: my belief is that when drawing Bland-Altman plots, confidence intervals should be considered the gold-standard. *blandr* fulfils this need!
+This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals. The *blandr* was created to fulfil this need.
+
+*blandr* has been improved iteratively over time, and hopefully this library will be useful to researchers as an open-source and reproducible package.
 
 ## The benefits
 
 * Calculates and plots confidence intervals
 * Outputs ggplot2 information to create extensible plots
+* Has a basic Jamovi module, to allow GUI analysis for those not comfortable with command line tools
 * Has a function to chart for proportional bias
+* If you get me through GitHub, I will do my best to maintain and improve this package
 
 # Citations
 
@@ -35,14 +39,19 @@ The DOI will refer to all versions of blandr. If you need to cite specific relea
 
 ## Installation
 
-You can install blandr from github with:
+blandr is available as a package from CRAN and can be installed with the following commands:
+
+```{r gh-installation, eval = FALSE}
+install.packages("blandr")
+library(blandr)
+```
+
+You can install the blandr development version, hosted on github at https://github.com/deepankardatta/blandr/, with the following commands:
 
 ```{r gh-installation, eval = FALSE}
 install.packages("devtools")
 devtools::install_github("deepankardatta/blandr")
 ```
-
-Currently the code is hosted at https://github.com/deepankardatta/blandr/ - in future I hope it will be available on CRAN for easy integration into R
 
 ## Example
 
@@ -55,9 +64,15 @@ blandr.display ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$Min
 blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst )
 ```
 
-## Why release a version <1.0?
+## The Jamovi module
 
-The basic functions work - and so I am releasing this as a "Minimum Viable Product" (https://en.wikipedia.org/wiki/Minimum_viable_product). I'm hoping to iterate the package, add a few more functions and get them validated, leading to a 1.0 version I won't have to change.
+One of the benefits of the current version is that it includes a basic module for the Jamovi GUI statistical spreadsheet (https://www.jamovi.org/). I'm a believer in making this tool more accesible and Jamovi is a way to do this. The Jamovi module is still under development, and will be submitted to the Jamovi module repository soon. However until this is done, it can be installed using the following commands:
+
+```{r gh-installation, eval = FALSE}
+install.packages('jmvtools', repos=c('https://repo.jamovi.org', 'https://cran.r-project.org'))
+library(jmvtools)
+jmvtools::install()
+```
 
 ## Why the odd name?
 
@@ -82,7 +97,9 @@ Future works include:
 * For further testing I need to write some *testhtat* modules
 * The function descriptions needs to be improved
 * Some of the roxygen2 documentation can be improved by calling the import parameters function
-* I want to add a few more sample data packs: including some of my own if possible!
+* I want to add a few more sample data packs: including some of my own if possible
+* Development of a report generator
+* Further development of the Jamovi module
 
 ## Help wanted!
 

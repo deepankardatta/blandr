@@ -1,5 +1,6 @@
 # Gets the newest version
-install.packages('jmvtools', repos=c('https://repo.jamovi.org', 'https://cran.r-project.org'))
+# install.packages('jmvtools', repos=c('https://repo.jamovi.org', 'https://cran.r-project.org'))
+library(jmvtools)
 
 # Checks if can find current version
 jmvtools::check()
