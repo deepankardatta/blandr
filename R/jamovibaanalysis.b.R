@@ -44,7 +44,7 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
           if ( !is.null(self$options$method1) && !is.null(self$options$method2) ) {
 
-            #
+            # Attempt to introduce a way to customise the plot
             if ( self$options$titleOfPlot == "" ) {
               titleOfPlot <- "Bland-Altman Plot"
             }
