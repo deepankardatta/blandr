@@ -58,7 +58,10 @@
 #'
 #' @export
 
-blandr.statistics <- function(method1, method2, sig.level = 0.95, LoA.mode = 1) {
+blandr.statistics <- function( method 1,
+                               method2 ,
+                               sig.level = 0.95,
+                               LoA.mode = 1) {
 
     # This sends to the preparation function, which does some sense checks on the data And
     # makes sure that the values are prepared
