@@ -58,7 +58,7 @@
 #'
 #' @export
 
-blandr.statistics <- function( method 1,
+blandr.statistics <- function( method1,
                                method2 ,
                                sig.level = 0.95,
                                LoA.mode = 1) {
