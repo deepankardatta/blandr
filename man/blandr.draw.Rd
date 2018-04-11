@@ -4,23 +4,20 @@
 \alias{blandr.draw}
 \title{Bland-Altman drawing function for R}
 \usage{
-blandr.draw(method1, method2, plotter = "ggplot",
-  y.plot.mode = "difference", method1name = "Method 1",
+blandr.draw(method1, method2, method1name = "Method 1",
   method2name = "Method 2",
   plotTitle = "Bland-Altman plot for comparison of 2 methods",
   sig.level = 0.95, LoA.mode = 1, annotate = FALSE, ciDisplay = TRUE,
   ciShading = TRUE, normalLow = FALSE, normalHigh = FALSE,
   lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8,
-  overlapping = FALSE)
+  overlapping = FALSE, plotter = "ggplot", x.plot.mode = "means",
+  y.plot.mode = "difference", plotProportionalBias = FALSE,
+  plotProportionalBias.se = TRUE, assume.differences.are.normal = TRUE)
 }
 \arguments{
 \item{method1}{A list of numbers.}
 
 \item{method2}{A list of numbers.}
-
-\item{plotter}{(Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'}
-
-\item{y.plot.mode}{(Optional) Switch to change y-axis from being plotted by difference (="difference") or by proportion magnitude of measurements (="proportion"). Default is "difference". Anything other than "proportional" will switch to default mode.}
 
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 
@@ -48,7 +45,19 @@ blandr.draw(method1, method2, plotter = "ggplot",
 
 \item{point_size}{(Optional) Size of marker for each dot. Default is cex=0.8}
 
-\item{overlapping}{(Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, deafult=FALSE. Not currently recommend until I can tweak the graphics to make them better}
+\item{overlapping}{(Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, deafault=FALSE. Not currently recommend until I can tweak the graphics to make them better}
+
+\item{plotter}{(Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'}
+
+\item{x.plot.mode}{(Optional) Switch to change x-axis from being plotted by means (="means") or by either 1st method (="method1") or 2nd method (="method2"). Default is "means". Anything other than "means" will switch to default mode.}
+
+\item{y.plot.mode}{(Optional) Switch to change y-axis from being plotted by difference (="difference") or by proportion magnitude of measurements (="proportion"). Default is "difference". Anything other than "proportional" will switch to default mode.}
+
+\item{plotProportionalBias}{(Optional) Plots a proportional bias line. Default is false.}
+
+\item{plotProportionalBias.se}{(Optional) If proportional bias line is drawn, switch to plot standard errors. See stat_smooth for details. Default is TRUE.}
+
+\item{assume.differences.are.normal}{(Optional, unused currently) Assume the difference of means has a normal distribution}
 }
 \description{
 Bland-Altman drawing function. Depends on the blandr.statistics function in the package. Will generate a plot via the standard R plotting functions.

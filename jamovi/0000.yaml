@@ -1,11 +1,11 @@
 ---
 title: Bland-Altman Method Comparison For Jamovi
 name: blandr
-version: 0.0.1
+version: 0.4.4
 jms: '1.0'
 authors:
   - Deepankar Datta
-maintainer: Deepankar Datta <yourself@somewhere.net>
+maintainer: Deepankar Datta <deepankardatta@nhs.net>
 date: '2018-02-16'
 type: R
 description: >-

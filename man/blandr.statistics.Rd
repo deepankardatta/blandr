@@ -20,6 +20,10 @@ means List of arithmetic mean of the two methods
 
 differences List of differences of the two methods
 
+method1 Returns the 'method1' list in the data frame if further evaluation is needed
+
+method2 Returns the 'method2' list in the data frame if further evaluation is needed
+
 sig.level Significance level supplied to the function
 
 sig.level.convert.to.z Significance level convert to Z value
@@ -50,7 +54,13 @@ lowerLOA_lowerCI Lower confidence interval of the lower limit of agreement
 
 proportion Differences/means*100
 
-count Number of observations
+no.of.observations Number of observations
+
+regression.equation A regression equation to help determine if there is any proportional bias
+
+regression.fixed.slope The slope value of the regression equation
+
+regression.fixed.intercept The intercept value of the regression equation
 }
 \description{
 Bland-Altman analysis function for R. Package created as existing

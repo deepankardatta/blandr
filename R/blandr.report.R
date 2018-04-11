@@ -16,7 +16,7 @@
 #'
 #' @export
 
-blandr.report <- function( method1 , method2 , ... ) {
+blandr.report <- function( method1 , method2 ) {
   rmarkdown::render("R/blandr-report.Rmd",
                     params = list(
                     method1 = method1,

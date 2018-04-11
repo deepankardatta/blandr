@@ -27,8 +27,19 @@ options:
       type: Bool
       default: true
 
-    - name: titleOfPlot
-      title: Plot title
-      type: String
+    - name: plotProportionalBias
+      title: Plot a proportional bias line
+      type: Bool
+      default: false
+
+    - name: plotProportionalBias.se
+      title: Plot confidence intervals to the proportional bias line
+      type: Bool
+      default: true
+
+    - name: overlapping
+      title: Clarify plotting of overlapping points
+      type: Bool
+      default: false
 
 ...

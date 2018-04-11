@@ -4,7 +4,7 @@
 \alias{blandr.report}
 \title{Bland-Altman report generating function (BETA)}
 \usage{
-blandr.report(method1, method2, ...)
+blandr.report(method1, method2)
 }
 \arguments{
 \item{method1}{A list of numbers for the first method}

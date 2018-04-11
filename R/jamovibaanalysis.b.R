@@ -45,16 +45,19 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           if ( !is.null(self$options$method1) && !is.null(self$options$method2) ) {
 
             # Attempt to introduce a way to customise the plot
-            if ( self$options$titleOfPlot == "" ) {
-              titleOfPlot <- "Bland-Altman Plot"
-            }
-            else { titleOfPlot <- self$options$titleOfPlot }
+            # if ( self$options$titleOfPlot == "" ) {
+            # titleOfPlot <- "Bland-Altman Plot"
+            #}
+            #else { titleOfPlot <- self$options$titleOfPlot }
 
           plotData <- image$state
           plot <-  blandr.ggplot( plotData ,
-                                  ciDisplay = self$options$ciDisplay,
-                                  ciShading = self$options$ciShading,
-                                  plotTitle = titleOfPlot )
+                                  plotTitle = "Bland-Altman plot" ,
+                                  ciDisplay = self$options$ciDisplay ,
+                                  ciShading = self$options$ciShading ,
+                                  plotProportionalBias = self$options$plotProportionalBias ,
+                                  plotProportionalBias.se = self$options$plotProportionalBias.se ,
+                                  overlapping = self$options$overlapping )
           plot <- plot + ggtheme
           print(plot)
           TRUE

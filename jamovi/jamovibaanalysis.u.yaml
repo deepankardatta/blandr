@@ -29,9 +29,9 @@ children:
         name: ciDisplay
       - type: CheckBox
         name: ciShading
-  - type: LayoutBox
-    margin: large
-    children:
-      - type: TextBox
-        name: titleOfPlot
-        format: string
+      - type: CheckBox
+        name: plotProportionalBias
+      - type: CheckBox
+        name: plotProportionalBias.se
+      - type: CheckBox
+        name: overlapping

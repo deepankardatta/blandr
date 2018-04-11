@@ -5,7 +5,8 @@
 \title{Bland-Altman Analysis}
 \usage{
 jamoviBAanalysis(data, method1, method2, ciDisplay = TRUE, ciShading = TRUE,
-  titleOfPlot)
+  plotProportionalBias = FALSE, plotProportionalBias.se = TRUE,
+  overlapping = FALSE)
 }
 \arguments{
 \item{data}{.}
@@ -18,7 +19,11 @@ jamoviBAanalysis(data, method1, method2, ciDisplay = TRUE, ciShading = TRUE,
 
 \item{ciShading}{.}
 
-\item{titleOfPlot}{.}
+\item{plotProportionalBias}{.}
+
+\item{plotProportionalBias.se}{.}
+
+\item{overlapping}{.}
 }
 \value{
 A results object containing:

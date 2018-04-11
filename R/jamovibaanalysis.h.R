@@ -10,7 +10,9 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
             method2 = NULL,
             ciDisplay = TRUE,
             ciShading = TRUE,
-            titleOfPlot = NULL, ...) {
+            plotProportionalBias = FALSE,
+            plotProportionalBias.se = TRUE,
+            overlapping = FALSE, ...) {
 
             super$initialize(
                 package='blandr',
@@ -32,28 +34,43 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
                 "ciShading",
                 ciShading,
                 default=TRUE)
-            private$..titleOfPlot <- jmvcore::OptionString$new(
-                "titleOfPlot",
-                titleOfPlot)
+            private$..plotProportionalBias <- jmvcore::OptionBool$new(
+                "plotProportionalBias",
+                plotProportionalBias,
+                default=FALSE)
+            private$..plotProportionalBias.se <- jmvcore::OptionBool$new(
+                "plotProportionalBias.se",
+                plotProportionalBias.se,
+                default=TRUE)
+            private$..overlapping <- jmvcore::OptionBool$new(
+                "overlapping",
+                overlapping,
+                default=FALSE)
 
             self$.addOption(private$..method1)
             self$.addOption(private$..method2)
             self$.addOption(private$..ciDisplay)
             self$.addOption(private$..ciShading)
-            self$.addOption(private$..titleOfPlot)
+            self$.addOption(private$..plotProportionalBias)
+            self$.addOption(private$..plotProportionalBias.se)
+            self$.addOption(private$..overlapping)
         }),
     active = list(
         method1 = function() private$..method1$value,
         method2 = function() private$..method2$value,
         ciDisplay = function() private$..ciDisplay$value,
         ciShading = function() private$..ciShading$value,
-        titleOfPlot = function() private$..titleOfPlot$value),
+        plotProportionalBias = function() private$..plotProportionalBias$value,
+        plotProportionalBias.se = function() private$..plotProportionalBias.se$value,
+        overlapping = function() private$..overlapping$value),
     private = list(
         ..method1 = NA,
         ..method2 = NA,
         ..ciDisplay = NA,
         ..ciShading = NA,
-        ..titleOfPlot = NA)
+        ..plotProportionalBias = NA,
+        ..plotProportionalBias.se = NA,
+        ..overlapping = NA)
 )
 
 jamoviBAanalysisResults <- if (requireNamespace('jmvcore')) R6::R6Class(
@@ -129,7 +146,9 @@ jamoviBAanalysisBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @param method2 .
 #' @param ciDisplay .
 #' @param ciShading .
-#' @param titleOfPlot .
+#' @param plotProportionalBias .
+#' @param plotProportionalBias.se .
+#' @param overlapping .
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$table} \tab \tab \tab \tab \tab a table \cr
@@ -149,7 +168,9 @@ jamoviBAanalysis <- function(
     method2,
     ciDisplay = TRUE,
     ciShading = TRUE,
-    titleOfPlot) {
+    plotProportionalBias = FALSE,
+    plotProportionalBias.se = TRUE,
+    overlapping = FALSE) {
 
     if ( ! requireNamespace('jmvcore'))
         stop('jamoviBAanalysis requires jmvcore to be installed (restart may be required)')
@@ -159,7 +180,9 @@ jamoviBAanalysis <- function(
         method2 = method2,
         ciDisplay = ciDisplay,
         ciShading = ciShading,
-        titleOfPlot = titleOfPlot)
+        plotProportionalBias = plotProportionalBias,
+        plotProportionalBias.se = plotProportionalBias.se,
+        overlapping = overlapping)
 
     results <- jamoviBAanalysisResults$new(
         options = options)
