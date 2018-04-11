@@ -70,5 +70,6 @@ build/
 build/*.js
 build/*.R
 *.jmo
+blandr.jmo
 
 
