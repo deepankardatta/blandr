@@ -70,7 +70,7 @@ jamoviBAplotQQBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Bland-Altman differences QQ plot
+#' Differences QQ plot
 #'
 #' 
 #' @param data .

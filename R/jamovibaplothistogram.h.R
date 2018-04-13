@@ -70,7 +70,7 @@ jamoviBAplotHistogramBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Bland-Altman differences histogram and density curve
+#' Differences histogram and density curve
 #'
 #' 
 #' @param data .

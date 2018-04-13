@@ -18,25 +18,20 @@ analyses:
     ns: blandr
     menuGroup: blandr
     menuTitle: Bland-Altman analysis
-  - title: Bland-Altman normality testing
-    name: jamoviBAnormality
-    ns: blandr
-    menuGroup: blandr
-    menuTitle: Bland-Altman normality testing
   - title: Bland-Altman raw statistics
     name: jamoviBAstats
     ns: blandr
     menuGroup: blandr
     menuTitle: Bland-Altman raw statistics
-  - title: Bland-Altman differences QQ plot
+  - title: Differences QQ plot
     name: jamoviBAplotQQ
     ns: blandr
     menuGroup: blandr
-    menuTitle: Bland-Altman differences QQ plot
-  - title: Bland-Altman differences histogram and density curve
+    menuTitle: Differences QQ plot
+  - title: Differences histogram and density curve
     name: jamoviBAplotHistogram
     ns: blandr
     menuGroup: blandr
-    menuTitle: Bland-Altman differences histogram and density curve
+    menuTitle: Differences histogram and density curve
 
 ...
