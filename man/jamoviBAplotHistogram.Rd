@@ -2,7 +2,7 @@
 % Please edit documentation in R/jamovibaplothistogram.h.R
 \name{jamoviBAplotHistogram}
 \alias{jamoviBAplotHistogram}
-\title{Bland-Altman differences histogram and density curve}
+\title{Differences histogram and density curve}
 \usage{
 jamoviBAplotHistogram(data, method1, method2)
 }
@@ -20,5 +20,5 @@ A results object containing:
 }
 }
 \description{
-Bland-Altman differences histogram and density curve
+Differences histogram and density curve
 }

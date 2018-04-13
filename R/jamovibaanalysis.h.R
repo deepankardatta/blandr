@@ -12,7 +12,8 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
             ciShading = TRUE,
             plotProportionalBias = FALSE,
             plotProportionalBias.se = TRUE,
-            overlapping = FALSE, ...) {
+            overlapping = FALSE,
+            marginalHistogram = FALSE, ...) {
 
             super$initialize(
                 package='blandr',
@@ -46,6 +47,10 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
                 "overlapping",
                 overlapping,
                 default=FALSE)
+            private$..marginalHistogram <- jmvcore::OptionBool$new(
+                "marginalHistogram",
+                marginalHistogram,
+                default=FALSE)
 
             self$.addOption(private$..method1)
             self$.addOption(private$..method2)
@@ -54,6 +59,7 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
             self$.addOption(private$..plotProportionalBias)
             self$.addOption(private$..plotProportionalBias.se)
             self$.addOption(private$..overlapping)
+            self$.addOption(private$..marginalHistogram)
         }),
     active = list(
         method1 = function() private$..method1$value,
@@ -62,7 +68,8 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
         ciShading = function() private$..ciShading$value,
         plotProportionalBias = function() private$..plotProportionalBias$value,
         plotProportionalBias.se = function() private$..plotProportionalBias.se$value,
-        overlapping = function() private$..overlapping$value),
+        overlapping = function() private$..overlapping$value,
+        marginalHistogram = function() private$..marginalHistogram$value),
     private = list(
         ..method1 = NA,
         ..method2 = NA,
@@ -70,7 +77,8 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
         ..ciShading = NA,
         ..plotProportionalBias = NA,
         ..plotProportionalBias.se = NA,
-        ..overlapping = NA)
+        ..overlapping = NA,
+        ..marginalHistogram = NA)
 )
 
 jamoviBAanalysisResults <- if (requireNamespace('jmvcore')) R6::R6Class(
@@ -180,6 +188,7 @@ jamoviBAanalysisBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @param plotProportionalBias .
 #' @param plotProportionalBias.se .
 #' @param overlapping .
+#' @param marginalHistogram .
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$table} \tab \tab \tab \tab \tab a table \cr
@@ -201,7 +210,8 @@ jamoviBAanalysis <- function(
     ciShading = TRUE,
     plotProportionalBias = FALSE,
     plotProportionalBias.se = TRUE,
-    overlapping = FALSE) {
+    overlapping = FALSE,
+    marginalHistogram = FALSE) {
 
     if ( ! requireNamespace('jmvcore'))
         stop('jamoviBAanalysis requires jmvcore to be installed (restart may be required)')
@@ -213,7 +223,8 @@ jamoviBAanalysis <- function(
         ciShading = ciShading,
         plotProportionalBias = plotProportionalBias,
         plotProportionalBias.se = plotProportionalBias.se,
-        overlapping = overlapping)
+        overlapping = overlapping,
+        marginalHistogram = marginalHistogram)
 
     results <- jamoviBAanalysisResults$new(
         options = options)

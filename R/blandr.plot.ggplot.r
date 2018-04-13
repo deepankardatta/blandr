@@ -8,20 +8,22 @@
 #' @param method1name (Optional) Plotting name for 1st method, default "Method 1"
 #' @param method2name (Optional) Plotting name for 2nd method, default "Method 2"
 #' @param plotTitle (Optional) Title name, default "Bland-Altman plot for comparison of 2 methods"
-#' @param ciDisplay (Optional) TRUE/FALSE switch to plot confidence intervals for bias and limits of agreement, default=TRUE
-#' @param ciShading (Optional) TRUE/FALSE switch to plot confidence interval shading to plot, default=TRUE
+#' @param ciDisplay (Optional) TRUE/FALSE switch to plot confidence intervals for bias and limits of agreement, default is TRUE
+#' @param ciShading (Optional) TRUE/FALSE switch to plot confidence interval shading to plot, default is TRUE
 #' @param normalLow (Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its lower boundary
 #' @param normalHigh (Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its higher boundary
 #' @param overlapping (Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, deafault=FALSE. Not currently recommend until I can tweak the graphics to make them better
 #' @param x.plot.mode (Optional) Switch to change x-axis from being plotted by means (="means") or by either 1st method (="method1") or 2nd method (="method2"). Default is "means". Anything other than "means" will switch to default mode.
 #' @param y.plot.mode (Optional) Switch to change y-axis from being plotted by difference (="difference") or by proportion magnitude of measurements (="proportion"). Default is "difference". Anything other than "proportional" will switch to default mode.
-#' @param plotProportionalBias (Optional) Plots a proportional bias line. Default is false.
-#' @param plotProportionalBias.se (Optional) If proportional bias line is drawn, switch to plot standard errors. See stat_smooth for details. Default is TRUE.
-#' @param assume.differences.are.normal (Optional, unused currently) Assume the difference of means has a normal distribution
+#' @param plotProportionalBias (Optional) TRUE/FALSE switch. Plots a proportional bias line. Default is FALSE.
+#' @param plotProportionalBias.se (Optional) TRUE/FALSE switch. If proportional bias line is drawn, switch to plot standard errors. See stat_smooth for details. Default is TRUE.
+#' @param marginalHistogram (Optional) TRUE/FALSE switch. Draws marginal histograms using the ggExtra package. Default is FALSE.
+#' @param assume.differences.are.normal (Optional, not operationally used currently) Assume the difference of means has a normal distribution. Will be used to build further analyses
 #'
 #' @return ba.plot Returns a ggplot data set that can then be plotted
 #'
 #' @import ggplot2
+#' @import ggExtra
 #'
 #' @examples
 #' # Generates two random measurements
@@ -60,10 +62,11 @@ blandr.plot.ggplot <- function ( statistics.results ,
                             y.plot.mode = "difference" ,
                             plotProportionalBias = FALSE ,
                             plotProportionalBias.se = TRUE ,
+                            marginalHistogram = FALSE ,
                             assume.differences.are.normal = TRUE
                             ) {
 
-  # Selects if x-axis uses means (traditional) or one of the methods
+  # Selects if x-axis uses means (traditional) or selects one of the methods
   # as the gold standard (non-traditional BA)
   # See Krouwer JS (2008) Why Bland-Altman plots should use X, not (Y+X)/2 when X is a reference method. Statistics in Medicine 27:778-780
   # NOT ENABLED YET
@@ -160,6 +163,9 @@ blandr.plot.ggplot <- function ( statistics.results ,
     ba.plot <- ba.plot + ggplot2::geom_smooth( method = 'lm' , se = plotProportionalBias.se )
   } # End of drawing proportional bias line
 
+  # Draws marginal histograms if option selected
+  # Idea from http://labrtorian.com/tag/bland-altman/
+  if( marginalHistogram == TRUE ) { ba.plot <- ggMarginal( ba.plot , type="histogram" ) }
 
   # Return the ggplot2 output
   return(ba.plot)

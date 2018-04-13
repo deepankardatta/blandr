@@ -2,7 +2,7 @@
 # This file is a generated template, your changes will not be overwritten
 
 jamoviBAplotQQClass <- if (requireNamespace('jmvcore')) R6::R6Class(
-  "jamoviBAnormalityClass",
+  "jamoviBAplotQQClass",
   inherit = jamoviBAplotQQBase,
   private = list(
     .run = function() {

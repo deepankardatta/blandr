@@ -1,9 +1,9 @@
 
 # This file is a generated template, your changes will not be overwritten
 
-jamoviBAnormalityClass <- if (requireNamespace('jmvcore')) R6::R6Class(
-  "jamoviBAnormalityClass",
-  inherit = jamoviBAnormalityBase,
+jamoviBAplotHistogramClass <- if (requireNamespace('jmvcore')) R6::R6Class(
+  "jamoviBAplotHistogramClass",
+  inherit = jamoviBAplotHistogramBase,
   private = list(
     .run = function() {
 

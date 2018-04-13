@@ -42,4 +42,9 @@ options:
       type: Bool
       default: false
 
+    - name: marginalHistogram
+      title: Marginal histograms (may not work)
+      type: Bool
+      default: false
+
 ...

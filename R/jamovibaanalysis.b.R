@@ -63,7 +63,8 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                   ciShading = self$options$ciShading ,
                                   plotProportionalBias = self$options$plotProportionalBias ,
                                   plotProportionalBias.se = self$options$plotProportionalBias.se ,
-                                  overlapping = self$options$overlapping )
+                                  overlapping = self$options$overlapping ,
+                                  marginalHistogram = self$options$marginalHistogram )
           plot <- plot + ggtheme
           print(plot)
           TRUE

@@ -7,6 +7,8 @@ jmvtools::check()
 
 # Installs
 devtools::document()
+devtools::document()
+devtools::build()
 jmvtools::install()
 
 # Adds another analysis

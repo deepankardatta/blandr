@@ -6,7 +6,7 @@
 \usage{
 jamoviBAanalysis(data, method1, method2, ciDisplay = TRUE, ciShading = TRUE,
   plotProportionalBias = FALSE, plotProportionalBias.se = TRUE,
-  overlapping = FALSE)
+  overlapping = FALSE, marginalHistogram = FALSE)
 }
 \arguments{
 \item{data}{.}
@@ -24,6 +24,8 @@ jamoviBAanalysis(data, method1, method2, ciDisplay = TRUE, ciShading = TRUE,
 \item{plotProportionalBias.se}{.}
 
 \item{overlapping}{.}
+
+\item{marginalHistogram}{.}
 }
 \value{
 A results object containing:

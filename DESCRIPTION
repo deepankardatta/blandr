@@ -15,7 +15,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/deepankardatta/blandr/
 BugReports: https://github.com/deepankardatta/blandr/issues
-Imports: ggplot2, knitr, stringr, jmvcore (>= 0.5.5), R6
+Imports: ggplot2, ggExtra, knitr, stringr, jmvcore (>= 0.5.5), R6
 Suggests: rmarkdown, testthat
 VignetteBuilder: knitr
 Collate: 
@@ -40,8 +40,6 @@ Collate:
     'blandr.plot.r'
     'jamovibaanalysis.b.R'
     'jamovibaanalysis.h.R'
-    'jamovibanormality.b.R'
-    'jamovibanormality.h.R'
     'jamovibaplothistogram.b.R'
     'jamovibaplothistogram.h.R'
     'jamovibaplotqq.b.R'

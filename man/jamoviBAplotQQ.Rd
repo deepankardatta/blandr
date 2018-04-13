@@ -2,7 +2,7 @@
 % Please edit documentation in R/jamovibaplotqq.h.R
 \name{jamoviBAplotQQ}
 \alias{jamoviBAplotQQ}
-\title{Bland-Altman differences QQ plot}
+\title{Differences QQ plot}
 \usage{
 jamoviBAplotQQ(data, method1, method2)
 }
@@ -20,5 +20,5 @@ A results object containing:
 }
 }
 \description{
-Bland-Altman differences QQ plot
+Differences QQ plot
 }
