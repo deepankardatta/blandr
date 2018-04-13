@@ -1,0 +1,20 @@
+---
+name:  jamoviBAplotHistogram
+title: Differences histogram and density curve
+menuGroup: blandr
+version: '1.0.0'
+jas: '1.1'
+
+options:
+    - name: data
+      type: Data
+
+    - name: method1
+      title: Method 1
+      type: Variable
+
+    - name: method2
+      title: Method 2
+      type: Variable
+
+...

@@ -5,10 +5,10 @@
 #'
 #' @author Deepankar Datta <deepankardatta@nhs.net>
 #'
-#' @inheritParams blandr.display
+#' @inheritParams blandr.output.text
 #' @inheritParams blandr.draw
 #'
-#' @include blandr.display.r
+#' @include blandr.output.text.r
 #' @include blandr.draw.r
 #'
 #' @examples
@@ -29,7 +29,7 @@ blandr.display.and.draw <- function( method1 , method2, plotter = "ggplot", meth
     sig.level = 0.95, annotate = FALSE, ciDisplay = TRUE, ciShading = FALSE, normalLow = FALSE,
     normalHigh = FALSE, lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8) {
 
-    blandr.display(
+    blandr.output.text(
       method1 = method1 ,
       method2 = method2 ,
       sig.level = sig.level

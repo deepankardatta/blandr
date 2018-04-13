@@ -1,0 +1,13 @@
+---
+name:  jamoviBAplotQQ
+title: Bland-Altman differences QQ plot
+jrs:   '1.1'
+
+items:
+    - name: plot
+      type: Image
+      width:  600
+      height: 450
+      renderFun: .plot
+
+...

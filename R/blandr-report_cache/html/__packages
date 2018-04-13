@@ -2,3 +2,6 @@ base
 stringr
 testthat
 blandr
+ggplot2
+gridExtra
+jmvtools

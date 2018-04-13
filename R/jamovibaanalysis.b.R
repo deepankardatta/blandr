@@ -28,8 +28,14 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           table$setRow(rowNo=1, values=list(
             observations = results$no.of.observations ,
             bias         = results$bias ,
+            biasUpperCI  = results$biasUpperCI ,
+            biasLowerCI  = results$biasLowerCI ,
             upperLOA     = results$upperLOA ,
-            lowerLOA     = results$lowerLOA
+            upperLOA_upperCI = results$upperLOA_upperCI ,
+            upperLOA_lowerCI = results$upperLOA_lowerCI ,
+            lowerLOA     = results$lowerLOA ,
+            lowerLOA_upperCI = results$lowerLOA_upperCI ,
+            lowerLOA_lowerCI = results$lowerLOA_lowerCI
           ))
 
           # standard Jamovi method to pass prepared data over for plotting
@@ -51,7 +57,7 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             #else { titleOfPlot <- self$options$titleOfPlot }
 
           plotData <- image$state
-          plot <-  blandr.ggplot( plotData ,
+          plot <-  blandr.plot.ggplot( statistics.results = plotData ,
                                   plotTitle = "Bland-Altman plot" ,
                                   ciDisplay = self$options$ciDisplay ,
                                   ciShading = self$options$ciShading ,

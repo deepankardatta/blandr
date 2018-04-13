@@ -1,6 +1,6 @@
 ---
 name:  jamoviBAanalysis
-title: Bland-Altman Analysis
+title: Bland-Altman analysis
 menuGroup: blandr
 version: '1.0.0'
 jas: '1.1'
@@ -28,17 +28,17 @@ options:
       default: true
 
     - name: plotProportionalBias
-      title: Plot a proportional bias line
+      title: Proportional bias line
       type: Bool
       default: false
 
     - name: plotProportionalBias.se
-      title: Plot confidence intervals to the proportional bias line
+      title: Proportional bias line confidence intervals
       type: Bool
       default: true
 
     - name: overlapping
-      title: Clarify plotting of overlapping points
+      title: Highlight overlapping points
       type: Bool
       default: false
 

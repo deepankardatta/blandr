@@ -13,6 +13,7 @@ library(blandr)
 knitr::opts_chunk$set( echo = TRUE , cache=TRUE )
 params$method1
 params$method2
+results <- blandr.statistics( method1 , method2 )
 ```
 
 ## Preamble
@@ -30,20 +31,18 @@ Questions to think about when interepreting the data include:
 1. Should the two methods be compared?
 2. Is the data correct?
 3. *A priori*, what can be thought of as acceptable practical agreement?
-4. In the data is there statistical agreement? (For all intents and purposed this will not be true)
+4. In the data is there statistical agreement?
 5. In the data is there practical agreement?
 6. What conclusions can be drawn from the data?
 
-A suggestion by Chhapola et al. on reporting the data includes:
+A suggestion by Chhapola et al. (doi:10.1177/0004563214553438) on reporting the data includes:
 
-1. correct representation of x-axis on B-A plot
+1. correct representation of x-axis on Bland-Altman plot
 2. representation and correct definition of limits of agreement (LOA)
 3. reporting of confidence interval (CI) of LOA
 4. comparison of LOA with a priori defined clinical criteria
 5. evaluation of the pattern of the relationship between difference (y-axis) and average (x-axis)
 6. measures of repeatability.
-
-This paper can be found at doi:10.1177/0004563214553438
 
 ## Description of the plots
 
@@ -71,11 +70,18 @@ hist(method2)
 
 ***
 
-## Comparison of the two data sets
+## Check of normality of differences
 
-### Raw data output
+Bland & Altman suggest to create what is thought of as a standard Bland-Altman plot, the differences need to be normally distributed. We can assess this with histograms, QQ plots, or with the Shapiro-Wilk normality test. Do seek formal statistical advice for assumptions behind all these tests.
+
+We can describe graphically the distribution of the differences. Further, a QQ plot can be generated - in general the scatter points should be as close to the line as possible to suggest the data is normally distributed.
 ```{r}
-blandr.display ( method1 , method2 , sig.level=0.95 )
+blandr.plot.normality( results )
+```
+
+In the Shapiro-Wilk test the null hypothesis is that the data is normally distributed. If p>0.05, normality can be assumed.
+```{r}
+shapiro.test( results$differences )
 ```
 
 ***
@@ -91,7 +97,8 @@ blandr.draw ( method1 , method2 , sig.level=0.95 )
 ## Plot comparison with best fit line to investigate for proportional bias
 
 ```{r}
-blandr.proportional.bias ( method1 , method2 , sig.level=0.95 )
+blandr.draw ( method1 , method2 , ciDisplay = FALSE , plotProportionalBias = TRUE )
+print(results$regression.equation)
 ```
 
 ***
@@ -100,6 +107,13 @@ blandr.proportional.bias ( method1 , method2 , sig.level=0.95 )
 
 ```{r}
 blandr.method.comparison ( method1 , method2 , sig.level=0.95 )
+```
+
+***
+
+## Raw data output of comparison statistics
+```{r}
+print(results)
 ```
 
 ***

@@ -1,0 +1,13 @@
+---
+name:  jamoviBAplotHistogram
+title: Bland-Altman differences histogram and density curve
+jrs:   '1.1'
+
+items:
+    - name: plot
+      type: Image
+      width:  600
+      height: 450
+      renderFun: .plot
+
+...

@@ -100,23 +100,54 @@ jamoviBAanalysisResults <- if (requireNamespace('jmvcore')) R6::R6Class(
                         `type`="number"),
                     list(
                         `name`="bias", 
-                        `title`="Bias", 
+                        `superTitle`="Bias", 
+                        `title`="estimate", 
+                        `type`="number"),
+                    list(
+                        `name`="biasLowerCI", 
+                        `superTitle`="Bias", 
+                        `title`="Lower 95% CI", 
+                        `type`="number"),
+                    list(
+                        `name`="biasUpperCI", 
+                        `superTitle`="Bias", 
+                        `title`="Higher 95% CI", 
                         `type`="number"),
                     list(
                         `name`="lowerLOA", 
-                        `superTitle`="Limit of Agreement", 
-                        `title`="Lower", 
+                        `superTitle`="Lower limit of Agreement", 
+                        `title`="estimate", 
+                        `type`="number"),
+                    list(
+                        `name`="lowerLOA_lowerCI", 
+                        `superTitle`="Lower limit of Agreement", 
+                        `title`="Lower 95% CI", 
+                        `type`="number"),
+                    list(
+                        `name`="lowerLOA_upperCI", 
+                        `superTitle`="Lower limit of Agreement", 
+                        `title`="Higher 95% CI", 
                         `type`="number"),
                     list(
                         `name`="upperLOA", 
-                        `superTitle`="Limit of Agreement", 
-                        `title`="Upper", 
+                        `superTitle`="Upper limit of Agreement", 
+                        `title`="estimate", 
+                        `type`="number"),
+                    list(
+                        `name`="upperLOA_lowerCI", 
+                        `superTitle`="Upper limit of Agreement", 
+                        `title`="Lower 95% CI", 
+                        `type`="number"),
+                    list(
+                        `name`="upperLOA_upperCI", 
+                        `superTitle`="Upper limit of Agreement", 
+                        `title`="Higher 95% CI", 
                         `type`="number"))))
             self$add(jmvcore::Image$new(
                 options=options,
                 name="plot",
-                width=400,
-                height=300,
+                width=600,
+                height=450,
                 renderFun=".plot"))}))
 
 jamoviBAanalysisBase <- if (requireNamespace('jmvcore')) R6::R6Class(
@@ -138,7 +169,7 @@ jamoviBAanalysisBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Bland-Altman Analysis
+#' Bland-Altman analysis
 #'
 #' 
 #' @param data .

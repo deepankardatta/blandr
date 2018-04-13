@@ -1,0 +1,13 @@
+---
+name:  jamoviBAnormality
+title: Bland-Altman normality testing
+jrs:   '1.1'
+
+items:
+    - name: plotNormality
+      type: Image
+      width:  600
+      height: 450
+      renderFun: .plot
+
+...

@@ -12,13 +12,13 @@
 #'
 #' @inheritParams blandr.statistics
 #' @inheritParams blandr.plot.limits
-#' @inheritParams blandr.basic.plot
-#' @inheritParams blandr.ggplot
+#' @inheritParams blandr.plot.rplot
+#' @inheritParams blandr.plot.ggplot
 #'
 #' @include blandr.statistics.r
 #' @include blandr.plot.limits.r
-#' @include blandr.basic.plot.r
-#' @include blandr.ggplot.r
+#' @include blandr.plot.rplot.r
+#' @include blandr.plot.ggplot.r
 #'
 #' @examples
 #' # Generates two random measurements
@@ -76,13 +76,13 @@ blandr.draw <- function( method1 ,
     if (plotter == "rplot") {
 
         # Pass data to the blandr.basic.plot function to use R's in-built graphics system
-        blandr.basic.plot(statistics.results, plot.limits, method1name, method2name, plotTitle,
+        blandr.plot.rplot(statistics.results, plot.limits, method1name, method2name, plotTitle,
             annotate, ciDisplay, ciShading, normalLow, normalHigh, point_size)
 
     } else {
 
-        # Pass data to the blandr.ggplot function to use ggplot2 graphics system
-        ba.plot <- blandr.ggplot( statistics.results = statistics.results ,
+        # Pass data to the blandr.plot.ggplot function to use ggplot2 graphics system
+        ba.plot <- blandr.plot.ggplot( statistics.results = statistics.results ,
                                   method1name = method1name ,
                                   method2name = method2name ,
                                   plotTitle = plotTitle ,

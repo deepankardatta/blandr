@@ -28,7 +28,8 @@ jamoviBAstatsClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           print(results)
           # following for Jamovi output
           self$results$text$setContent(results)
-        }
+
+        } # close if function for calculations
 
         })
 )
