@@ -18,20 +18,23 @@ analyses:
     ns: blandr
     menuGroup: blandr
     menuTitle: Bland-Altman analysis
-  - title: Bland-Altman raw statistics
-    name: jamoviBAstats
-    ns: blandr
-    menuGroup: blandr
-    menuTitle: Bland-Altman raw statistics
   - title: Differences QQ plot
     name: jamoviBAplotQQ
     ns: blandr
     menuGroup: blandr
+    menuSubgroup: Bland-Altman difference analysis
     menuTitle: Differences QQ plot
   - title: Differences histogram and density curve
     name: jamoviBAplotHistogram
     ns: blandr
     menuGroup: blandr
+    menuSubgroup: Bland-Altman difference analysis
     menuTitle: Differences histogram and density curve
+  - title: Bland-Altman raw statistics
+    name: jamoviBAstats
+    ns: blandr
+    menuGroup: blandr
+    menuSubgroup: Raw statistical output
+    menuTitle: Bland-Altman raw statistics
 
 ...

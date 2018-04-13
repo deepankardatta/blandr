@@ -2,7 +2,7 @@ title: Bland-Altman analysis
 name: jamoviBAanalysis
 jus: '2.0'
 stage: 0
-compilerMode: aggressive
+compilerMode: tame
 children:
   - type: VariableSupplier
     persistentItems: false
@@ -22,8 +22,10 @@ children:
             name: method2
             maxItemCount: 1
             isTarget: true
-  - type: LayoutBox
-    margin: large
+  - type: CollapseBox
+    label: Plotting options
+    collapsed: true
+    stretchFactor: 1
     children:
       - type: CheckBox
         name: ciDisplay
