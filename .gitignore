@@ -69,7 +69,7 @@ Temporary Items
 build/
 build/*.js
 build/*.R
+build/js
+build/R
 *.jmo
 blandr.jmo
-
-
