@@ -12,8 +12,7 @@ blandr.draw(method1, method2, method1name = "Method 1",
   lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8,
   overlapping = FALSE, plotter = "ggplot", x.plot.mode = "means",
   y.plot.mode = "difference", plotProportionalBias = FALSE,
-  plotProportionalBias.se = TRUE, marginalHistogram = FALSE,
-  assume.differences.are.normal = TRUE)
+  plotProportionalBias.se = TRUE, assume.differences.are.normal = TRUE)
 }
 \arguments{
 \item{method1}{A list of numbers.}
@@ -57,8 +56,6 @@ blandr.draw(method1, method2, method1name = "Method 1",
 \item{plotProportionalBias}{(Optional) TRUE/FALSE switch. Plots a proportional bias line. Default is FALSE.}
 
 \item{plotProportionalBias.se}{(Optional) TRUE/FALSE switch. If proportional bias line is drawn, switch to plot standard errors. See stat_smooth for details. Default is TRUE.}
-
-\item{marginalHistogram}{(Optional) TRUE/FALSE switch. Draws marginal histograms using the ggExtra package. Default is FALSE.}
 
 \item{assume.differences.are.normal}{(Optional, not operationally used currently) Assume the difference of means has a normal distribution. Will be used to build further analyses}
 }

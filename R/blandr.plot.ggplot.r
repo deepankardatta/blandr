@@ -17,13 +17,11 @@
 #' @param y.plot.mode (Optional) Switch to change y-axis from being plotted by difference (="difference") or by proportion magnitude of measurements (="proportion"). Default is "difference". Anything other than "proportional" will switch to default mode.
 #' @param plotProportionalBias (Optional) TRUE/FALSE switch. Plots a proportional bias line. Default is FALSE.
 #' @param plotProportionalBias.se (Optional) TRUE/FALSE switch. If proportional bias line is drawn, switch to plot standard errors. See stat_smooth for details. Default is TRUE.
-#' @param marginalHistogram (Optional) TRUE/FALSE switch. Draws marginal histograms using the ggExtra package. Default is FALSE.
 #' @param assume.differences.are.normal (Optional, not operationally used currently) Assume the difference of means has a normal distribution. Will be used to build further analyses
 #'
 #' @return ba.plot Returns a ggplot data set that can then be plotted
 #'
 #' @import ggplot2
-#' @import ggExtra
 #'
 #' @examples
 #' # Generates two random measurements
@@ -165,7 +163,9 @@ blandr.plot.ggplot <- function ( statistics.results ,
 
   # Draws marginal histograms if option selected
   # Idea from http://labrtorian.com/tag/bland-altman/
-  if( marginalHistogram == TRUE ) { ba.plot <- ggMarginal( ba.plot , type="histogram" ) }
+  # REMOVED AS INTRODUCED SOME INCOMPATIBILITIES DEPENDENT ON USERS R VERSION
+  # ALSO MASSIVELY INCREASED PACKAGE SIZE
+  # if( marginalHistogram == TRUE ) { ba.plot <- ggMarginal( ba.plot , type="histogram" ) }
 
   # Return the ggplot2 output
   return(ba.plot)

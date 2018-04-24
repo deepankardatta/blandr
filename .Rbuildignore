@@ -1,5 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^build$
 ^unused$
 ^tests$
 ^data-raw$
@@ -12,4 +13,7 @@
 ^README-.*\.png$
 ^NEWS\.Rmd$
 ^NEWS-.*\.png$
-^R\blandr-report.html
+^R\blandr-report.html$
+^R\blandr-report_cache\*.*$
+^R\blandr-report_files\*.*$
+^.*.jmo$

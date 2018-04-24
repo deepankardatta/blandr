@@ -16,14 +16,14 @@ items:
           title: ''
           type: text
         - name: estimate
-          title: 'estimate'
+          title: 'Estimate'
           type: number
         - name: LowerCI
-          superTitle: '95% Confidence Interval'
+          superTitle: '95% confidence interval'
           title: 'Lower'
           type: number
         - name: UpperCI
-          superTitle: '95% Confidence Interval'
+          superTitle: '95% confidence interval'
           title: 'Upper'
           type: number
 

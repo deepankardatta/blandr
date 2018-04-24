@@ -32,13 +32,13 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             LowerCI         = results$biasLowerCI
           ))
           table$setRow( rowNo=2, values=list(
-            table_row_names = "Lower Limit of Agreement" ,
+            table_row_names = "Lower limit of agreement" ,
             estimate        = results$lowerLOA ,
             UpperCI         = results$lowerLOA_upperCI ,
             LowerCI         = results$lowerLOA_lowerCI
           ))
           table$setRow( rowNo=3 , values=list(
-            table_row_names = "Upper Limit of Agreement" ,
+            table_row_names = "Upper limit of agreement" ,
             estimate        = results$upperLOA ,
             UpperCI         = results$upperLOA_upperCI ,
             LowerCI         = results$upperLOA_lowerCI

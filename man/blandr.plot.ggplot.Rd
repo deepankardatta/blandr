@@ -40,8 +40,6 @@ blandr.plot.ggplot(statistics.results, method1name = "Method 1",
 
 \item{plotProportionalBias.se}{(Optional) TRUE/FALSE switch. If proportional bias line is drawn, switch to plot standard errors. See stat_smooth for details. Default is TRUE.}
 
-\item{marginalHistogram}{(Optional) TRUE/FALSE switch. Draws marginal histograms using the ggExtra package. Default is FALSE.}
-
 \item{assume.differences.are.normal}{(Optional, not operationally used currently) Assume the difference of means has a normal distribution. Will be used to build further analyses}
 }
 \value{
