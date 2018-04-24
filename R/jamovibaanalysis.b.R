@@ -25,18 +25,27 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
           # create a nice table
           table <- self$results$table
-          table$setRow(rowNo=1, values=list(
-            observations = results$no.of.observations ,
-            bias         = results$bias ,
-            biasUpperCI  = results$biasUpperCI ,
-            biasLowerCI  = results$biasLowerCI ,
-            upperLOA     = results$upperLOA ,
-            upperLOA_upperCI = results$upperLOA_upperCI ,
-            upperLOA_lowerCI = results$upperLOA_lowerCI ,
-            lowerLOA     = results$lowerLOA ,
-            lowerLOA_upperCI = results$lowerLOA_upperCI ,
-            lowerLOA_lowerCI = results$lowerLOA_lowerCI
+          table$setRow( rowNo=1 , values=list(
+            table_row_names = paste( "Bias ( n = " , results$no.of.observations , ")" ) ,
+            estimate        = results$bias ,
+            UpperCI         = results$biasUpperCI ,
+            LowerCI         = results$biasLowerCI
           ))
+          table$setRow( rowNo=2, values=list(
+            table_row_names = "Lower Limit of Agreement" ,
+            estimate        = results$lowerLOA ,
+            UpperCI         = results$lowerLOA_upperCI ,
+            LowerCI         = results$lowerLOA_lowerCI
+          ))
+          table$setRow( rowNo=3 , values=list(
+            table_row_names = "Upper Limit of Agreement" ,
+            estimate        = results$upperLOA ,
+            UpperCI         = results$upperLOA_upperCI ,
+            LowerCI         = results$upperLOA_lowerCI
+          ))
+
+
+          # observations = results$no.of.observations
 
           # standard Jamovi method to pass prepared data over for plotting
           image <- self$results$plot
@@ -63,8 +72,7 @@ jamoviBAanalysisClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                   ciShading = self$options$ciShading ,
                                   plotProportionalBias = self$options$plotProportionalBias ,
                                   plotProportionalBias.se = self$options$plotProportionalBias.se ,
-                                  overlapping = self$options$overlapping ,
-                                  marginalHistogram = self$options$marginalHistogram )
+                                  overlapping = self$options$overlapping )
           plot <- plot + ggtheme
           print(plot)
           TRUE

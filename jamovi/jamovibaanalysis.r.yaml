@@ -7,49 +7,24 @@ items:
     - name:  table
       title: Bland-Altman
       type: Table
-      rows:  1
+      rows:  3
       clearWith:
         - method1
         - method2
       columns:
-        - name: observations
-          title: 'N'
-          type: number
-        - name: bias
-          superTitle: Bias
+        - name: table_row_names
+          title: ''
+          type: text
+        - name: estimate
           title: 'estimate'
           type: number
-        - name: biasLowerCI
-          superTitle: Bias
-          title: 'Lower 95% CI'
+        - name: LowerCI
+          superTitle: '95% Confidence Interval'
+          title: 'Lower'
           type: number
-        - name: biasUpperCI
-          superTitle: Bias
-          title: 'Higher 95% CI'
-          type: number
-        - name: lowerLOA
-          superTitle: Lower limit of Agreement
-          title: 'estimate'
-          type: number
-        - name: lowerLOA_lowerCI
-          superTitle: Lower limit of Agreement
-          title: 'Lower 95% CI'
-          type: number
-        - name: lowerLOA_upperCI
-          superTitle: Lower limit of Agreement
-          title: 'Higher 95% CI'
-          type: number
-        - name: upperLOA
-          superTitle: Upper limit of Agreement
-          title: 'estimate'
-          type: number
-        - name: upperLOA_lowerCI
-          superTitle: Upper limit of Agreement
-          title: 'Lower 95% CI'
-          type: number
-        - name: upperLOA_upperCI
-          superTitle: Upper limit of Agreement
-          title: 'Higher 95% CI'
+        - name: UpperCI
+          superTitle: '95% Confidence Interval'
+          title: 'Upper'
           type: number
 
     - name: plot

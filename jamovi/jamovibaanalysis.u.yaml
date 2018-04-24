@@ -37,5 +37,3 @@ children:
         name: plotProportionalBias.se
       - type: CheckBox
         name: overlapping
-      - type: CheckBox
-        name: marginalHistogram

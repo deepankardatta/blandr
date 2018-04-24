@@ -12,8 +12,7 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
             ciShading = TRUE,
             plotProportionalBias = FALSE,
             plotProportionalBias.se = TRUE,
-            overlapping = FALSE,
-            marginalHistogram = FALSE, ...) {
+            overlapping = FALSE, ...) {
 
             super$initialize(
                 package='blandr',
@@ -47,10 +46,6 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
                 "overlapping",
                 overlapping,
                 default=FALSE)
-            private$..marginalHistogram <- jmvcore::OptionBool$new(
-                "marginalHistogram",
-                marginalHistogram,
-                default=FALSE)
 
             self$.addOption(private$..method1)
             self$.addOption(private$..method2)
@@ -59,7 +54,6 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
             self$.addOption(private$..plotProportionalBias)
             self$.addOption(private$..plotProportionalBias.se)
             self$.addOption(private$..overlapping)
-            self$.addOption(private$..marginalHistogram)
         }),
     active = list(
         method1 = function() private$..method1$value,
@@ -68,8 +62,7 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
         ciShading = function() private$..ciShading$value,
         plotProportionalBias = function() private$..plotProportionalBias$value,
         plotProportionalBias.se = function() private$..plotProportionalBias.se$value,
-        overlapping = function() private$..overlapping$value,
-        marginalHistogram = function() private$..marginalHistogram$value),
+        overlapping = function() private$..overlapping$value),
     private = list(
         ..method1 = NA,
         ..method2 = NA,
@@ -77,8 +70,7 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
         ..ciShading = NA,
         ..plotProportionalBias = NA,
         ..plotProportionalBias.se = NA,
-        ..overlapping = NA,
-        ..marginalHistogram = NA)
+        ..overlapping = NA)
 )
 
 jamoviBAanalysisResults <- if (requireNamespace('jmvcore')) R6::R6Class(
@@ -97,59 +89,28 @@ jamoviBAanalysisResults <- if (requireNamespace('jmvcore')) R6::R6Class(
                 options=options,
                 name="table",
                 title="Bland-Altman",
-                rows=1,
+                rows=3,
                 clearWith=list(
                     "method1",
                     "method2"),
                 columns=list(
                     list(
-                        `name`="observations", 
-                        `title`="N", 
-                        `type`="number"),
+                        `name`="table_row_names", 
+                        `title`="", 
+                        `type`="text"),
                     list(
-                        `name`="bias", 
-                        `superTitle`="Bias", 
+                        `name`="estimate", 
                         `title`="estimate", 
                         `type`="number"),
                     list(
-                        `name`="biasLowerCI", 
-                        `superTitle`="Bias", 
-                        `title`="Lower 95% CI", 
+                        `name`="LowerCI", 
+                        `superTitle`="95% Confidence Interval", 
+                        `title`="Lower", 
                         `type`="number"),
                     list(
-                        `name`="biasUpperCI", 
-                        `superTitle`="Bias", 
-                        `title`="Higher 95% CI", 
-                        `type`="number"),
-                    list(
-                        `name`="lowerLOA", 
-                        `superTitle`="Lower limit of Agreement", 
-                        `title`="estimate", 
-                        `type`="number"),
-                    list(
-                        `name`="lowerLOA_lowerCI", 
-                        `superTitle`="Lower limit of Agreement", 
-                        `title`="Lower 95% CI", 
-                        `type`="number"),
-                    list(
-                        `name`="lowerLOA_upperCI", 
-                        `superTitle`="Lower limit of Agreement", 
-                        `title`="Higher 95% CI", 
-                        `type`="number"),
-                    list(
-                        `name`="upperLOA", 
-                        `superTitle`="Upper limit of Agreement", 
-                        `title`="estimate", 
-                        `type`="number"),
-                    list(
-                        `name`="upperLOA_lowerCI", 
-                        `superTitle`="Upper limit of Agreement", 
-                        `title`="Lower 95% CI", 
-                        `type`="number"),
-                    list(
-                        `name`="upperLOA_upperCI", 
-                        `superTitle`="Upper limit of Agreement", 
-                        `title`="Higher 95% CI", 
+                        `name`="UpperCI", 
+                        `superTitle`="95% Confidence Interval", 
+                        `title`="Upper", 
                         `type`="number"))))
             self$add(jmvcore::Image$new(
                 options=options,
@@ -188,7 +149,6 @@ jamoviBAanalysisBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @param plotProportionalBias .
 #' @param plotProportionalBias.se .
 #' @param overlapping .
-#' @param marginalHistogram .
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$table} \tab \tab \tab \tab \tab a table \cr
@@ -210,8 +170,7 @@ jamoviBAanalysis <- function(
     ciShading = TRUE,
     plotProportionalBias = FALSE,
     plotProportionalBias.se = TRUE,
-    overlapping = FALSE,
-    marginalHistogram = FALSE) {
+    overlapping = FALSE) {
 
     if ( ! requireNamespace('jmvcore'))
         stop('jamoviBAanalysis requires jmvcore to be installed (restart may be required)')
@@ -223,8 +182,7 @@ jamoviBAanalysis <- function(
         ciShading = ciShading,
         plotProportionalBias = plotProportionalBias,
         plotProportionalBias.se = plotProportionalBias.se,
-        overlapping = overlapping,
-        marginalHistogram = marginalHistogram)
+        overlapping = overlapping)
 
     results <- jamoviBAanalysisResults$new(
         options = options)

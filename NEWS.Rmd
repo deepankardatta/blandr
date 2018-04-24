@@ -16,6 +16,12 @@ knitr::opts_chunk$set(
 
 # NEWS for blandr
 
+## Version 0.4.5
+* 0.4.5 will not be tagged on GitHub
+* Is being prepared for a 0.5 release
+* Further development of rmarkdown auto-report function
+* Addition of Jamovi module code
+
 ## Version 0.4.4-devel: development version
 * 0.4.4-devel will not be tagged on GitHub
 * Development of rmarkdown auto-report function
