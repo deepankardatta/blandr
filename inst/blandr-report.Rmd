@@ -87,14 +87,6 @@ shapiro.test( results$differences )
 
 ***
 
-## Plot comparison of the two methods
-
-```{r}
-blandr.draw ( method1 , method2 , sig.level=0.95 , marginalHistogram = TRUE )
-```
-
-***
-
 ## Plot comparison with best fit line to investigate for proportional bias
 
 ```{r}

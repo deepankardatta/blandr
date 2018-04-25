@@ -22,10 +22,18 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
 
             private$..method1 <- jmvcore::OptionVariable$new(
                 "method1",
-                method1)
+                method1,
+                suggested=list(
+                    "continuous"),
+                permitted=list(
+                    "continuous"))
             private$..method2 <- jmvcore::OptionVariable$new(
                 "method2",
-                method2)
+                method2,
+                suggested=list(
+                    "continuous"),
+                permitted=list(
+                    "continuous"))
             private$..ciDisplay <- jmvcore::OptionBool$new(
                 "ciDisplay",
                 ciDisplay,

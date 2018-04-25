@@ -60,7 +60,6 @@ blandr.plot.ggplot <- function ( statistics.results ,
                             y.plot.mode = "difference" ,
                             plotProportionalBias = FALSE ,
                             plotProportionalBias.se = TRUE ,
-                            marginalHistogram = FALSE ,
                             assume.differences.are.normal = TRUE
                             ) {
 

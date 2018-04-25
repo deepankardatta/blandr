@@ -12,9 +12,17 @@ options:
     - name: method1
       title: Method 1
       type: Variable
+      suggested:
+        - continuous
+      permitted:
+        - continuous
 
     - name: method2
       title: Method 2
       type: Variable
+      suggested:
+        - continuous
+      permitted:
+        - continuous
 
 ...

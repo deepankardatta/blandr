@@ -24,8 +24,13 @@ blandr.plot.normality <- function( statistics.results ) {
     # and rename
     names(results)[1] <- "differences"
 
+    # Apply a null to the variable density to hopefully get past the CRAN check
+    # This is a ggplot2 and CRAN issue
+    # See: https://stackoverflow.com/questions/9439256/how-can-i-handle-r-cmd-check-no-visible-binding-for-global-variable-notes-when#12429344
+    density <- NULL
+
     # Create the histogram
-    normality.plot <- ggplot( results , aes( x=differences ) ) +
+    normality.plot <- ggplot( results , aes( x = results$differences ) ) +
       geom_histogram( aes(y=..density..) , colour="black", fill="white" ) +
       geom_density( colour="red" ) +
       ylab( "Density" ) +

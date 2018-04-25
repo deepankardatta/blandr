@@ -15,8 +15,8 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/deepankardatta/blandr/
 BugReports: https://github.com/deepankardatta/blandr/issues
-Imports: ggplot2, knitr, stringr, jmvcore (>= 0.5.5), R6
-Suggests: rmarkdown, testthat
+Imports: ggplot2, knitr, stringr, jmvcore (>= 0.5.5), R6, rmarkdown
+Suggests: testthat
 VignetteBuilder: knitr
 Collate: 
     'blandr.data.preparation.r'

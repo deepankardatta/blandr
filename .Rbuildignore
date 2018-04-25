@@ -1,7 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^temp$
-^inst.doc$
 ^build$
 ^unused$
 ^tests$
@@ -15,5 +14,5 @@
 ^README-.*\.png$
 ^NEWS\.Rmd$
 ^NEWS-.*\.png$
-^.*blandr-report.*$
+^.*blandr-report_.*$
 ^.*\.jmo$

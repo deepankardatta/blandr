@@ -19,10 +19,13 @@
 #' @export
 
 blandr.output.report <- function( method1 , method2 ) {
-  rmarkdown::render("R/blandr-report.Rmd",
-                    params = list(
-                    method1 = method1,
-                    method2 = method2)
-                    )
+
+  report_location <- system.file( "blandr-report.Rmd" , package="blandr" )
+
+  rmarkdown::render( report_location ,
+                     params = list(
+                     method1 = method1,
+                     method2 = method2)
+                     )
 }
 
