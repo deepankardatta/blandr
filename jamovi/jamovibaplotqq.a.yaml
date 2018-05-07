@@ -16,6 +16,8 @@ options:
         - continuous
       permitted:
         - continuous
+        - nominal
+        - ordinal
 
     - name: method2
       title: Method 2
@@ -24,5 +26,7 @@ options:
         - continuous
       permitted:
         - continuous
+        - nominal
+        - ordinal
 
 ...

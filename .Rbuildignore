@@ -9,6 +9,7 @@
 ^cran-comments\.Rmd$
 ^cran-comments-.*\.png$
 ^cran-comments\.md$
+^jamovi$
 ^revdep$
 ^README\.Rmd$
 ^README-.*\.png$

@@ -21,14 +21,18 @@ jamoviBAplotHistogramOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
                 suggested=list(
                     "continuous"),
                 permitted=list(
-                    "continuous"))
+                    "continuous",
+                    "nominal",
+                    "ordinal"))
             private$..method2 <- jmvcore::OptionVariable$new(
                 "method2",
                 method2,
                 suggested=list(
                     "continuous"),
                 permitted=list(
-                    "continuous"))
+                    "continuous",
+                    "nominal",
+                    "ordinal"))
 
             self$.addOption(private$..method1)
             self$.addOption(private$..method2)
