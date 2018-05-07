@@ -46,10 +46,7 @@ using session charset: UTF-8
 R CMD check results
 0 errors | 0 warnings | 0 notes
 
-However on using devtools::release gives 1 note as:
-Package has a VignetteBuilder field but no prebuilt vignette index.
-
-WinBuilder (devtools::build_win()) gives a different note:
+WinBuilder (devtools::build_win()) gives a note - not mis-spelled:
 Possibly mis-spelled words in DESCRIPTION:
   Jamovi (10:16)
 
