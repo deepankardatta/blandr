@@ -7,7 +7,7 @@ Description: Carries out Bland Altman analyses (also known as a Tukey
     2015 as existing Bland-Altman analysis functions did not calculate 
     confidence intervals. This package was created to rectify this, 
     and create reproducible plots. It further provides the structures for
-    creating a Jamovi (https://www.jamovi.org/) module to allows use of 
+    creating a Jamovi (<https://www.jamovi.org/>) module to allows use of 
     the package functions via an easy to use GUI system.
 Depends: R (>= 3.3.0)
 Authors@R: person("Deepankar", "Datta", email = "deepankardatta@nhs.net",
