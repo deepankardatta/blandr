@@ -22,10 +22,22 @@ jamoviBAanalysisOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
 
             private$..method1 <- jmvcore::OptionVariable$new(
                 "method1",
-                method1)
+                method1,
+                suggested=list(
+                    "continuous"),
+                permitted=list(
+                    "continuous",
+                    "nominal",
+                    "ordinal"))
             private$..method2 <- jmvcore::OptionVariable$new(
                 "method2",
-                method2)
+                method2,
+                suggested=list(
+                    "continuous"),
+                permitted=list(
+                    "continuous",
+                    "nominal",
+                    "ordinal"))
             private$..ciDisplay <- jmvcore::OptionBool$new(
                 "ciDisplay",
                 ciDisplay,
@@ -100,16 +112,16 @@ jamoviBAanalysisResults <- if (requireNamespace('jmvcore')) R6::R6Class(
                         `type`="text"),
                     list(
                         `name`="estimate", 
-                        `title`="estimate", 
+                        `title`="Estimate", 
                         `type`="number"),
                     list(
                         `name`="LowerCI", 
-                        `superTitle`="95% Confidence Interval", 
+                        `superTitle`="95% confidence interval", 
                         `title`="Lower", 
                         `type`="number"),
                     list(
                         `name`="UpperCI", 
-                        `superTitle`="95% Confidence Interval", 
+                        `superTitle`="95% confidence interval", 
                         `title`="Upper", 
                         `type`="number"))))
             self$add(jmvcore::Image$new(

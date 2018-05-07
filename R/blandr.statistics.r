@@ -50,7 +50,7 @@
 #' @return regression.fixed.slope The slope value of the regression equation
 #' @return regression.fixed.intercept The intercept value of the regression equation
 #'
-#' @importFrom  stats coef cor lm na.omit qnorm qt sd t.test
+#' @importFrom stats coef cor lm na.omit qnorm qt sd t.test
 #'
 #' @include blandr.data.preparation.r
 #'

@@ -9,6 +9,8 @@
 # RUN every build
 devtools::test()
 devtools::document()
+devtools::document()
+devtools::build()
 devtools::check()
 
 # RUN final build

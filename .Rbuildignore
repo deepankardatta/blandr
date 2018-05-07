@@ -1,5 +1,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^temp$
+^build/js$
+^build/R$
 ^unused$
 ^tests$
 ^data-raw$
@@ -7,9 +10,11 @@
 ^cran-comments\.Rmd$
 ^cran-comments-.*\.png$
 ^cran-comments\.md$
+^jamovi$
 ^revdep$
 ^README\.Rmd$
 ^README-.*\.png$
 ^NEWS\.Rmd$
 ^NEWS-.*\.png$
-^R\blandr-report.html
+^.*blandr-report_.*$
+^.*\.jmo$

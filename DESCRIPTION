@@ -1,12 +1,14 @@
 Package: blandr
 Title: Bland-Altman Method Comparison
-Version: 0.4.5
+Version: 0.5.0
 Description: Carries out Bland Altman analyses (also known as a Tukey
     mean-difference plot) as described by JM Bland and DG Altman in
     1986 <doi:10.1016/S0140-6736(86)90837-8>. This package was created in 
     2015 as existing Bland-Altman analysis functions did not calculate 
     confidence intervals. This package was created to rectify this, 
-    and create reproducible plots.
+    and create reproducible plots. It further provides the structures for
+    creating a Jamovi (<https://www.jamovi.org/>) module to allows use of 
+    the package functions via an easy to use GUI system.
 Depends: R (>= 3.3.0)
 Authors@R: person("Deepankar", "Datta", email = "deepankardatta@nhs.net",
                   role = c("aut", "cre"))
@@ -15,8 +17,8 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/deepankardatta/blandr/
 BugReports: https://github.com/deepankardatta/blandr/issues
-Imports: ggplot2, ggExtra, knitr, stringr, jmvcore (>= 0.5.5), R6
-Suggests: rmarkdown, testthat
+Imports: ggplot2, knitr, stringr, jmvcore (>= 0.5.5), R6, rmarkdown
+Suggests: testthat
 VignetteBuilder: knitr
 Collate: 
     'blandr.data.preparation.r'

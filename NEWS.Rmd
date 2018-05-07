@@ -16,6 +16,11 @@ knitr::opts_chunk$set(
 
 # NEWS for blandr
 
+## Version 0.5
+* Final CRAN release
+* Contains rmarkdown auto-report function
+* The codebase (at GitHub) allows generation of a Jamovi module - development can be done in parallel
+
 ## Version 0.4.5
 * 0.4.5 will not be tagged on GitHub
 * Is being prepared for a 0.5 release

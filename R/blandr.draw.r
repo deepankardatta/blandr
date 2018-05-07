@@ -61,7 +61,6 @@ blandr.draw <- function( method1 ,
                          y.plot.mode = "difference" ,
                          plotProportionalBias = FALSE ,
                          plotProportionalBias.se = TRUE ,
-                         marginalHistogram = FALSE ,
                          assume.differences.are.normal = TRUE
                          ) {
 
@@ -96,7 +95,6 @@ blandr.draw <- function( method1 ,
                                   y.plot.mode = y.plot.mode ,
                                   plotProportionalBias = plotProportionalBias ,
                                   plotProportionalBias.se = plotProportionalBias.se ,
-                                  marginalHistogram = marginalHistogram ,
                                   assume.differences.are.normal = assume.differences.are.normal
                                   )
         ba.plot

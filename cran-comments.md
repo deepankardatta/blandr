@@ -1,6 +1,8 @@
-This is version 0.4.3 of "blandr"
-This is a FIRST SUBMISSION to CRAN - I have updated the package in response to 
-comments by Uwe Ligges
+This is version 0.5.0 of "blandr"
+This is a second version submission to CRAN
+
+## Changes in 0.5.0
+Update libraries to have an autoreport function. The codebase also include code for a Jamovi module which can also be run in base R.
 
 ## Changes in revised 0.4.3 in response to CRAN suggestions
 Examples and more comments put into R files, so that roxygen2 can put into manual
@@ -33,20 +35,25 @@ I have changed the description to so: "Carries out Bland Altman analyses (also k
 Changes in the DESCRIPTION file
 
 ## Test environments
-* local OS X install, Mac OS X 10.12.5, R 3.4.0
+* local OS X install, Mac OS X 10.12.5, R 3.5.0
 * win-builder (devel and release) - via devtools::build_win()
 
 ## R CMD check results
-using R version 3.4.0 (2017-04-21)
+using R version 3.5.0 (2018-04-23)
 using platform: x86_64-apple-darwin15.6.0 (64-bit)
 using session charset: UTF-8
 
-There were no ERRORs or WARNINGs.
+R CMD check results
+0 errors | 0 warnings | 0 notes
 
-1 NOTE on win-builder: "Possibly mis-spelled words in DESCRIPTION". These words are not mis-spelled.
+WinBuilder (devtools::build_win()) gives a note - not mis-spelled:
+Possibly mis-spelled words in DESCRIPTION:
+  Jamovi (10:16)
 
-No errors from revdep
+revdep
+Warning message:
+'DESCRIPTION' file has an 'Encoding' field and re-encoding is not possible 
 
 ## Reverse dependencies
 
-This is a new release, so there are no reverse dependencies.
+There are no reverse dependencies.

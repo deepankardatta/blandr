@@ -35,7 +35,7 @@ You can find the citation information through the usual R citation commands:
 citation("blandr")
 ```
 
-The DOI will refer to all versions of blandr. If you need to cite specific releases DOIs, the full versioning information can be found at Zenodo (https://zenodo.org/record/824515), with the full source code at the blandr GitHub page (https://github.com/deepankardatta/blandr/).
+The DOI will refer to all versions of blandr. If you need to cite specific releases DOIs, the full versioning information can be found at Zenodo (https://zenodo.org/record/824514), with the full source code at the blandr GitHub page (https://github.com/deepankardatta/blandr/).
 
 ## Installation
 

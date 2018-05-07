@@ -12,10 +12,22 @@ options:
     - name: method1
       title: Method 1
       type: Variable
+      suggested:
+        - continuous
+      permitted:
+        - continuous
+        - nominal
+        - ordinal
 
     - name: method2
       title: Method 2
       type: Variable
+      suggested:
+        - continuous
+      permitted:
+        - continuous
+        - nominal
+        - ordinal
 
     - name: ciDisplay
       title: Confidence intervals
