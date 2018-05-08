@@ -1,7 +1,8 @@
 ---
 name:  jamoviBAplotHistogram
-title: Differences histogram and density curve
+title: Differences Histogram and Density Curve
 menuGroup: blandr
+menuSubgroup: Bland-Altman Difference Analysis
 version: '1.0.0'
 jas: '1.1'
 

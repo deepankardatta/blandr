@@ -116,12 +116,12 @@ jamoviBAanalysisResults <- if (requireNamespace('jmvcore')) R6::R6Class(
                         `type`="number"),
                     list(
                         `name`="LowerCI", 
-                        `superTitle`="95% confidence interval", 
+                        `superTitle`="95% Confidence Interval", 
                         `title`="Lower", 
                         `type`="number"),
                     list(
                         `name`="UpperCI", 
-                        `superTitle`="95% confidence interval", 
+                        `superTitle`="95% Confidence Interval", 
                         `title`="Upper", 
                         `type`="number"))))
             self$add(jmvcore::Image$new(
@@ -150,7 +150,7 @@ jamoviBAanalysisBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Bland-Altman analysis
+#' Bland-Altman Analysis
 #'
 #' 
 #' @param data .

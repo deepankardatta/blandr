@@ -1,7 +1,8 @@
 ---
 name:  jamoviBAplotQQ
-title: Differences QQ plot
+title: Differences Q-Q Plot
 menuGroup: blandr
+menuSubgroup: Bland-Altman Difference Analysis
 version: '1.0.0'
 jas: '1.1'
 

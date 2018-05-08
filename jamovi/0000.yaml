@@ -1,5 +1,5 @@
 ---
-title: Bland-Altman Method Comparison For Jamovi
+title: Bland-Altman Method Comparison
 name: blandr
 version: 0.5.0
 jms: '1.0'
@@ -9,32 +9,32 @@ maintainer: Deepankar Datta <deepankardatta@nhs.net>
 date: '2018-04-25'
 type: R
 description: >-
-  Implements Bland-Altman method comparison analysis in Jamovi using the blandr
-  R library from CRAN. The Jamovi functionality is now integrated into the main
-  blandr package.
+  This module provides Bland-Altman method comparison analysis, and is also
+  available as an <a href="https://cran.r-project.org/package=blandr"
+  target="_blank">R package from CRAN</a>
 analyses:
-  - title: Bland-Altman analysis
+  - title: Bland-Altman Analysis
     name: jamoviBAanalysis
     ns: blandr
     menuGroup: blandr
-    menuTitle: Bland-Altman analysis
-  - title: Differences QQ plot
+    menuTitle: Bland-Altman Analysis
+  - title: Differences Q-Q Plot
     name: jamoviBAplotQQ
     ns: blandr
     menuGroup: blandr
-    menuSubgroup: Bland-Altman difference analysis
-    menuTitle: Differences QQ plot
-  - title: Differences histogram and density curve
+    menuSubgroup: Bland-Altman Difference Analysis
+    menuTitle: Differences Q-Q Plot
+  - title: Differences Histogram and Density Curve
     name: jamoviBAplotHistogram
     ns: blandr
     menuGroup: blandr
-    menuSubgroup: Bland-Altman difference analysis
-    menuTitle: Differences histogram and density curve
-  - title: Bland-Altman raw statistics
+    menuSubgroup: Bland-Altman Difference Analysis
+    menuTitle: Differences Histogram and Density Curve
+  - title: Bland-Altman Raw Statistics
     name: jamoviBAstats
     ns: blandr
     menuGroup: blandr
-    menuSubgroup: Raw statistical output
-    menuTitle: Bland-Altman raw statistics
+    menuSubgroup: Raw Output
+    menuTitle: Bland-Altman Raw Statistics
 
 ...

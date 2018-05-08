@@ -1,7 +1,8 @@
 ---
 name:  jamoviBAstats
-title: Bland-Altman raw statistics
+title: Bland-Altman Raw Statistics
 menuGroup: blandr
+menuSubgroup: Raw Output
 version: '1.0.0'
 jas: '1.1'
 

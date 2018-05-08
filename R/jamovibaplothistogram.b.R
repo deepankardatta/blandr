@@ -1,6 +1,4 @@
 
-# This file is a generated template, your changes will not be overwritten
-
 jamoviBAplotHistogramClass <- if (requireNamespace('jmvcore')) R6::R6Class(
   "jamoviBAplotHistogramClass",
   inherit = jamoviBAplotHistogramBase,
