@@ -19,11 +19,11 @@ items:
           title: 'Estimate'
           type: number
         - name: LowerCI
-          superTitle: '95% confidence interval'
+          superTitle: '95% Confidence Interval'
           title: 'Lower'
           type: number
         - name: UpperCI
-          superTitle: '95% confidence interval'
+          superTitle: '95% Confidence Interval'
           title: 'Upper'
           type: number
 

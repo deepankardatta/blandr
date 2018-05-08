@@ -80,7 +80,7 @@ jamoviBAstatsBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Bland-Altman raw statistics
+#' Bland-Altman Raw Statistics
 #'
 #' 
 #' @param data .

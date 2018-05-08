@@ -82,7 +82,7 @@ jamoviBAplotHistogramBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Differences histogram and density curve
+#' Differences Histogram and Density Curve
 #'
 #' 
 #' @param data .

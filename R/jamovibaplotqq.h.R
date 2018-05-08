@@ -82,7 +82,7 @@ jamoviBAplotQQBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Differences QQ plot
+#' Differences Q-Q Plot
 #'
 #' 
 #' @param data .
