@@ -1,5 +1,5 @@
 ---
-title: Bland-Altman Method Comparison For Jamovi
+title: Bland-Altman Method Comparison
 name: blandr
 version: 0.5.0
 jms: '1.0'
@@ -9,9 +9,9 @@ maintainer: Deepankar Datta <deepankardatta@nhs.net>
 date: '2018-04-25'
 type: R
 description: >-
-  Implements Bland-Altman method comparison analysis in Jamovi using the blandr
-  R library from CRAN. The Jamovi functionality is now integrated into the main
-  blandr package.
+  This module provides Bland-Altman method comparison analysis, and is also
+  available as an <a href="https://cran.r-project.org/package=blandr"
+  target="_blank">R package from CRAN</a>
 analyses:
   - title: Bland-Altman analysis
     name: jamoviBAanalysis
