@@ -26,9 +26,8 @@ children:
             name: method2
             maxItemCount: 1
             isTarget: true
-  - type: CollapseBox
-    label: Plotting options
-    collapsed: true
+  - type: Label
+    label: Options
     stretchFactor: 1
     children:
       - type: CheckBox
