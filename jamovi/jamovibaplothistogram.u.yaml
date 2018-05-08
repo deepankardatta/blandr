@@ -2,9 +2,13 @@ title: Differences histogram and density curve
 name: jamoviBAplotHistogram
 jus: '2.0'
 stage: 0
-compilerMode: aggressive
+compilerMode: tame
 children:
   - type: VariableSupplier
+    permitted:
+      - continuous
+      - nominal
+      - ordinal
     persistentItems: false
     stretchFactor: 1
     children:

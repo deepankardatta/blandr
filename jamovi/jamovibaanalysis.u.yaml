@@ -5,6 +5,10 @@ stage: 0
 compilerMode: tame
 children:
   - type: VariableSupplier
+    permitted:
+      - continuous
+      - nominal
+      - ordinal
     persistentItems: false
     stretchFactor: 1
     children:
