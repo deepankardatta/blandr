@@ -9,6 +9,7 @@ Description: Carries out Bland Altman analyses (also known as a Tukey
     and create reproducible plots. This package is also available as a module
     for the 'jamovi' statistical spreadsheet (see <https://www.jamovi.org>
     for more information).
+Depends: R (>= 3.2.0)
 Authors@R: person("Deepankar", "Datta", email = "deepankardatta@nhs.net",
                   role = c("aut", "cre"))
 License: GPL-3
@@ -16,7 +17,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/deepankardatta/blandr/
 BugReports: https://github.com/deepankardatta/blandr/issues
-Imports: ggplot2, knitr, stringr, jmvcore (>= 0.5.5), R6, rmarkdown
+Imports: ggplot2, knitr, stringr, jmvcore (>= 0.8.5), R6, rmarkdown
 Suggests: testthat
 VignetteBuilder: knitr
 Collate: 
