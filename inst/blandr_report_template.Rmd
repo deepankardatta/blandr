@@ -1,7 +1,8 @@
 ---
-title: "Bland-Altman report"
-author: "blandr report automated tool"
+title: "Bland-Altman analysis"
+author: "blandr v0.5.1"
 date: '`r strftime(Sys.time(), format = "%B %d, %Y")`'
+runtime: shiny
 output: html_document
 params:
     method1: NA
@@ -33,7 +34,7 @@ The DOI will refer to all versions of blandr. If you need to cite specific relea
 
 ## Interpreting the output
 
-The two methods used in the comparison will be labelled "Method 1" and "Method 2". It is up to the user to understand which data they have supplied as these methods.
+The two methods used in the comparison will be labelled "Method 1" and "Method 2". It is up to the user to understand which data they have supplied as these methods. The package always calculates the differences as "Method 1" minus "Method 2".
 
 Questions to think about when interepreting the data include:
 
@@ -101,6 +102,17 @@ shapiro.test( results$differences )
 ```{r}
 blandr.draw ( method1 , method2 , ciDisplay = FALSE , plotProportionalBias = TRUE )
 print(results$regression.equation)
+```
+
+***
+
+## Bland-Altman analysis (with assumption of normal distribution of differences)
+
+```{r}
+# Uses one of the Jamovi functions as it gives you a nice table as well
+# Although you can call the blandr.draw function for a ggplot as well
+ba_data <- data.frame( method1 , method2 )
+blandr::jamoviBAanalysis( data=ba_data , method1="method1" , method2="method2" )
 ```
 
 ***
