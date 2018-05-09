@@ -63,6 +63,13 @@ blandr.plot.ggplot <- function ( statistics.results ,
                             assume.differences.are.normal = TRUE
                             ) {
 
+  # Does a check if ggplot2 is available
+  # It should be as it is in the imports section but in CRAN checks some systems don't have it!
+  if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    stop("Package \"ggplot2\" needed for this function to work. Please install it.",
+         call. = FALSE)
+  }
+
   # Selects if x-axis uses means (traditional) or selects one of the methods
   # as the gold standard (non-traditional BA)
   # See Krouwer JS (2008) Why Bland-Altman plots should use X, not (Y+X)/2 when X is a reference method. Statistics in Medicine 27:778-780

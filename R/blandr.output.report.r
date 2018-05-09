@@ -5,6 +5,8 @@
 #' @author Deepankar Datta <deepankardatta@nhs.net>
 #'
 #' @import rmarkdown
+#' @import shiny
+#' @import jmvcore
 #'
 #' @param method1 A list of numbers for the first method
 #' @param method2 A list of numbers for the second method
@@ -20,12 +22,22 @@
 
 blandr.output.report <- function( method1 , method2 ) {
 
-  report_location <- system.file( "blandr-report.Rmd" , package="blandr" )
+  if( !rmarkdown::pandoc_available() ) {
 
-  rmarkdown::render( report_location ,
-                     params = list(
-                     method1 = method1,
-                     method2 = method2)
-                     )
-}
+    stop("The \"pandoc\" system is needed for this function to work. Please install it.",
+         call. = FALSE)
+
+  } else {
+
+    report_location <- system.file( "blandr_report_template.Rmd" , package="blandr" )
+
+    rmarkdown::run( file = report_location ,
+                    render_args = list( runtime = "shiny" ,
+                      params = list( method1 = method1 , method2 = method2 ) # End of params
+                      ) # End of render_args
+    ) # End of rmarkdown::run
+
+  } # END OF IF STATEMENT
+
+} # END OF FUNCTION
 

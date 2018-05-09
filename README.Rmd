@@ -86,6 +86,9 @@ If you can think of a better name please let me know!
 
 Further information can be found in the function help files in the package, as well as in the vignettes.
 
+## System Requirements
+The library is quite small, and mostly depends on the ggplot2 library. However the report functions do require rmarkdown, knitr, and most importantly pandoc - the function should check this is available and stop gracefully if not. Further the Jamovi based functions need the Jamovi library to work.
+
 ## Future improvements
 
 Whilst this package is good enough for use, there is the scope for iterative improvements.

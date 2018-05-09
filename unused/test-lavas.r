@@ -8,3 +8,6 @@ blandr.draw( LAVASdata$VBG.LAC,LAVASdata$ABG.LAC,"Venous","Arterial", plotTitle=
 blandr.draw( LAVASdata$VBG.LAC,LAVASdata$ABG.LAC,"Venous","Arterial", plotTitle="Bland-Altman plot: A-LACT vs PV-LACT", annotate=TRUE, ciShading=TRUE , overlapping = TRUE )
 
 test <- blandr.statistics(LAVASdata$VBG.LAC,LAVASdata$ABG.LAC)
+
+blandr.output.report( LAVASdata$VBG.LAC,LAVASdata$ABG.LAC)
+
