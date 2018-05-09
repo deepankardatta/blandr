@@ -2,7 +2,7 @@
 % Please edit documentation in R/jamovibaplotqq.h.R
 \name{jamoviBAplotQQ}
 \alias{jamoviBAplotQQ}
-\title{Differences QQ plot}
+\title{Differences Q-Q Plot}
 \usage{
 jamoviBAplotQQ(data, method1, method2)
 }
@@ -20,5 +20,5 @@ A results object containing:
 }
 }
 \description{
-Differences QQ plot
+Differences Q-Q Plot
 }

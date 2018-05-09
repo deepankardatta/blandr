@@ -7,9 +7,9 @@
 # devtools::use_testthat()
 
 # RUN every build
+devtools::document()
+devtools::document()
 devtools::test()
-devtools::document()
-devtools::document()
 devtools::build()
 devtools::check()
 

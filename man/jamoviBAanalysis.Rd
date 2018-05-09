@@ -2,7 +2,7 @@
 % Please edit documentation in R/jamovibaanalysis.h.R
 \name{jamoviBAanalysis}
 \alias{jamoviBAanalysis}
-\title{Bland-Altman analysis}
+\title{Bland-Altman Analysis}
 \usage{
 jamoviBAanalysis(data, method1, method2, ciDisplay = TRUE, ciShading = TRUE,
   plotProportionalBias = FALSE, plotProportionalBias.se = TRUE,
@@ -39,5 +39,5 @@ Tables can be converted to data frames with \code{asDF} or \code{\link{as.data.f
 \code{as.data.frame(results$table)}
 }
 \description{
-Bland-Altman analysis
+Bland-Altman Analysis
 }

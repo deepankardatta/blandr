@@ -16,7 +16,10 @@ knitr::opts_chunk$set(
 
 # NEWS for blandr
 
-## Version 0.5
+## Version 0.5.1
+* Fixing the broken blandr.output.report function - it turns out this does not work so well on other systems - and has been converted into a Shiny app
+
+## Version 0.5.0
 * Final CRAN release
 * Contains rmarkdown auto-report function
 * The codebase (at GitHub) allows generation of a Jamovi module - development can be done in parallel

@@ -5,7 +5,6 @@
 #' @author Deepankar Datta <deepankardatta@nhs.net>
 #'
 #' @import rmarkdown
-#' @import shiny
 #' @import jmvcore
 #'
 #' @param method1 A list of numbers for the first method
