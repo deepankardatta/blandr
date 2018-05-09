@@ -11,7 +11,7 @@ params:
 
 ```{r setup, include=FALSE}
 library(blandr)
-knitr::opts_chunk$set( echo = TRUE , cache=TRUE )
+knitr::opts_chunk$set( echo = TRUE , cache=FALSE )
 params$method1
 params$method2
 results <- blandr.statistics( method1 , method2 )

@@ -9,5 +9,12 @@ blandr.draw( LAVASdata$VBG.LAC,LAVASdata$ABG.LAC,"Venous","Arterial", plotTitle=
 
 test <- blandr.statistics(LAVASdata$VBG.LAC,LAVASdata$ABG.LAC)
 
-blandr.output.report( LAVASdata$VBG.LAC,LAVASdata$ABG.LAC)
+blandr.output.report( LAVASdata$VBG.LAC , LAVASdata$ABG.LAC )
+blandr.output.report( LAVASdata$LAB.LAC , LAVASdata$ABG.LAC )
+
+
+method1 <- as.double(LAVASdata$ABG.LAC)
+method2 <- as.double(LAVASdata$VBG.LAC)
+
+rmarkdown::run( file = "inst/blandr_report_template.Rmd" , render_args = list( runtime = "shiny" , params = list( method1 = method1 , method2 = method2 ) ) )
 

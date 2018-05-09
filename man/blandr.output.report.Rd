@@ -2,7 +2,7 @@
 % Please edit documentation in R/blandr.output.report.r
 \name{blandr.output.report}
 \alias{blandr.output.report}
-\title{Bland-Altman report generating function (BETA)}
+\title{Bland-Altman report generator}
 \usage{
 blandr.output.report(method1, method2)
 }
@@ -12,14 +12,36 @@ blandr.output.report(method1, method2)
 \item{method2}{A list of numbers for the second method}
 }
 \description{
-Generates a report for the Bland-Altman statistics. The function passes data to a R markdown
+Generates a report for the Bland-Altman statistics using rMarkdown and Shiny.
+}
+\note{
+Use the function to generate a report. You can also take the .Rmd file to customise it and create
+
+your own report. Or use rMarkdown to save the contents. I couldn't add this to the function as it's
+
+not allowed in CRAN. On the otherhand a full Shiny app would take too long. So this is a stop-gap way
+
+of creating this function. Hopefully I can improve it in the future
 }
 \examples{
+# NOT RUN
 # Generates two random measurements
-measurement1 <- rnorm(100)
-measurement2 <- rnorm(100)
+# measurement1 <- rnorm(100)
+# measurement2 <- rnorm(100)
 
-blandr.output.report( measurement1 , measurement2 )
+# blandr.output.report( measurement1 , measurement2 )
+#
+# Use this to manually run the rmarkdown template
+# However specify where the template is
+# Also define your methods as method1 and method2 exactly
+# For a reason I can't fathom (or how the list of parameters is constructed)
+# not naming them method1 and method2 makes them invisible to the rMarkdown document
+#
+# rmarkdown::run( file = "blandr_report_template.Rmd" ,
+#      render_args = list( runtime = "shiny" ,
+#          params = list( method1 = method1 ,
+#               method2 = method2 ) ) )
+# END OF NOT RUN
 
 }
 \author{
