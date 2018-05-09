@@ -1,8 +1,8 @@
-This is version 0.5.0 of "blandr"
-This is a second version submission to CRAN
+This is version 0.5.1 of "blandr"
+This is a third version submission to CRAN
 
-## Changes to revised 0.5.0
-In response to web checks (https://cran.r-project.org/web/checks/check_results_blandr.html) which were only highlighted in Solaris and Linux versions of blandr when tested. Changed some functions to test the availability of ggplot2, and if not stops execution of the function. Further the auto report function checks for the existence of pandoc, and again stops if not found.
+## Changes to 0.5.1
+In response to web checks (https://cran.r-project.org/web/checks/check_results_blandr.html) which were only highlighted in Solaris and Linux versions of blandr when tested. Changed some functions to test the availability of ggplot2, and if not stops execution of the function. Further the auto report function checks for the existence of pandoc, and again stops if not found. In response to further comments, the blandr.output.report function has been overhauled to not use temporary files - instead of rmarkdown::render, it uses rmarkdown::run to display the report instead
 
 ## Changes in 0.5.0
 Update libraries to have an autoreport function. The codebase also include code for a Jamovi module which can also be run in base R.
