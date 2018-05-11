@@ -1,6 +1,6 @@
 Package: blandr
 Title: Bland-Altman Method Comparison
-Version: 0.5.1
+Version: 0.5.2
 Date: 2018-05-09
 Description: Carries out Bland Altman analyses (also known as a Tukey
     mean-difference plot) as described by JM Bland and DG Altman in
@@ -11,8 +11,9 @@ Description: Carries out Bland Altman analyses (also known as a Tukey
     for the 'jamovi' statistical spreadsheet (see <https://www.jamovi.org>
     for more information).
 Depends: R (>= 3.2.0)
-Authors@R: person("Deepankar", "Datta", email = "deepankardatta@nhs.net",
-                  role = c("aut", "cre"))
+Authors@R: c(person("Deepankar", "Datta", email = "deepankardatta@nhs.net",
+                  role = c("aut", "cre") ) , 
+                  person("Jonathon", "Love", email = "jon@thon.love" , role = "ctb" ) )
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

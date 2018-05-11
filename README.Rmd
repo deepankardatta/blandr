@@ -14,19 +14,16 @@ knitr::opts_chunk$set(
 
 # blandr: a Bland-Altman Method Comparison package for R
 
-*blandr* carries out Bland Altman analyses (also known as a Tukey mean-difference plot) as described by JM Bland and DG Altman in 1986.
-
-This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals. The *blandr* was created to fulfil this need.
-
-*blandr* has been improved iteratively over time, and hopefully this library will be useful to researchers as an open-source and reproducible package.
+*blandr* carries out Bland Altman analyses (also known as a Tukey mean-difference plot) as described by JM Bland and DG Altman in 1986. This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals. *blandr* has been improved iteratively over time, and hopefully will be useful as an open-source library for reproducible science.
 
 ## The benefits
 
 * Calculates and plots confidence intervals
 * Outputs ggplot2 information to create extensible plots
-* Has a basic Jamovi module, to allow GUI analysis for those not comfortable with command line tools
-* Has a function to chart for proportional bias
-* If you get me through GitHub, I will do my best to maintain and improve this package
+* Associated Jamovi module, allowing researchers and users uncomfortable with command line tools to use a graphical user interface
+* Shiny/rmarkdown-based automatic report generating function
+* Developing functions to chart for proportional bias
+* Open source and on GitHub - anyone can contribute and extend the library
 
 # Citations
 
@@ -66,13 +63,17 @@ blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWri
 
 ## The Jamovi module
 
-One of the benefits of the current version is that it includes a basic module for the Jamovi GUI statistical spreadsheet (https://www.jamovi.org/). I'm a believer in making this tool more accesible and Jamovi is a way to do this. The Jamovi module is still under development, and will be submitted to the Jamovi module repository soon. However until this is done, it can be installed using the following commands:
+One of the benefits of *blandr* is that the library has been developed so a module can be generated for the Jamovi GUI statistical spreadsheet (https://www.jamovi.org/). I'm a believer in making this tool more accesible and Jamovi is a way to do this. The Jamovi module will also be iteratively developed - the code for each Jamovi version is linked to the CRAN version on GitHub. The module will be on the Jamovi library.
+
+If you want to use the development versions of *blandr*, you can install Jamovi from the comman line using the following commands:
 
 ```{r gh-installation, eval = FALSE}
 install.packages('jmvtools', repos=c('https://repo.jamovi.org', 'https://cran.r-project.org'))
 library(jmvtools)
 jmvtools::install()
 ```
+
+You can then download the *blandr* GitHub development branch and install it to Jamovi from the command line.
 
 ## Why the odd name?
 
