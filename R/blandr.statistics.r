@@ -69,6 +69,8 @@
 #'
 #' blandr.statistics(measurement2 ~ measurement1)
 #'
+#' # Example with a real data set
+#' blandr.statistics(Method.B ~ Method.A, data = giavarina.2015)
 #' @rdname blandr.statistics
 #' @export
 blandr.statistics = function(x, ...){

@@ -83,6 +83,8 @@ blandr.statistics( measurement1 , measurement2 )
 
 blandr.statistics(measurement2 ~ measurement1)
 
+# Example with a real data set
+blandr.statistics(Method.B ~ Method.A, data = giavarina.2015)
 }
 \references{
 Based on: (1) Bland, J. M., & Altman, D. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The Lancet, 327(8476), 307-310. http://dx.doi.org/10.1016/S0140-6736(86)90837-8
