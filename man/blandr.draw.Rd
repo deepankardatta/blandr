@@ -7,18 +7,15 @@
 blandr.draw(method1, method2, method1name = "Method 1",
   method2name = "Method 2",
   plotTitle = "Bland-Altman plot for comparison of 2 methods",
-  sig.level = 0.95, LoA.mode = 1, annotate = FALSE, ciDisplay = TRUE,
-  ciShading = TRUE, normalLow = FALSE, normalHigh = FALSE,
-  lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8,
-  overlapping = FALSE, plotter = "ggplot", x.plot.mode = "means",
-  y.plot.mode = "difference", plotProportionalBias = FALSE,
-  plotProportionalBias.se = TRUE, assume.differences.are.normal = TRUE)
+  sig.level = 0.95, LoA.mode = 1, annotate = FALSE,
+  ciDisplay = TRUE, ciShading = TRUE, normalLow = FALSE,
+  normalHigh = FALSE, lowest_y_axis = FALSE, highest_y_axis = FALSE,
+  point_size = 0.8, overlapping = FALSE, plotter = "ggplot",
+  x.plot.mode = "means", y.plot.mode = "difference",
+  plotProportionalBias = FALSE, plotProportionalBias.se = TRUE,
+  assume.differences.are.normal = TRUE)
 }
 \arguments{
-\item{method1}{A list of numbers.}
-
-\item{method2}{A list of numbers.}
-
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 
 \item{method2name}{(Optional) Plotting name for 2nd method, default 'Method 2'}

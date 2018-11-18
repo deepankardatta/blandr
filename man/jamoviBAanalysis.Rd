@@ -4,9 +4,9 @@
 \alias{jamoviBAanalysis}
 \title{Bland-Altman Analysis}
 \usage{
-jamoviBAanalysis(data, method1, method2, ciDisplay = TRUE, ciShading = TRUE,
-  plotProportionalBias = FALSE, plotProportionalBias.se = TRUE,
-  overlapping = FALSE)
+jamoviBAanalysis(data, method1, method2, ciDisplay = TRUE,
+  ciShading = TRUE, plotProportionalBias = FALSE,
+  plotProportionalBias.se = TRUE, overlapping = FALSE)
 }
 \arguments{
 \item{data}{.}

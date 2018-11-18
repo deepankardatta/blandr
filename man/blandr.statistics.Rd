@@ -2,65 +2,50 @@
 % Please edit documentation in R/blandr.statistics.r
 \name{blandr.statistics}
 \alias{blandr.statistics}
+\alias{blandr.statistics.default}
 \title{Bland-Altman statistics for R}
 \usage{
-blandr.statistics(method1, method2, sig.level = 0.95, LoA.mode = 1)
+blandr.statistics(x, ...)
+
+\method{blandr.statistics}{default}(x, y, sig.level = 0.95,
+  LoA.mode = 1)
 }
 \arguments{
-\item{method1}{A list of numbers.}
+\item{x}{Either a formula, or a vector of numbers corresponding to the results from method 1.}
 
-\item{method2}{A list of numbers.}
+\item{...}{other arguments.}
+
+\item{y}{A vector of numbers corresponding to the results from method 2. Only needed if \code{X} is a vector.}
 
 \item{sig.level}{(Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.}
 
 \item{LoA.mode}{(Optional) Switch to change how accurately the limits of agreement (LoA) are calculated from the bias and its standard deviation. The default is LoA.mode=1 which calculates LoA with the more accurate 1.96x multiplier. LoA.mode=2 uses the 2x multiplier which was used in the original papers. This should really be kept at default, except to double check calculations in older papers.}
 }
 \value{
-means List of arithmetic mean of the two methods
-
-differences List of differences of the two methods
-
-method1 Returns the 'method1' list in the data frame if further evaluation is needed
-
-method2 Returns the 'method2' list in the data frame if further evaluation is needed
-
-sig.level Significance level supplied to the function
-
-sig.level.convert.to.z Significance level convert to Z value
-
-bias Bias of the two methods
-
-biasUpperCI Upper confidence interval of the bias (based on significance level)
-
-biasLowerCI Lower confidence interval of the bias (based on significance level)
-
-biasStdDev
-
-biasSEM Standard error for the bias
-
-LOA_SEM Standard error for the limits of agreement
-
-upperLOA Upper limit of agreement
-
-upperLOA_upperCI Upper confidence interval of the upper limit of agreement
-
-upperLOA_lowerCI Lower confidence interval of the upper limit of agreement
-
-lowerLOA Lower limit of agreement
-
-lowerLOA_upperCI Upper confidence interval of the lower limit of agreement
-
-lowerLOA_lowerCI Lower confidence interval of the lower limit of agreement
-
-proportion Differences/means*100
-
-no.of.observations Number of observations
-
-regression.equation A regression equation to help determine if there is any proportional bias
-
-regression.fixed.slope The slope value of the regression equation
-
-regression.fixed.intercept The intercept value of the regression equation
+An object of class 'blandr' is returned. This is a list with the following elements:
+\item{means}{List of arithmetic mean of the two methods}
+\item{differences}{List of differences of the two methods}
+\item{method1}{Returns the 'method1' list in the data frame if further evaluation is needed}
+\item{method2}{Returns the 'method2' list in the data frame if further evaluation is needed}
+\item{sig.level}{Significance level supplied to the function}
+\item{sig.level.convert.to.z}{Significance level convert to Z value}
+\item{bias}{Bias of the two methods}
+\item{biasUpperCI}{Upper confidence interval of the bias (based on significance level)}
+\item{biasLowerCI}{Lower confidence interval of the bias (based on significance level)}
+\item{biasStdDev}{Standard deviation for the bias}
+\item{biasSEM}{Standard error for the bias}
+\item{LOA_SEM}{Standard error for the limits of agreement}
+\item{upperLOA}{Upper limit of agreement}
+\item{upperLOA_upperCI}{Upper confidence interval of the upper limit of agreement}
+\item{upperLOA_lowerCI}{Lower confidence interval of the upper limit of agreement}
+\item{lowerLOA}{Lower limit of agreement}
+\item{lowerLOA_upperCI}{Upper confidence interval of the lower limit of agreement}
+\item{lowerLOA_lowerCI}{Lower confidence interval of the lower limit of agreement}
+\item{proportion}{Differences/means*100}
+\item{no.of.observations}{Number of observations}
+\item{regression.equation}{A regression equation to help determine if there is any proportional bias}
+\item{regression.fixed.slope}{The slope value of the regression equation}
+\item{regression.fixed.intercept}{The intercept value of the regression equation}
 }
 \description{
 Bland-Altman analysis function for R. Package created as existing
@@ -86,12 +71,17 @@ Last update 2016-02-04
 Originally designed for LAVAS and CVLA
 }
 \examples{
+
 # Generates two random measurements
-measurement1 <- rnorm(100)
+ measurement1 <- rnorm(100)
 measurement2 <- rnorm(100)
 
 # Generates Bland-Altman statistics data of the two measurements
 blandr.statistics( measurement1 , measurement2 )
+
+# Generates Bland-Altman statistics data of the two measurements using the formula interface
+
+blandr.statistics(measurement2 ~ measurement1)
 
 }
 \references{
