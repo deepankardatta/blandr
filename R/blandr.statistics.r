@@ -37,7 +37,7 @@
 #' \item{bias}{Bias of the two methods}
 #' \item{biasUpperCI}{Upper confidence interval of the bias (based on significance level)}
 #' \item{biasLowerCI}{Lower confidence interval of the bias (based on significance level)}
-#' \item {biasStdDev}{Standard deviation for the bias}
+#' \item{biasStdDev}{Standard deviation for the bias}
 #' \item{biasSEM}{Standard error for the bias}
 #' \item{LOA_SEM}{Standard error for the limits of agreement}
 #' \item{upperLOA}{Upper limit of agreement}
@@ -69,12 +69,13 @@
 #'
 #' blandr.statistics(measurement2 ~ measurement1)
 #'
+#' @rdname blandr.statistics
 #' @export
 blandr.statistics = function(x, ...){
   UseMethod("blandr.statistics")
 }
 
-#' @describeIn blandr.statistics
+#' @rdname blandr.statistics
 #' @export
 blandr.statistics.default <- function(x,
                                y,
@@ -178,7 +179,7 @@ blandr.statistics.default <- function(x,
     # END OF FUNCTION
 }
 
-#' @describeIn blandr.statistics
+#'  @rdname blandr.statistics
 #' @export
 blandr.statistics.formula = function(formula, data = parent.frame(), ...){
   if (missing(formula) || (length(formula) != 3))
