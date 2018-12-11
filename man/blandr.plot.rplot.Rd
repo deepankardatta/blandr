@@ -4,8 +4,8 @@
 \alias{blandr.plot.rplot}
 \title{Bland-Altman plotting function, using basic R drawing functions}
 \usage{
-blandr.plot.rplot(statistics.results, plot.limits, method1name = "Method 1",
-  method2name = "Method 2",
+blandr.plot.rplot(statistics.results, plot.limits,
+  method1name = "Method 1", method2name = "Method 2",
   plotTitle = "Bland-Altman plot for comparison of 2 methods",
   annotate = FALSE, ciDisplay = TRUE, ciShading = TRUE,
   normalLow = FALSE, normalHigh = FALSE, point_size = 0.8)
