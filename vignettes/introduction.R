@@ -24,7 +24,7 @@ stats.data[5]
 stats.data[6]
 
 ## ------------------------------------------------------------------------
-blandr.display ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , sig.level=0.95 )
+blandr.output.text ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , sig.level=0.95 )
 
 ## ---- fig.width=6, fig.height=5------------------------------------------
 blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst )
