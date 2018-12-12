@@ -1,6 +1,6 @@
 ---
 name:  jamoviBAanalysis
-title: Bland-Altman Analysis
+title: Bland-Altman analysis for Jamovi
 menuGroup: blandr
 version: '1.0.0'
 jas: '1.1'

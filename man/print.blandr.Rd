@@ -2,9 +2,7 @@
 % Please edit documentation in R/print.blandr.R
 \name{print.blandr}
 \alias{print.blandr}
-\title{Print method for \code{blandr} objects
- 
-Compactly print the statistics used to construct a Bland-Altman plot}
+\title{Print method for \code{blandr} objects}
 \usage{
 \method{print}{blandr}(x, digits = getOption("digits"), ...)
 }
@@ -16,13 +14,11 @@ Compactly print the statistics used to construct a Bland-Altman plot}
 \item{...}{other arguments.}
 }
 \description{
-Print method for \code{blandr} objects
- 
 Compactly print the statistics used to construct a Bland-Altman plot
 }
 \examples{
 
 results = blandr.statistics(Method.B ~ Method.A, data = giavarina.2015)
 results
-  
+
 }

@@ -1,6 +1,6 @@
-#' @title Bland-Altman summary statistics display function
+#' @title (DEPRECATED) Bland-Altman summary statistics display function
 #'
-#' @description Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
+#' @description (DEPRECATED) Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
 #'
 #' @author Deepankar Datta <deepankardatta@nhs.net>
 #'
@@ -21,6 +21,8 @@
 #' @export
 
 blandr.output.text <- function(method1, method2, sig.level = 0.95) {
+
+    .Deprecated("blandr.output.text")
 
     result <- blandr.statistics(method1, method2, sig.level)
 

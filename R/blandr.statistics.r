@@ -59,7 +59,7 @@
 #' @examples
 #'
 #' # Generates two random measurements
-#'  measurement1 <- rnorm(100)
+#' measurement1 <- rnorm(100)
 #' measurement2 <- rnorm(100)
 #'
 #' # Generates Bland-Altman statistics data of the two measurements
@@ -67,10 +67,12 @@
 #'
 #' # Generates Bland-Altman statistics data of the two measurements using the formula interface
 #'
-#' blandr.statistics(measurement2 ~ measurement1)
+#' blandr.statistics( measurement2 ~ measurement1 )
 #'
 #' # Example with a real data set
-#' blandr.statistics(Method.B ~ Method.A, data = giavarina.2015)
+#' blandr.statistics( Method.B ~ Method.A, data = giavarina.2015 )
+
+
 #' @rdname blandr.statistics
 #' @export
 blandr.statistics = function(x, ...){
@@ -88,7 +90,7 @@ blandr.statistics.default <- function(x,
     # makes sure that the values are prepared
     method1 = x
     method2 = y
-    ba.data <- blandr.data.preparation(method1, method2, sig.level)
+    ba.data <- blandr.data.preparation( method1 , method2 , sig.level )
 
     # method1 and method2 are the measurements
     means <- (ba.data$method1 + ba.data$method2)/2
@@ -181,7 +183,7 @@ blandr.statistics.default <- function(x,
     # END OF FUNCTION
 }
 
-#'  @rdname blandr.statistics
+#' @rdname blandr.statistics
 #' @export
 blandr.statistics.formula = function(formula, data = parent.frame(), ...){
   if (missing(formula) || (length(formula) != 3))
