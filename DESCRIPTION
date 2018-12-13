@@ -1,7 +1,7 @@
 Package: blandr
 Title: Bland-Altman Method Comparison
-Version: 0.5.2
-Date: 2018-05-09
+Version: 0.5.3
+Date: 2018-12-12
 Description: Carries out Bland Altman analyses (also known as a Tukey
     mean-difference plot) as described by JM Bland and DG Altman in
     1986 <doi:10.1016/S0140-6736(86)90837-8>. This package was created in 
