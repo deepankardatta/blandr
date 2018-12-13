@@ -186,6 +186,9 @@ blandr.statistics.default <- function(x,
 #' @rdname blandr.statistics
 #' @export
 blandr.statistics.formula = function(formula, data = parent.frame(), ...){
+
+  # alows a formula like: results = blandr.statistics(Method.B ~ Method.A, data = giavarina.2015)
+
   if (missing(formula) || (length(formula) != 3))
     stop("'formula' missing or incorrect")
 

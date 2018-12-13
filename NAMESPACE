@@ -2,7 +2,10 @@
 
 S3method(blandr.statistics,default)
 S3method(blandr.statistics,formula)
+S3method(ggplot,blandr)
+S3method(plot,blandr)
 S3method(print,blandr)
+S3method(summary,blandr)
 export(blandr.data.preparation)
 export(blandr.dataset.fibre)
 export(blandr.dataset.load)

@@ -69,7 +69,7 @@ blandr.draw <- function( method1 ,
 
     # Passed data to the blandr.plot.limits function to generate plot limits
     # Only used for the basic R plots
-    plot.limits <- blandr.plot.limits(statistics.results, lowest_y_axis, highest_y_axis)
+    plot.limits <- blandr.plot.limits( statistics.results , lowest_y_axis, highest_y_axis)
 
     # Plots data, dependent on what has been selected as the 'plotter' option Implemented as
     # an if/else statement

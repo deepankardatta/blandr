@@ -43,6 +43,7 @@ Collate:
     'blandr.plot.normality.r'
     'blandr.plot.qq.r'
     'blandr.plot.r'
+    'ggplot.blandr.R'
     'jamovibaanalysis.b.R'
     'jamovibaanalysis.h.R'
     'jamovibaplothistogram.b.R'
@@ -51,5 +52,7 @@ Collate:
     'jamovibaplotqq.h.R'
     'jamovibastats.b.R'
     'jamovibastats.h.R'
+    'plot.blandr.R'
     'print.blandr.R'
+    'summary.blandr.R'
 RoxygenNote: 6.1.0

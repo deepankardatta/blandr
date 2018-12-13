@@ -1,6 +1,8 @@
 #' @title (DEPRECATED) Bland-Altman summary statistics display function
 #'
-#' @description (DEPRECATED) Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
+#' @description (DEPRECATED) Displays results of Bland-Altman analysis in a nicer text format.
+#' Relies on the \code{blandr.statistics} function in the package. Deprecated and moved into
+#' the \code{print.blandr} generic
 #'
 #' @author Deepankar Datta <deepankardatta@nhs.net>
 #'
