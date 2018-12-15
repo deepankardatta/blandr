@@ -3,11 +3,7 @@
 blandr: a Bland-Altman Method Comparison package for R
 ======================================================
 
-*blandr* carries out Bland Altman analyses (also known as a Tukey mean-difference plot) as described by JM Bland and DG Altman in 1986.
-
-This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals. The *blandr* was created to fulfil this need.
-
-*blandr* has been improved iteratively over time, and hopefully this library will be useful to researchers as an open-source and reproducible package.
+*blandr* carries out Bland Altman analyses (also known as a Tukey mean-difference plot) as described by JM Bland and DG Altman in 1986. This package was started in 2015 as existing Bland-Altman R functions did not calculate confidence intervals. The *blandr* was created to fulfil this need. *blandr* has been improved iteratively over time, and hopefully this library will be useful to researchers as an open-source and reproducible package.
 
 The benefits
 ------------
@@ -70,13 +66,13 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(blandr)
 load(file="Data/bland.altman.PEFR.1986.rda")
-blandr.display ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , sig.level=0.95 )
+blandr.display( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , sig.level=0.95 )
 blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst )
 ```
 
 The Jamovi module
 -----------------
-One of the benefits of the current version is that it includes a basic module for the Jamovi GUI statistical spreadsheet (<https://www.jamovi.org/>). I'm a believer in making this tool more accesible and Jamovi is a way to do this. The Jamovi module is still under development, and will be submitted to the Jamovi module repository soon. However until this is done, it can be installed using the following commands:
+One of the benefits of the current version is that it includes a basic module for the Jamovi GUI statistical spreadsheet (<https://www.jamovi.org/>). I'm a believer in making this tool more accesible and Jamovi is a way to do this. It can be found in the Jamovi module repository. Alternatively, it can be installed using the following commands:
 
 ``` r
 install.packages('jmvtools', repos=c('https://repo.jamovi.org', 'https://cran.r-project.org'))
@@ -87,9 +83,7 @@ jmvtools::install()
 Why the name?
 -------------
 
-Thinking of a unique name was difficult - and it wasn't worth spending/wasting time on this initially. Curiously it was going to be called BlandAltmanEdinburgh (as I was in Edinburgh at the time I made this) until I considerd uploading this to GitHub and CRAN.
-
-Hadley Wickham has an excellent set of documentation on creating packages. The one on naming (<http://r-pkgs.had.co.nz/package.html>) is worth a read. Reflecting on it a lot of the naming issues are to prevent collisions with similarly named packages, so using *blandaltman* in the name might have cause problems. Mirroring the pre-existing *plyr* and *knitr* I thought I'd just add a "r" to "bland": yes it doesn't involve Altman's name, but I couldn't think of anything better.
+Thinking of a unique name was difficult - and it wasn't worth spending/wasting time on this initially. Hadley Wickham has an excellent set of documentation on creating packages. The one on naming (<http://r-pkgs.had.co.nz/package.html>) is worth a read. Reflecting on it a lot of the naming issues are to prevent collisions with similarly named packages, so using *blandaltman* in the name might have cause problems. Mirroring the pre-existing *plyr* and *knitr* I thought I'd just add a "r" to "bland": yes it doesn't involve Altman's name, but I couldn't think of anything better.
 
 If you can think of a better name please let me know!
 
@@ -111,8 +105,8 @@ Future works include:
 -   The function descriptions needs to be improved
 -   Some of the roxygen2 documentation can be improved by calling the import parameters function
 -   I want to add a few more sample data packs: including some of my own if possible
--   Development of a report generator
--   Development of the Jamovi module
+-   Development of further report generators
+-   Improvements to the code to use S3 functions
 
 Help wanted!
 ------------
