@@ -6,9 +6,8 @@ compilerMode: tame
 children:
   - type: VariableSupplier
     permitted:
-      - continuous
-      - nominal
-      - ordinal
+        - numeric
+        - factor
     persistentItems: false
     stretchFactor: 1
     children:
