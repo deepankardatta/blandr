@@ -1,15 +1,17 @@
-#' @title Bland-Altman display and draw for R
+#' @title (DEPRECATED) Bland-Altman display and draw for R
 #'
-#' @description Stub function: calls both the display and plots functions (in that order). Uses the same parameters as the plot and display functions to allow easy all-in-one use.
-#' @description This function may be deprecated in future, as you really can use the functions easily separately.
+#' @description (DEPRECATED) Stub function: calls both the display and plots functions (in that order).
+#' Uses the same parameters as the plot and display functions to allow easy all-in-one use.
+#' This function may be deprecated in future, as you really can use the functions easily
+#' separately.
 #'
 #' @author Deepankar Datta <deepankardatta@nhs.net>
 #'
-#' @inheritParams blandr.output.text
-#' @inheritParams blandr.draw
+#' @inheritParams summary.blandr
+#' @inheritParams ggplot.blandr
 #'
-#' @include blandr.output.text.r
-#' @include blandr.draw.r
+#' @include summary.blandr.R
+#' @include ggplot.blandr.R
 #'
 #' @examples
 #' # Generates two random measurements
@@ -28,6 +30,8 @@ blandr.display.and.draw <- function( method1 , method2, plotter = "ggplot", meth
     method2name = "Method 2", plotTitle = "Bland-Altman plot for comparison of 2 methods",
     sig.level = 0.95, annotate = FALSE, ciDisplay = TRUE, ciShading = FALSE, normalLow = FALSE,
     normalHigh = FALSE, lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8) {
+
+    .Deprecated("plot.blandr")
 
     blandr.output.text(
       method1 = method1 ,

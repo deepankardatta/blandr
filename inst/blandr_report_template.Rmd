@@ -1,6 +1,6 @@
 ---
 title: "Bland-Altman analysis"
-author: "blandr v0.5.1"
+author: "blandr v0.5.3"
 date: '`r strftime(Sys.time(), format = "%B %d, %Y")`'
 runtime: shiny
 output: html_document

@@ -2,7 +2,7 @@
 % Please edit documentation in R/blandr.display.and.draw.r
 \name{blandr.display.and.draw}
 \alias{blandr.display.and.draw}
-\title{Bland-Altman display and draw for R}
+\title{(DEPRECATED) Bland-Altman display and draw for R}
 \usage{
 blandr.display.and.draw(method1, method2, plotter = "ggplot",
   method1name = "Method 1", method2name = "Method 2",
@@ -43,9 +43,10 @@ blandr.display.and.draw(method1, method2, plotter = "ggplot",
 \item{point_size}{(Optional) Size of marker for each dot. Default is cex=0.8}
 }
 \description{
-Stub function: calls both the display and plots functions (in that order). Uses the same parameters as the plot and display functions to allow easy all-in-one use.
-
-This function may be deprecated in future, as you really can use the functions easily separately.
+(DEPRECATED) Stub function: calls both the display and plots functions (in that order).
+Uses the same parameters as the plot and display functions to allow easy all-in-one use.
+This function may be deprecated in future, as you really can use the functions easily
+separately.
 }
 \examples{
 # Generates two random measurements
