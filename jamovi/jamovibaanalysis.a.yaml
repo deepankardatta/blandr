@@ -3,7 +3,7 @@ name:  jamoviBAanalysis
 title: Bland-Altman analysis for Jamovi
 menuGroup: blandr
 version: '1.0.0'
-jas: '1.1'
+jas: '1.2'
 
 options:
     - name: data
@@ -15,9 +15,8 @@ options:
       suggested:
         - continuous
       permitted:
-        - continuous
-        - nominal
-        - ordinal
+        - numeric
+        - factor
 
     - name: method2
       title: Method 2
@@ -25,9 +24,8 @@ options:
       suggested:
         - continuous
       permitted:
-        - continuous
-        - nominal
-        - ordinal
+        - numeric
+        - factor
 
     - name: ciDisplay
       title: Confidence intervals
