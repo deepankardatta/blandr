@@ -21,18 +21,14 @@ jamoviBAplotHistogramOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
                 suggested=list(
                     "continuous"),
                 permitted=list(
-                    "continuous",
-                    "nominal",
-                    "ordinal"))
+                    "numeric"))
             private$..method2 <- jmvcore::OptionVariable$new(
                 "method2",
                 method2,
                 suggested=list(
                     "continuous"),
                 permitted=list(
-                    "continuous",
-                    "nominal",
-                    "ordinal"))
+                    "numeric"))
 
             self$.addOption(private$..method1)
             self$.addOption(private$..method2)
@@ -102,12 +98,18 @@ jamoviBAplotHistogram <- function(
     if ( ! requireNamespace('jmvcore'))
         stop('jamoviBAplotHistogram requires jmvcore to be installed (restart may be required)')
 
+    if ( ! missing(method1)) method1 <- jmvcore::resolveQuo(jmvcore::enquo(method1))
+    if ( ! missing(method2)) method2 <- jmvcore::resolveQuo(jmvcore::enquo(method2))
+    if (missing(data))
+        data <- jmvcore::marshalData(
+            parent.frame(),
+            `if`( ! missing(method1), method1, NULL),
+            `if`( ! missing(method2), method2, NULL))
+
+
     options <- jamoviBAplotHistogramOptions$new(
         method1 = method1,
         method2 = method2)
-
-    results <- jamoviBAplotHistogramResults$new(
-        options = options)
 
     analysis <- jamoviBAplotHistogramClass$new(
         options = options,
