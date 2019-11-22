@@ -4,7 +4,7 @@ title: Differences Q-Q Plot
 menuGroup: blandr
 menuSubgroup: Bland-Altman Difference Analysis
 version: '1.0.0'
-jas: '1.1'
+jas: '1.2'
 
 options:
     - name: data
@@ -16,9 +16,7 @@ options:
       suggested:
         - continuous
       permitted:
-        - continuous
-        - nominal
-        - ordinal
+        - numeric
 
     - name: method2
       title: Method 2
@@ -26,8 +24,6 @@ options:
       suggested:
         - continuous
       permitted:
-        - continuous
-        - nominal
-        - ordinal
+        - numeric
 
 ...
