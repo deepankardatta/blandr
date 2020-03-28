@@ -6,6 +6,7 @@
 #' @param x a blandr class object, the results from \code{blandr.statistics}.
 #' @param ... other arguments.
 #'
+#' @include ggplot2
 #'
 #' @examples
 #'

@@ -11,35 +11,6 @@ blandr.display.and.plot(method1, method2, method1name = "Method 1",
   ciShading = FALSE, normalLow = FALSE, normalHigh = FALSE,
   lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8)
 }
-\arguments{
-\item{method1}{A list of numbers.}
-
-\item{method2}{A list of numbers.}
-
-\item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
-
-\item{method2name}{(Optional) Plotting name for 2nd method, default 'Method 2'}
-
-\item{plotTitle}{(Optional) Title name, default 'Bland-Altman plot for comparison of 2 methods'}
-
-\item{sig.level}{(Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.}
-
-\item{annotate}{(Optional) TRUE/FALSE switch to provides annotations to plot, default=FALSE}
-
-\item{ciDisplay}{(Optional) TRUE/FALSE switch to plot confidence intervals for bias and limits of agreement, default=TRUE}
-
-\item{ciShading}{(Optional) TRUE/FALSE switch to plot confidence interval shading to plot, default=TRUE}
-
-\item{normalLow}{(Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its lower boundary}
-
-\item{normalHigh}{(Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its higher boundary}
-
-\item{lowest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the lower boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
-
-\item{highest_y_axis}{(Optional) Defaults to NULL If given a continuous variable will use this as the upper boundary of the y axis. Useful if need multiple plots with equivalent y-axes.}
-
-\item{point_size}{(Optional) Size of marker for each dot. Default is cex=0.8}
-}
 \description{
 (DEPRECATED) Re-directs to blandr.display.and.draw
 }
