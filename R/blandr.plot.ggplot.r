@@ -96,7 +96,7 @@ blandr.plot.ggplot <- function ( statistics.results ,
 
   # Plot using ggplot
   ba.plot <- ggplot( plot.data , aes( x = plot.data$x.axis , y = plot.data$y.axis ) ) +
-    geom_point(point_size = point_size) +
+    geom_point(size = point_size) +
     theme(plot.title = element_text(hjust = 0.5)) +
     geom_hline( yintercept = 0 , linetype = 1 ) + # "0" line
     geom_hline( yintercept = statistics.results$bias , linetype = 2 ) + # Bias
