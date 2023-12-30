@@ -74,3 +74,6 @@ build/js
 build/R
 *.jmo
 blandr.jmo
+
+# Unused folder
+unused/
