@@ -16,6 +16,13 @@ knitr::opts_chunk$set(
 
 # NEWS for blandr
 
+## Version 0.5.2
+* This is an intermediate development version to update a few things after 5 years, and get things up to date. It also allows me to re-familiarise myself with R and Jamovi. I've ignored this for a while. I want to get back into it.
+* Things changed:
+** Jamovi update - there is a pull request I merged from 2019. I need to update this
+** Fix some erros
+** Fix my contact email
+
 ## Version 0.5.1
 * Fixing the broken blandr.output.report function - it turns out this does not work so well on other systems - and has been converted into a Shiny app
 
