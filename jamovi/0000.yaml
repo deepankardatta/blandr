@@ -37,5 +37,7 @@ analyses:
     menuGroup: blandr
     menuSubgroup: Raw Output
     menuTitle: Bland-Altman Raw Statistics
+usesNative: true
+minApp: 1.0.8
 
 ...
