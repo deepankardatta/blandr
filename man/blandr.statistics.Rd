@@ -8,8 +8,7 @@
 \usage{
 blandr.statistics(x, ...)
 
-\method{blandr.statistics}{default}(x, y, sig.level = 0.95,
-  LoA.mode = 1)
+\method{blandr.statistics}{default}(x, y, sig.level = 0.95, LoA.mode = 1)
 
 \method{blandr.statistics}{formula}(formula, data = parent.frame(), ...)
 }
