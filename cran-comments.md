@@ -1,3 +1,20 @@
+## Changes to 0.5.1 for version 0.6
+Massive apologies. I am re-submitting to CRAN after being de-listed. I will hold my hands up and say due to work I have left this to neglect.
+It has come to my attention that it was delisted due to some automated tests failing: https://github.com/deepankardatta/blandr/issues/29 and
+https://cran-archive.r-project.org/web/checks/2024/2024-05-10_check_results_blandr.html
+
+Compounding this is that the re-directs to my email have obviously failed. I have the same email inbox, and my work keeps on generating new 
+addresses to point to this. To fix this I have change my email to a "home" address. If you feel that this is unsafe please do let me know.
+
+To address the issues in the check I have taken out of the DESCRIPTION file the imports for R6 as suggested. I have not done so for knitr
+as when running devtools::build() and devtools::check(), R notes that I need to declare knitr for the vignette builder.
+
+I note the errors on "blandr.dataset.fibre()" that a file couldn't be loaded because it was "403 Forbidden". I can load this from my own
+computer. The CRAN check page suggests that this dataset loads on linux and macos, but fails on Windows and development versions. I cannot explain this.
+
+The main purpose of this submission is to get the blandr package back onto CRAN for developers who need it. Then I will work on more permanent fixes.
+
+## Final submission to CRAN for 0.5.1
 This is version 0.5.1 of "blandr"
 This is a third version submission to CRAN
 
@@ -35,15 +52,15 @@ I have changed the description to so: "Carries out Bland Altman analyses (also k
 
 =====
 
-Changes in the DESCRIPTION file
+Changes in the DESCRIPTION file #2024 don't submit yet
 
 ## Test environments
-* local OS X install, Mac OS X 10.12.5, R 3.5.0
+* local OS X install, Mac OS Sonoma 14.4.1, R 4.4.0
 * win-builder (devel and release) - via devtools::build_win()
 
 ## R CMD check results
-using R version 3.5.0 (2018-04-23)
-using platform: x86_64-apple-darwin15.6.0 (64-bit)
+using R version 4.4.0 (2024-04-24)
+using platform: aarch64-apple-darwin20
 using session charset: UTF-8
 
 R CMD check results

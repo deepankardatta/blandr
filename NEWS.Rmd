@@ -16,7 +16,15 @@ knitr::opts_chunk$set(
 
 # NEWS for blandr
 
-## Version 0.5.2
+## Version 0.6
+* Version 0.5.2 was never officially released. The reason why it mainly time - my main job is very busy and I have neglected this
+* Unfortunately as I had not updated my email, and due to errors, blandr was deleted from CRAN
+* This is the version to make up for my neglect and get it back on CRAN, thus the increment in version number
+** Removal from CRAN due to some errors: https://github.com/deepankardatta/blandr/issues/29
+** I am going to comment out "blandr-Ex.R" until I can commit time to fixing the issue
+* This also allows me a base to make future proper updates
+
+## Version 0.5.2 (not released)
 * This is an intermediate development version to update a few things after 5 years, and get things up to date. It also allows me to re-familiarise myself with R and Jamovi. I've ignored this for a while. I want to get back into it.
 * Things changed:
 ** Jamovi update - there is a pull request I merged from 2019. I need to update this
