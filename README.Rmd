@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
 # Citations
 
 You can find the citation information through the usual R citation commands:
-```{r}
+```{r, eval = FALSE}
 citation("blandr")
 ```
 
@@ -45,7 +45,7 @@ library(blandr)
 
 You can install the blandr development version, hosted on github at https://github.com/deepankardatta/blandr/, with the following commands:
 
-```{r gh-installation, eval = FALSE}
+```{r, eval = FALSE}
 install.packages("devtools")
 devtools::install_github("deepankardatta/blandr")
 ```
@@ -67,7 +67,7 @@ One of the benefits of *blandr* is that the library has been developed so a modu
 
 If you want to use the development versions of *blandr*, you can install Jamovi from the comman line using the following commands:
 
-```{r gh-installation, eval = FALSE}
+```{r, eval = FALSE}
 install.packages('jmvtools', repos=c('https://repo.jamovi.org', 'https://cran.r-project.org'))
 library(jmvtools)
 jmvtools::install()

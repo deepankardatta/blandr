@@ -9,6 +9,7 @@ library(devtools)
 # devtools::use_testthat()
 
 # RUN every build
+# make code to knit the README and NEWS files automatically
 devtools::document()
 devtools::document()
 devtools::test()
