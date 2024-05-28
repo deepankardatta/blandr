@@ -138,6 +138,6 @@ Future works include:
 
 Comments on the code, suggestions for improvement, verification tests,
 validation studies, and even code contributions would be gratefully
-accepted. Email me at <deepankar.datta@gmail.com> and I’ll try and get
-back to you as soon as possible. Please do bear in mind this is a
+accepted. Email me at deepankar(dot)datta(at)gmail.com and I’ll try and
+get back to you as soon as possible. Please do bear in mind this is a
 side-project, and I can be otherwise busy with a lot of other work.
