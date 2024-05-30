@@ -22,3 +22,6 @@ results = blandr.statistics(Method.B ~ Method.A, data = giavarina.2015)
 results
 
 }
+\author{
+Deepankar Datta <deepankar.datta@gmail.com>
+}

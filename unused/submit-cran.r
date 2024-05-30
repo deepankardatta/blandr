@@ -1,5 +1,7 @@
 # http://r-pkgs.had.co.nz/release.html
 
+# Original scripts written c.2017. Need to update them to use newer version of devtolls
+
 library(devtools)
 
 # RUN-ONCE
@@ -17,10 +19,15 @@ devtools::build()
 devtools::build_manual()
 
 # RUN before submission for checks
+library(rhub) #see ?rhubv2 for info
 devtools::check()
-check_win()
-devtools::check_win()
-devtools::check_rhub()
+check_win_devel()
+test_coverage()
 
 # RUN for submission
 devtools::release()
+
+# These are the old versions of the check
+# check_win()
+# devtools::check_win()
+# devtools::check_rhub()

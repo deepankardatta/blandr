@@ -52,3 +52,6 @@ blandr.plot(
 \description{
 (DEPRECATED) Re-directs to blandr.draw.r
 }
+\author{
+Deepankar Datta <deepankar.datta@gmail.com>
+}

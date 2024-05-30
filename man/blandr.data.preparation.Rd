@@ -30,5 +30,5 @@ blandr.data.preparation( measurement1 , measurement2, sig.level=0.95 )
 
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta <deepankar.datta@gmail.com>
 }

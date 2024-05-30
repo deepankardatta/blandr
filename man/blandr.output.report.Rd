@@ -45,5 +45,5 @@ of creating this function. Hopefully I can improve it in the future
 
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta <deepankar.datta@gmail.com>
 }

@@ -71,5 +71,5 @@ blandr.display.and.draw( measurement1 , measurement2 , plotTitle = 'Bland-Altman
 
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta <deepankar.datta@gmail.com>
 }

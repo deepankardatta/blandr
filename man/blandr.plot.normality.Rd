@@ -13,5 +13,5 @@ blandr.plot.normality(statistics.results)
 Generates  a combined histogram and density curve for Bland-Altman differences
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta <deepankar.datta@gmail.com>
 }

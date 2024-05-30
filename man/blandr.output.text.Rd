@@ -26,5 +26,5 @@ blandr.output.text( measurement1 , measurement2 )
 
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta <deepankar.datta@gmail.com>
 }
