@@ -2,7 +2,7 @@
 #'
 #' @description Prepares the data and runs error checks before the calling function runs whatever method analysis mode is wants.
 #'
-#' @author Deepankar Datta <deepankardatta@nhs.net>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @param method1 A list of numbers.
 #' @param method2 A list of numbers.

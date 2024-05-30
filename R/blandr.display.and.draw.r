@@ -3,7 +3,7 @@
 #' @description Stub function: calls both the display and plots functions (in that order). Uses the same parameters as the plot and display functions to allow easy all-in-one use.
 #' @description This function may be deprecated in future, as you really can use the functions easily separately.
 #'
-#' @author Deepankar Datta <deepankardatta@nhs.net>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @inheritParams blandr.output.text
 #' @inheritParams blandr.draw

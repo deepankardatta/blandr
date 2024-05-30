@@ -2,7 +2,7 @@
 #'
 #' @description Bland-Altman drawing function. Depends on the blandr.statistics function in the package. Will generate a plot via the standard R plotting functions.
 #'
-#' @author Deepankar Datta <deepankardatta@nhs.net>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @note Started 2015-11-14
 #' @note Last update 2015-11-19

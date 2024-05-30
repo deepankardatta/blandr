@@ -7,7 +7,7 @@
 #' @note not allowed in CRAN. On the otherhand a full Shiny app would take too long. So this is a stop-gap way
 #' @note of creating this function. Hopefully I can improve it in the future
 #'
-#' @author Deepankar Datta <deepankardatta@nhs.net>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @import rmarkdown
 #' @import jmvcore

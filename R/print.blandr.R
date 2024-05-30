@@ -2,6 +2,8 @@
 #'
 #' @description Compactly print the statistics used to construct a Bland-Altman plot
 #'
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
+#'
 #' @param x the results from \code{blandr.statistics}.
 #' @param digits number of significant digits to be used.
 #' @param ... other arguments.
