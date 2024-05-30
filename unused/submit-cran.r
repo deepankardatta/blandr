@@ -14,6 +14,7 @@ devtools::document()
 devtools::document()
 devtools::test()
 devtools::build()
+devtools::build_manual()
 
 # RUN before submission for checks
 devtools::check()
