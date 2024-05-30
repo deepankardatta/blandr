@@ -8,6 +8,7 @@
 #' @param digits number of significant digits to be used.
 #' @param ... other arguments.
 #'
+#' @importFrom stats pt
 #'
 #' @examples
 #'

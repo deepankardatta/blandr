@@ -7,7 +7,7 @@
 #' \code{blandr.display} and \code{bland.altamn.plot} functions. However
 #' the return results can be used to generate a custom chart if desired.
 #'
-#' @author Deepankar Datta <ddeepankar.datta@gmail.com>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @note The function will give similar answers when used on the original Bland-Altman PEFR data sets. They won't be exactly the same as (a) for 95\% limits of agreement I have used +/-1.96, rather than 2, and (b) the computerised calculation means that the rounding that is present in each step of the original examples does not occur. This will give a more accurate answer, although I can understand why in 1986 rounding would occur at each step for ease of calculation.
 #' @note The function depends on paired values.
@@ -52,7 +52,7 @@
 #' \item{regression.fixed.slope}{The slope value of the regression equation}
 #' \item{regression.fixed.intercept}{The intercept value of the regression equation}
 #'
-#' @importFrom stats coef cor lm na.omit qnorm qt sd t.test
+#' @importFrom stats coef cor lm na.omit qnorm qt sd t.test model.frame model.response
 #'
 #' @include blandr.data.preparation.r
 #'

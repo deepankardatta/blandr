@@ -30,6 +30,10 @@ blandr.draw(
 )
 }
 \arguments{
+\item{method1}{A vector of numbers corresponding to the results from method 1.}
+
+\item{method2}{A vector of numbers corresponding to the results from method 2.}
+
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 
 \item{method2name}{(Optional) Plotting name for 2nd method, default 'Method 2'}

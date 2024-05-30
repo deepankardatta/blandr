@@ -16,7 +16,7 @@ devtools::document()
 devtools::document()
 devtools::test()
 devtools::build()
-devtools::build_manual()
+# devtools::build_manual()
 
 # RUN before submission for checks
 library(rhub) #see ?rhubv2 for info

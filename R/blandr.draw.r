@@ -10,6 +10,9 @@
 #'
 #' @param plotter (Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'
 #'
+#' @param method1 A vector of numbers corresponding to the results from method 1.
+#' @param method2 A vector of numbers corresponding to the results from method 2.
+#'
 #' @inheritParams blandr.statistics
 #' @inheritParams blandr.plot.limits
 #' @inheritParams blandr.plot.rplot

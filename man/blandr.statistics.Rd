@@ -94,5 +94,5 @@ Based on: (1) Bland, J. M., & Altman, D. (1986). Statistical methods for assessi
 Confidence interval work based on follow-up paper: (2) Altman, D. G., & Bland, J. M. (2002). Commentary on quantifying agreement between two methods of measurement. Clinical chemistry, 48(5), 801-802. http://www.clinchem.org/content/48/5/801.full.pdf
 }
 \author{
-Deepankar Datta <ddeepankar.datta@gmail.com>
+Deepankar Datta <deepankar.datta@gmail.com>
 }
