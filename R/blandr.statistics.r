@@ -78,10 +78,13 @@
 blandr.statistics = function(x, ...){
   UseMethod("blandr.statistics")
 }
+# 2024-05-30: commentary after 5 years of not looking at this code
+# I think I was trying to be too clever in allowing the user to either pass two vectors
+# or pass a formula to the function. I am not clear why I felt this was necessary.
 
 #' @rdname blandr.statistics
 #' @export
-blandr.statistics.default <- function(x,
+blandr.statistics.default <- function( x,
                                y,
                                sig.level = 0.95,
                                LoA.mode = 1 ) {
