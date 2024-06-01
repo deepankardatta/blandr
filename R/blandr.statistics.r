@@ -185,16 +185,3 @@ blandr.statistics.default <- function( x,
 
     # END OF FUNCTION
 }
-
-#' @rdname blandr.statistics
-#' @export
-blandr.statistics.formula = function(formula, data = parent.frame(), ...){
-  if (missing(formula) || (length(formula) != 3))
-    stop("'formula' missing or incorrect")
-
-  mf = model.frame(formula, data)
-  y = model.response(mf)
-  x = mf[,2]
-
-  blandr.statistics.default(x = x, y = y, ...)
-}
