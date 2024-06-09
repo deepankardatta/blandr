@@ -1,4 +1,4 @@
-## Changes to 0.5.1 for version 0.6
+## Changes to 0.5.1 for version 0.6.0
 Massive apologies. I am re-submitting to CRAN after being de-listed. I will hold my hands up and say due to work I have left this to neglect.
 It has come to my attention that it was delisted due to some automated tests failing: https://github.com/deepankardatta/blandr/issues/29 and
 https://cran-archive.r-project.org/web/checks/2024/2024-05-10_check_results_blandr.html
@@ -79,7 +79,7 @@ This one note is as follows:
 Not using these imports fails the vignette builder
 
 * win-builder only generates one note, for a potential mis-spelled word
-* rhub builder does not seem to generate any warnings
+* rhub builder does not seem to generate any errors, only some discouraged notes which will be for a future release to update
 
 ## Reverse dependencies
 

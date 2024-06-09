@@ -7,5 +7,5 @@ bibentry(
   doi = "10.5281/zenodo.824514" ,
   year = "2017" ,
   url = "https://github.com/deepankardatta/blandr" ,
-  note = "Version 0.6, 2024-06-09"
+  note = "Version 0.6.0, 2024-06-09"
 )

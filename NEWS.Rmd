@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 # NEWS for blandr
 
-## Version 0.6
+## Version 0.6.0
 * Version 0.5.2 was never officially released. The reason why is mainly time - my main job is very busy and I have neglected this
 * Unfortunately as I had not updated my email, and due to errors, blandr was deleted from CRAN
 * This is the version to make up for my neglect and get it back on CRAN, thus the increment in version number

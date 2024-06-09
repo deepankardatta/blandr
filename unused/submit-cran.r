@@ -23,7 +23,7 @@ library(rhub) #see ?rhubv2 for info
 devtools::check()
 check_win_devel()
 test_coverage()
-rhub::rc_submit() # old rhub v1 way using new system
+rhub::rc_submit() # old rhub v1 way using new system, replaces check_rhub()
 
 spell_check()
 
