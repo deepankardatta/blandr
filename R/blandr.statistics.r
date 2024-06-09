@@ -21,11 +21,10 @@
 #' @references Based on: (1) Bland, J. M., & Altman, D. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The Lancet, 327(8476), 307-310. http://dx.doi.org/10.1016/S0140-6736(86)90837-8
 #' @references Confidence interval work based on follow-up paper: (2) Altman, D. G., & Bland, J. M. (2002). Commentary on quantifying agreement between two methods of measurement. Clinical chemistry, 48(5), 801-802. http://www.clinchem.org/content/48/5/801.full.pdf
 #'
-#' @param x Either a formula, or a vector of numbers corresponding to the results from method 1.
-#' @param y A vector of numbers corresponding to the results from method 2. Only needed if \code{X} is a vector.
+#' @param method1 Either a formula, or a vector of numbers corresponding to the results from method 1.
+#' @param method2 A vector of numbers corresponding to the results from method 2. Only needed if \code{X} is a vector.
 #' @param sig.level (Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.
 #' @param LoA.mode (Optional) Switch to change how accurately the limits of agreement (LoA) are calculated from the bias and its standard deviation. The default is LoA.mode=1 which calculates LoA with the more accurate 1.96x multiplier. LoA.mode=2 uses the 2x multiplier which was used in the original papers. This should really be kept at default, except to double check calculations in older papers.
-#' @param ... other arguments.
 #'
 #' @return An object of class 'blandr' is returned. This is a list with the following elements:
 #' \item{means}{List of arithmetic mean of the two methods}
@@ -65,34 +64,25 @@
 #' # Generates Bland-Altman statistics data of the two measurements
 #' blandr.statistics( measurement1 , measurement2 )
 #'
-#' # Generates Bland-Altman statistics data of the two measurements using the formula interface
-#'
-#' blandr.statistics( measurement2 ~ measurement1 )
-#'
-#' # Example with a real data set
-#' blandr.statistics( Method.B ~ Method.A, data = giavarina.2015 )
-
-
 #' @rdname blandr.statistics
 #' @export
-blandr.statistics = function(x, ...){
-  UseMethod("blandr.statistics")
-}
+
+# Hold over from 0.5.x versions of blandr - which are years old
+# The c.2024 devtools seem to choke on this and it's not clear why
+# blandr.statistics = function(x, ...){
+# UseMethod("blandr.statistics")
+# }
 # 2024-05-30: commentary after 5 years of not looking at this code
 # I think I was trying to be too clever in allowing the user to either pass two vectors
 # or pass a formula to the function. I am not clear why I felt this was necessary.
 
-#' @rdname blandr.statistics
-#' @export
-blandr.statistics.default <- function( x,
-                               y,
+blandr.statistics <- function( method1,
+                               method2,
                                sig.level = 0.95,
                                LoA.mode = 1 ) {
 
     # This sends to the preparation function, which does some sense checks on the data And
     # makes sure that the values are prepared
-    method1 = x
-    method2 = y
     ba.data <- blandr.data.preparation( method1 , method2 , sig.level )
 
     # method1 and method2 are the measurements

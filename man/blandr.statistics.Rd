@@ -2,22 +2,14 @@
 % Please edit documentation in R/blandr.statistics.r
 \name{blandr.statistics}
 \alias{blandr.statistics}
-\alias{blandr.statistics.default}
-\alias{blandr.statistics.formula}
 \title{Bland-Altman statistics for R}
 \usage{
-blandr.statistics(x, ...)
-
-\method{blandr.statistics}{default}(x, y, sig.level = 0.95, LoA.mode = 1)
-
-\method{blandr.statistics}{formula}(formula, data = parent.frame(), ...)
+blandr.statistics(method1, method2, sig.level = 0.95, LoA.mode = 1)
 }
 \arguments{
-\item{x}{Either a formula, or a vector of numbers corresponding to the results from method 1.}
+\item{method1}{Either a formula, or a vector of numbers corresponding to the results from method 1.}
 
-\item{...}{other arguments.}
-
-\item{y}{A vector of numbers corresponding to the results from method 2. Only needed if \code{X} is a vector.}
+\item{method2}{A vector of numbers corresponding to the results from method 2. Only needed if \code{X} is a vector.}
 
 \item{sig.level}{(Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.}
 
@@ -81,12 +73,6 @@ measurement2 <- rnorm(100)
 # Generates Bland-Altman statistics data of the two measurements
 blandr.statistics( measurement1 , measurement2 )
 
-# Generates Bland-Altman statistics data of the two measurements using the formula interface
-
-blandr.statistics( measurement2 ~ measurement1 )
-
-# Example with a real data set
-blandr.statistics( Method.B ~ Method.A, data = giavarina.2015 )
 }
 \references{
 Based on: (1) Bland, J. M., & Altman, D. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The Lancet, 327(8476), 307-310. http://dx.doi.org/10.1016/S0140-6736(86)90837-8

@@ -43,6 +43,7 @@ Collate:
     'blandr.plot.normality.r'
     'blandr.plot.qq.r'
     'blandr.plot.r'
+    'blandr.statistics.formula.R'
     'jamovibaanalysis.b.R'
     'jamovibaanalysis.h.R'
     'jamovibaplothistogram.b.R'
