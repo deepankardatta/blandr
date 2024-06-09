@@ -2,7 +2,7 @@
 #'
 #' @description Loads the Bland-Altman oxygen saturation dataset from Martin Bland's website.
 #'
-#' @author Deepankar Datta <deepankardatta@nhs.net>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @note The function converts the STATA DCT data format into a data frame that R can process.
 #'

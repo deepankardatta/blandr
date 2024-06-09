@@ -1,6 +1,6 @@
 ---
 name:  jamoviBAstats
-title: Bland-Altman Raw Statistics
+title: Bland-Altman raw statistics for Jamovi
 menuGroup: blandr
 menuSubgroup: Raw Output
 version: '1.0.0'

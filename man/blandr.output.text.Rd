@@ -2,7 +2,7 @@
 % Please edit documentation in R/blandr.output.text.r
 \name{blandr.output.text}
 \alias{blandr.output.text}
-\title{Bland-Altman summary statistics display function}
+\title{(DEPRECATED) Bland-Altman summary statistics display function}
 \usage{
 blandr.output.text(method1, method2, sig.level = 0.95)
 }
@@ -14,7 +14,7 @@ blandr.output.text(method1, method2, sig.level = 0.95)
 \item{sig.level}{(Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.}
 }
 \description{
-Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
+(DEPRECATED) Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
 }
 \examples{
 # Generates two random measurements
@@ -26,5 +26,5 @@ blandr.output.text( measurement1 , measurement2 )
 
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

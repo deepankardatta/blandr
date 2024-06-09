@@ -4,14 +4,29 @@
 \alias{blandr.plot}
 \title{(DEPRECATED) Bland-Altman drawing function for R}
 \usage{
-blandr.plot(method1, method2, plotter = "ggplot",
-  method1name = "Method 1", method2name = "Method 2",
+blandr.plot(
+  method1,
+  method2,
+  plotter = "ggplot",
+  method1name = "Method 1",
+  method2name = "Method 2",
   plotTitle = "Bland-Altman plot for comparison of 2 methods",
-  sig.level = 0.95, annotate = FALSE, ciDisplay = TRUE,
-  ciShading = TRUE, normalLow = FALSE, normalHigh = FALSE,
-  lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8)
+  sig.level = 0.95,
+  annotate = FALSE,
+  ciDisplay = TRUE,
+  ciShading = TRUE,
+  normalLow = FALSE,
+  normalHigh = FALSE,
+  lowest_y_axis = FALSE,
+  highest_y_axis = FALSE,
+  point_size = 0.8
+)
 }
 \arguments{
+\item{method1}{A vector of numbers corresponding to the results from method 1.}
+
+\item{method2}{A vector of numbers corresponding to the results from method 2.}
+
 \item{plotter}{(Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'}
 
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
@@ -40,4 +55,7 @@ blandr.plot(method1, method2, plotter = "ggplot",
 }
 \description{
 (DEPRECATED) Re-directs to blandr.draw.r
+}
+\author{
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

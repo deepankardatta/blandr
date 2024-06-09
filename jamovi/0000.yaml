@@ -1,10 +1,11 @@
 ---
 title: Bland-Altman Method Comparison
 name: blandr
-version: 0.5.1
+version: 0.5.2
 jms: '1.0'
 authors:
   - Deepankar Datta
+  - Jonathon Love
 maintainer: Deepankar Datta <deepankardatta@nhs.net>
 date: '2018-04-25'
 type: R

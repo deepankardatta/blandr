@@ -1,7 +1,7 @@
 ---
 title: "Vignettes for blandr"
 author: "Deepankar Datta"
-date: "2018-11-19"
+date: "2023-12-30"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignettes for blandr}
@@ -83,83 +83,51 @@ blandr.statistics ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$
 ```
 
 ```
-## $means
-##  [1] 503.0 412.5 518.0 431.0 488.0 578.5 388.5 411.0 654.0 439.0 424.5
-## [12] 641.0 263.5 477.5 218.5 386.5 439.0
+## Bland-Altman Statistics
+## =======================
+## t = -0.22524, df = 16, p-value = 0.8246
+## alternative hypothesis: true bias is not equal to 0
 ## 
-## $differences
-##  [1] -18 -35  -4   6 -24 -43  49  62  -8 -12 -15  30   7   1 -81  73 -24
+## =======================
+## Number of comparisons:  17 
+## Maximum value for average measures:  654 
+## Minimum value for average measures:  218.5 
+## Maximum value for difference in measures:  73 
+## Minimum value for difference in measures:  -81 
 ## 
-## $method1
-##  [1] 494 395 516 434 476 557 413 442 650 433 417 656 267 478 178 423 427
+## Bias:  -2.117647 
+## Standard deviation of bias:  38.76513 
 ## 
-## $method2
-##  [1] 512 430 520 428 500 600 364 380 658 445 432 626 260 477 259 350 451
+## Standard error of bias:  9.401925 
+## Standard error for limits of agreement:  16.39491 
 ## 
-## $sig.level
-## [1] 0.95
+## Bias:  -2.117647 
+## Bias- upper 95% CI:  17.81354 
+## Bias- lower 95% CI:  -22.04884 
 ## 
-## $sig.level.convert.to.z
-## [1] 1.959964
+## Upper limit of agreement:  73.86201 
+## Upper LOA- upper 95% CI:  108.6177 
+## Upper LOA- lower 95% CI:  39.10636 
 ## 
-## $bias
-## [1] -2.117647
+## Lower limit of agreement:  -78.0973 
+## Lower LOA- upper 95% CI:  -43.34165 
+## Lower LOA- lower 95% CI:  -112.8529 
 ## 
-## $biasUpperCI
-## [1] 17.81354
+## =======================
+## Derived measures:  
+## Mean of differences/means:  -1.158314 
+## Point estimate of bias as proportion of lowest average:  -0.9691749 
+## Point estimate of bias as proportion of highest average -0.3237992 
+## Spread of data between lower and upper LoAs:  151.9593 
+## Bias as proportion of LoA spread:  -1.393562 
 ## 
-## $biasLowerCI
-## [1] -22.04884
-## 
-## $biasStdDev
-## [1] 38.76513
-## 
-## $biasSEM
-## [1] 9.401925
-## 
-## $LOA_SEM
-## [1] 16.39491
-## 
-## $upperLOA
-## [1] 73.86201
-## 
-## $upperLOA_upperCI
-## [1] 108.6177
-## 
-## $upperLOA_lowerCI
-## [1] 39.10636
-## 
-## $lowerLOA
-## [1] -78.0973
-## 
-## $lowerLOA_upperCI
-## [1] -43.34165
-## 
-## $lowerLOA_lowerCI
-## [1] -112.8529
-## 
-## $proportion
-##  [1]  -3.5785288  -8.4848485  -0.7722008   1.3921114  -4.9180328
-##  [6]  -7.4330164  12.6126126  15.0851582  -1.2232416  -2.7334852
-## [11]  -3.5335689   4.6801872   2.6565465   0.2094241 -37.0709382
-## [16]  18.8874515  -5.4669704
-## 
-## $no.of.observations
-## [1] 17
-## 
-## $regression.equation
-## [1] "y(differences) = 0.029 x(means) + -15"
-## 
-## $regression.fixed.slope
-## means 
-## 0.029 
-## 
-## $regression.fixed.intercept
-## (Intercept) 
-##         -15 
-## 
-## attr(,"class")
-## [1] "blandr"
+## =======================
+## Bias: 
+##  -2.117647  ( -22.04884  to  17.81354 ) 
+## ULoA: 
+##  73.86201  ( 39.10636  to  108.6177 ) 
+## LLoA: 
+##  -78.0973  ( -112.8529  to  -43.34165 )
 ```
 
 The function allows you to transfer the values to a list. This can be useful if you want to use your own custom graphing routines.
@@ -202,83 +170,51 @@ stats.data
 ```
 
 ```
-## $means
-##  [1] 503.0 412.5 518.0 431.0 488.0 578.5 388.5 411.0 654.0 439.0 424.5
-## [12] 641.0 263.5 477.5 218.5 386.5 439.0
+## Bland-Altman Statistics
+## =======================
+## t = -0.22524, df = 16, p-value = 0.8246
+## alternative hypothesis: true bias is not equal to 0
 ## 
-## $differences
-##  [1] -18 -35  -4   6 -24 -43  49  62  -8 -12 -15  30   7   1 -81  73 -24
+## =======================
+## Number of comparisons:  17 
+## Maximum value for average measures:  654 
+## Minimum value for average measures:  218.5 
+## Maximum value for difference in measures:  73 
+## Minimum value for difference in measures:  -81 
 ## 
-## $method1
-##  [1] 494 395 516 434 476 557 413 442 650 433 417 656 267 478 178 423 427
+## Bias:  -2.117647 
+## Standard deviation of bias:  38.76513 
 ## 
-## $method2
-##  [1] 512 430 520 428 500 600 364 380 658 445 432 626 260 477 259 350 451
+## Standard error of bias:  9.401925 
+## Standard error for limits of agreement:  16.39491 
 ## 
-## $sig.level
-## [1] 0.95
+## Bias:  -2.117647 
+## Bias- upper 95% CI:  17.81354 
+## Bias- lower 95% CI:  -22.04884 
 ## 
-## $sig.level.convert.to.z
-## [1] 1.959964
+## Upper limit of agreement:  73.86201 
+## Upper LOA- upper 95% CI:  108.6177 
+## Upper LOA- lower 95% CI:  39.10636 
 ## 
-## $bias
-## [1] -2.117647
+## Lower limit of agreement:  -78.0973 
+## Lower LOA- upper 95% CI:  -43.34165 
+## Lower LOA- lower 95% CI:  -112.8529 
 ## 
-## $biasUpperCI
-## [1] 17.81354
+## =======================
+## Derived measures:  
+## Mean of differences/means:  -1.158314 
+## Point estimate of bias as proportion of lowest average:  -0.9691749 
+## Point estimate of bias as proportion of highest average -0.3237992 
+## Spread of data between lower and upper LoAs:  151.9593 
+## Bias as proportion of LoA spread:  -1.393562 
 ## 
-## $biasLowerCI
-## [1] -22.04884
-## 
-## $biasStdDev
-## [1] 38.76513
-## 
-## $biasSEM
-## [1] 9.401925
-## 
-## $LOA_SEM
-## [1] 16.39491
-## 
-## $upperLOA
-## [1] 73.86201
-## 
-## $upperLOA_upperCI
-## [1] 108.6177
-## 
-## $upperLOA_lowerCI
-## [1] 39.10636
-## 
-## $lowerLOA
-## [1] -78.0973
-## 
-## $lowerLOA_upperCI
-## [1] -43.34165
-## 
-## $lowerLOA_lowerCI
-## [1] -112.8529
-## 
-## $proportion
-##  [1]  -3.5785288  -8.4848485  -0.7722008   1.3921114  -4.9180328
-##  [6]  -7.4330164  12.6126126  15.0851582  -1.2232416  -2.7334852
-## [11]  -3.5335689   4.6801872   2.6565465   0.2094241 -37.0709382
-## [16]  18.8874515  -5.4669704
-## 
-## $no.of.observations
-## [1] 17
-## 
-## $regression.equation
-## [1] "y(differences) = 0.029 x(means) + -15"
-## 
-## $regression.fixed.slope
-## means 
-## 0.029 
-## 
-## $regression.fixed.intercept
-## (Intercept) 
-##         -15 
-## 
-## attr(,"class")
-## [1] "blandr"
+## =======================
+## Bias: 
+##  -2.117647  ( -22.04884  to  17.81354 ) 
+## ULoA: 
+##  73.86201  ( 39.10636  to  108.6177 ) 
+## LLoA: 
+##  -78.0973  ( -112.8529  to  -43.34165 )
 ```
 
 You can then take the individual elements of the statistics output by appending a number in square brackets to the end when calling the list, e.g.:
@@ -290,8 +226,8 @@ stats.data[1]
 
 ```
 ## $means
-##  [1] 503.0 412.5 518.0 431.0 488.0 578.5 388.5 411.0 654.0 439.0 424.5
-## [12] 641.0 263.5 477.5 218.5 386.5 439.0
+##  [1] 503.0 412.5 518.0 431.0 488.0 578.5 388.5 411.0 654.0 439.0 424.5 641.0
+## [13] 263.5 477.5 218.5 386.5 439.0
 ```
 
 ```r
@@ -328,6 +264,12 @@ The Bland-Altman display function takes the output of the 'blandr.statistics' fu
 
 ```r
 blandr.output.text ( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , sig.level=0.95 )
+```
+
+```
+## Warning: 'blandr.output.text' is deprecated.
+## Use 'blandr.output.text' instead.
+## See help("Deprecated")
 ```
 
 ```
@@ -378,6 +320,16 @@ To draw basic Bland-Altman plots use the *blandr.draw* function. The function on
 blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst )
 ```
 
+```
+## Warning: Use of `plot.data$x.axis` is discouraged.
+## ℹ Use `x.axis` instead.
+```
+
+```
+## Warning: Use of `plot.data$y.axis` is discouraged.
+## ℹ Use `y.axis` instead.
+```
+
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
 
 As can be seen from above, the display of confidence intervals, and shading of these intervals is turned on by default. You can turn these off using the following options.
@@ -385,6 +337,16 @@ As can be seen from above, the display of confidence intervals, and shading of t
 
 ```r
 blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , ciDisplay = FALSE , ciShading = FALSE )
+```
+
+```
+## Warning: Use of `plot.data$x.axis` is discouraged.
+## ℹ Use `x.axis` instead.
+```
+
+```
+## Warning: Use of `plot.data$y.axis` is discouraged.
+## ℹ Use `y.axis` instead.
 ```
 
 ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
@@ -400,6 +362,16 @@ vignette.chart <- blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman
 vignette.chart
 ```
 
+```
+## Warning: Use of `plot.data$x.axis` is discouraged.
+## ℹ Use `x.axis` instead.
+```
+
+```
+## Warning: Use of `plot.data$y.axis` is discouraged.
+## ℹ Use `y.axis` instead.
+```
+
 ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
 
 ```r
@@ -407,11 +379,25 @@ vignette.chart <- vignette.chart + geom_vline( xintercept = 300 , linetype = 4 ,
 vignette.chart
 ```
 
+```
+## Warning: Use of `plot.data$x.axis` is discouraged.
+## ℹ Use `x.axis` instead.
+## Use of `plot.data$y.axis` is discouraged.
+## ℹ Use `y.axis` instead.
+```
+
 ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-2.png)
 
 ```r
 vignette.chart <- vignette.chart + annotate("text", x=400, y=40 , label= "An example of why ggplot2 is a better choice for charting")
 vignette.chart
+```
+
+```
+## Warning: Use of `plot.data$x.axis` is discouraged.
+## ℹ Use `x.axis` instead.
+## Use of `plot.data$y.axis` is discouraged.
+## ℹ Use `y.axis` instead.
 ```
 
 ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-3.png)
@@ -442,6 +428,16 @@ If we consider the default Bland-Altman chart again:
 blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWrightFirst , ciDisplay = FALSE )
 ```
 
+```
+## Warning: Use of `plot.data$x.axis` is discouraged.
+## ℹ Use `x.axis` instead.
+```
+
+```
+## Warning: Use of `plot.data$y.axis` is discouraged.
+## ℹ Use `y.axis` instead.
+```
+
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
 
 The confidence intervals are switched off to allow comparison to figure 2 of Bland and Altman's 1986 paper. We can see the "calculated optimal" axes mean that the lowest value on the x-axis is roughly 200.
@@ -455,6 +451,16 @@ vignette.chart <- blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman
 vignette.chart
 ```
 
+```
+## Warning: Use of `plot.data$x.axis` is discouraged.
+## ℹ Use `x.axis` instead.
+```
+
+```
+## Warning: Use of `plot.data$y.axis` is discouraged.
+## ℹ Use `y.axis` instead.
+```
+
 ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
 
 (2) We can then change the chart to use the calculated plot limits. (In reality you can change this to any limits you want)
@@ -466,6 +472,16 @@ vignette.chart.2 <- vignette.chart + ggplot2::coord_cartesian( xlim=c( wright.pl
 vignette.chart.2
 ```
 
+```
+## Warning: Use of `plot.data$x.axis` is discouraged.
+## ℹ Use `x.axis` instead.
+```
+
+```
+## Warning: Use of `plot.data$y.axis` is discouraged.
+## ℹ Use `y.axis` instead.
+```
+
 ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
 
 (3) Or we can force the lower x-boundary to be 0, to match the Bland-Altman 1986 paper, figure 2.
@@ -473,6 +489,16 @@ vignette.chart.2
 ```r
 vignette.chart.3 <- vignette.chart + ggplot2::coord_cartesian( xlim=c( 0 , wright.plot$x_upper ) , ylim=c( wright.plot$y_lower , wright.plot$y_upper ) , expand = FALSE )
 vignette.chart.3
+```
+
+```
+## Warning: Use of `plot.data$x.axis` is discouraged.
+## ℹ Use `x.axis` instead.
+```
+
+```
+## Warning: Use of `plot.data$y.axis` is discouraged.
+## ℹ Use `y.axis` instead.
 ```
 
 ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)

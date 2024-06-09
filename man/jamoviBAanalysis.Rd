@@ -4,9 +4,16 @@
 \alias{jamoviBAanalysis}
 \title{Bland-Altman Analysis}
 \usage{
-jamoviBAanalysis(data, method1, method2, ciDisplay = TRUE,
-  ciShading = TRUE, plotProportionalBias = FALSE,
-  plotProportionalBias.se = TRUE, overlapping = FALSE)
+jamoviBAanalysis(
+  data,
+  method1,
+  method2,
+  ciDisplay = TRUE,
+  ciShading = TRUE,
+  plotProportionalBias = FALSE,
+  plotProportionalBias.se = TRUE,
+  overlapping = FALSE
+)
 }
 \arguments{
 \item{data}{.}
@@ -28,8 +35,8 @@ jamoviBAanalysis(data, method1, method2, ciDisplay = TRUE,
 \value{
 A results object containing:
 \tabular{llllll}{
-  \code{results$table} \tab \tab \tab \tab \tab a table \cr
-  \code{results$plot} \tab \tab \tab \tab \tab an image \cr
+\code{results$table} \tab \tab \tab \tab \tab a table \cr
+\code{results$plot} \tab \tab \tab \tab \tab an image \cr
 }
 
 Tables can be converted to data frames with \code{asDF} or \code{\link{as.data.frame}}. For example:

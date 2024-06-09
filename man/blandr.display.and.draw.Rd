@@ -4,12 +4,23 @@
 \alias{blandr.display.and.draw}
 \title{Bland-Altman display and draw for R}
 \usage{
-blandr.display.and.draw(method1, method2, plotter = "ggplot",
-  method1name = "Method 1", method2name = "Method 2",
+blandr.display.and.draw(
+  method1,
+  method2,
+  plotter = "ggplot",
+  method1name = "Method 1",
+  method2name = "Method 2",
   plotTitle = "Bland-Altman plot for comparison of 2 methods",
-  sig.level = 0.95, annotate = FALSE, ciDisplay = TRUE,
-  ciShading = FALSE, normalLow = FALSE, normalHigh = FALSE,
-  lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8)
+  sig.level = 0.95,
+  annotate = FALSE,
+  ciDisplay = TRUE,
+  ciShading = FALSE,
+  normalLow = FALSE,
+  normalHigh = FALSE,
+  lowest_y_axis = FALSE,
+  highest_y_axis = FALSE,
+  point_size = 0.8
+)
 }
 \arguments{
 \item{method1}{A list of numbers.}
@@ -60,5 +71,5 @@ blandr.display.and.draw( measurement1 , measurement2 , plotTitle = 'Bland-Altman
 
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

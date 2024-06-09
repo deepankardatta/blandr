@@ -4,12 +4,22 @@
 \alias{blandr.display.and.plot}
 \title{(DEPRECATED) Bland-Altman display and plot for R}
 \usage{
-blandr.display.and.plot(method1, method2, method1name = "Method 1",
+blandr.display.and.plot(
+  method1,
+  method2,
+  method1name = "Method 1",
   method2name = "Method 2",
   plotTitle = "Bland-Altman plot for comparison of 2 methods",
-  sig.level = 0.95, annotate = FALSE, ciDisplay = TRUE,
-  ciShading = FALSE, normalLow = FALSE, normalHigh = FALSE,
-  lowest_y_axis = FALSE, highest_y_axis = FALSE, point_size = 0.8)
+  sig.level = 0.95,
+  annotate = FALSE,
+  ciDisplay = TRUE,
+  ciShading = FALSE,
+  normalLow = FALSE,
+  normalHigh = FALSE,
+  lowest_y_axis = FALSE,
+  highest_y_axis = FALSE,
+  point_size = 0.8
+)
 }
 \arguments{
 \item{method1}{A list of numbers.}
@@ -44,5 +54,5 @@ blandr.display.and.plot(method1, method2, method1name = "Method 1",
 (DEPRECATED) Re-directs to blandr.display.and.draw
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }
