@@ -16,7 +16,7 @@ jamoviBAplotHistogram(data, method1, method2)
 \value{
 A results object containing:
 \tabular{llllll}{
-  \code{results$plot} \tab \tab \tab \tab \tab an image \cr
+\code{results$plot} \tab \tab \tab \tab \tab an image \cr
 }
 }
 \description{

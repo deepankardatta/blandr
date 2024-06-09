@@ -28,5 +28,5 @@ https://www-users.york.ac.uk/~mb55/datasets/datasets.htm - Martin Bland's exampl
 Bland JM, Altman DG. (1995) Comparing methods of measurement: why plotting difference against standard method is misleading. Lancet, 346, 1085-7.
 }
 \author{
-Deepankar Datta <deepankar.datta@gmail.com>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

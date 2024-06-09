@@ -19,7 +19,7 @@ Use the function to generate a report. You can also take the .Rmd file to custom
 
 your own report. Or use rMarkdown to save the contents. I couldn't add this to the function as it's
 
-not allowed in CRAN. On the otherhand a full Shiny app would take too long. So this is a stop-gap way
+not allowed in CRAN. On the other hand a full Shiny app would take too long. So this is a stop-gap way
 
 of creating this function. Hopefully I can improve it in the future
 }
@@ -45,5 +45,5 @@ of creating this function. Hopefully I can improve it in the future
 
 }
 \author{
-Deepankar Datta <deepankar.datta@gmail.com>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

@@ -35,5 +35,5 @@ blandr.statistics.formula( Method.B ~ Method.A, data = giavarina.2015 )
 
 }
 \author{
-Deepankar Datta <deepankar.datta@gmail.com>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

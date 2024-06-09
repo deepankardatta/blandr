@@ -13,5 +13,5 @@ blandr.plot.qq(statistics.results)
 Generates a QQ plot for Bland-Altman differences
 }
 \author{
-Deepankar Datta <deepankar.datta@gmail.com>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

@@ -33,5 +33,5 @@ Linnet K., Limitations of the paired t-test for evaluation of method comparison 
 Zaki R, Bulgiba A, Ismail R, Ismail NA. Statistical Methods Used to Test for Agreement of Medical Instruments Measuring Continuous Variables in Method Comparison Studies: A Systematic Review PLoS ONE 2012 7(5): e37908. doi: 10.1371/journal.pone.0037908
 }
 \author{
-Deepankar Datta <deepankar.datta@gmail.com>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

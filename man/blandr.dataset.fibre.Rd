@@ -28,5 +28,5 @@ https://www-users.york.ac.uk/~mb55/datasets/datasets.htm - Martin Bland's exampl
 Bland JM, Altman DG. (1986) Statistical methods for assessing agreement between two methods of clinical measurement. Lancet i, 307-310.
 }
 \author{
-Deepankar Datta <deepankar.datta@gmail.com>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

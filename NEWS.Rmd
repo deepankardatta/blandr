@@ -17,18 +17,19 @@ knitr::opts_chunk$set(
 # NEWS for blandr
 
 ## Version 0.6
-* Version 0.5.2 was never officially released. The reason why it mainly time - my main job is very busy and I have neglected this
+* Version 0.5.2 was never officially released. The reason why is mainly time - my main job is very busy and I have neglected this
 * Unfortunately as I had not updated my email, and due to errors, blandr was deleted from CRAN
 * This is the version to make up for my neglect and get it back on CRAN, thus the increment in version number
 ** Removal from CRAN due to some errors: https://github.com/deepankardatta/blandr/issues/29
 ** I am going to comment out "blandr-Ex.R" until I can commit time to fixing the issue
 * This also allows me a base to make future proper updates
+* There are some updates to comply with new devtools and citation functions since this was first released in 2017
 
 ## Version 0.5.2 (not released)
 * This is an intermediate development version to update a few things after 5 years, and get things up to date. It also allows me to re-familiarise myself with R and Jamovi. I've ignored this for a while. I want to get back into it.
 * Things changed:
 ** Jamovi update - there is a pull request I merged from 2019. I need to update this
-** Fix some erros
+** Fix some errors
 ** Fix my contact email
 
 ## Version 0.5.1
@@ -69,7 +70,7 @@ knitr::opts_chunk$set(
 * The preparation of the files for upload to GitHub and CRAN broke a few things
 * There's been a rebuilding of a few files to unbreak the package
 * The Bland-Altman PEFR data has been re-structured into a data-frame
-* Some of the functions have had their roxygen2 documentation changed to use inherit parameters to allow easier future maintainance of the manuals
+* Some of the functions have had their roxygen2 documentation changed to use inherit parameters to allow easier future maintenance of the manuals
 * There are no errors / warnings / notes - so hopefully can upload to CRAN now!
 
 ## Version 0.4: 2017-06-30

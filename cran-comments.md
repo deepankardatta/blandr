@@ -6,13 +6,16 @@ https://cran-archive.r-project.org/web/checks/2024/2024-05-10_check_results_blan
 Compounding this is that the re-directs to my email have obviously failed. I have the same email inbox, and my work keeps on generating new 
 addresses to point to this. To fix this I have change my email to a "home" address. If you feel that this is unsafe please do let me know.
 
-To address the issues in the check I have taken out of the DESCRIPTION file the imports for R6 as suggested. I have not done so for knitr
-as when running devtools::build() and devtools::check(), R notes that I need to declare knitr for the vignette builder.
+To address the issues in the check I have taken out of the DESCRIPTION file the imports for R6 as suggested. I have not done so for knitr and markdown as when running devtools::build() and devtools::check(), R notes that I need to declare knitr for the vignette builder.
 
 I note the errors on "blandr.dataset.fibre()" that a file couldn't be loaded because it was "403 Forbidden". I can load this from my own
-computer. The CRAN check page suggests that this dataset loads on linux and macos, but fails on Windows and development versions. I cannot explain this.
+computer. The CRAN check page suggests that this dataset loads on linux and macos, but fails on Windows and development versions. I cannot explain this. I wonder if the issue is if that multiple builds of this have been tested, and have been trying to access the website, it has blocked it as a potential denial of service attack?
 
 The main purpose of this submission is to get the blandr package back onto CRAN for developers who need it. Then I will work on more permanent fixes.
+
+I have checked this builds on 2 MacOS computers. The devtools::check_win_devel() seems to return no errors.
+
+Re-submit 2024-06-09
 
 ## Final submission to CRAN for 0.5.1
 This is version 0.5.1 of "blandr"
@@ -55,8 +58,11 @@ I have changed the description to so: "Carries out Bland Altman analyses (also k
 Changes in the DESCRIPTION file #2024 don't submit yet
 
 ## Test environments
-* local OS X install, Mac OS Sonoma 14.4.1, R 4.4.0
-* win-builder (devel and release) - via devtools::build_win()
+* local OS X install, Mac OS Sonoma 14.4.1, R 4.4.0 (arm64)
+* 2nd local OS X install, macOS Big Sur 11.7.10, R 4.3.2 (x86)
+* win-builder (devel and release) - via devtools::check_win_devel()
+* rhub::rc_submit() - using rhubv2 but none github method (plan to setup on next version)
+** tested on first 4 platform ooptions: linux, macos, macos-arm64, windows
 
 ## R CMD check results
 using R version 4.4.0 (2024-04-24)
@@ -64,15 +70,16 @@ using platform: aarch64-apple-darwin20
 using session charset: UTF-8
 
 R CMD check results
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 1 note
 
-WinBuilder (devtools::build_win()) gives a note - not mis-spelled:
-Possibly mis-spelled words in DESCRIPTION:
-  Jamovi (10:16)
+This one note is as follows:
+"Namespaces in Imports field not imported from:
+    ‘knitr’ ‘markdown’
+    All declared Imports should be used."
+Not using these imports fails the vignette builder
 
-revdep
-Warning message:
-'DESCRIPTION' file has an 'Encoding' field and re-encoding is not possible 
+* win-builder only generates one note, for a potential mis-spelled word
+* rhub builder does not seem to generate any warnings
 
 ## Reverse dependencies
 

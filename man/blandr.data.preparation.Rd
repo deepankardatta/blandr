@@ -30,5 +30,5 @@ blandr.data.preparation( measurement1 , measurement2, sig.level=0.95 )
 
 }
 \author{
-Deepankar Datta <deepankar.datta@gmail.com>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

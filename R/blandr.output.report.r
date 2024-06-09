@@ -4,7 +4,7 @@
 #'
 #' @note Use the function to generate a report. You can also take the .Rmd file to customise it and create
 #' @note your own report. Or use rMarkdown to save the contents. I couldn't add this to the function as it's
-#' @note not allowed in CRAN. On the otherhand a full Shiny app would take too long. So this is a stop-gap way
+#' @note not allowed in CRAN. On the other hand a full Shiny app would take too long. So this is a stop-gap way
 #' @note of creating this function. Hopefully I can improve it in the future
 #'
 #' @author Deepankar Datta <deepankar.datta@gmail.com>

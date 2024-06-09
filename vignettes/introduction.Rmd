@@ -23,7 +23,7 @@ This manual functions as a series of vignettes to instruct on how to best use th
 
 ## Why should I use it?
 
-To get an open-source library that allows replicable Bland-Altman analysises using R. Further it generates and plots confidence intervals for Bland-Altman method comparisons: something that other libraries do not seem to generate.
+To get an open-source library that allows replicable Bland-Altman analyses using R. Further it generates and plots confidence intervals for Bland-Altman method comparisons: something that other libraries do not seem to generate.
 
 ## Installation
 

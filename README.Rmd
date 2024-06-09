@@ -63,9 +63,9 @@ blandr.draw( bland.altman.PEFR.1986$WrightFirst , bland.altman.PEFR.1986$MiniWri
 
 ## The Jamovi module
 
-One of the benefits of *blandr* is that the library has been developed so a module can be generated for the Jamovi GUI statistical spreadsheet (https://www.jamovi.org/). I'm a believer in making this tool more accesible and Jamovi is a way to do this. The Jamovi module will also be iteratively developed - the code for each Jamovi version is linked to the CRAN version on GitHub. The module will be on the Jamovi library.
+One of the benefits of *blandr* is that the library has been developed so a module can be generated for the Jamovi GUI statistical spreadsheet (https://www.jamovi.org/). I'm a believer in making this tool more accessible, and Jamovi is a way to do this. The Jamovi module will also be iteratively developed - the code for each Jamovi version is linked to the CRAN version on GitHub. The module will be on the Jamovi library.
 
-If you want to use the development versions of *blandr*, you can install Jamovi from the comman line using the following commands:
+If you want to use the development versions of *blandr*, you can install Jamovi from the command line using the following commands:
 
 ```{r, eval = FALSE}
 install.packages('jmvtools', repos=c('https://repo.jamovi.org', 'https://cran.r-project.org'))
@@ -98,7 +98,7 @@ Future works include:
 
 * There are a further few deprecated functions to delete (I just need to finish a few projects first!!).
 * The package needs to have to go through some validation and testing
-* For further testing I need to write some *testhtat* modules
+* For further testing I need to write some *testthat* modules
 * The function descriptions needs to be improved
 * Some of the roxygen2 documentation can be improved by calling the import parameters function
 * I want to add a few more sample data packs: including some of my own if possible

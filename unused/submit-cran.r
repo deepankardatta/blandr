@@ -23,6 +23,9 @@ library(rhub) #see ?rhubv2 for info
 devtools::check()
 check_win_devel()
 test_coverage()
+rhub::rc_submit() # old rhub v1 way using new system
+
+spell_check()
 
 # RUN for submission
 devtools::release()

@@ -12,7 +12,7 @@
 #' @param ciShading (Optional) TRUE/FALSE switch to plot confidence interval shading to plot, default is TRUE
 #' @param normalLow (Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its lower boundary
 #' @param normalHigh (Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its higher boundary
-#' @param overlapping (Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, deafault=FALSE. Not currently recommend until I can tweak the graphics to make them better
+#' @param overlapping (Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, default=FALSE. Not currently recommend until I can tweak the graphics to make them better
 #' @param x.plot.mode (Optional) Switch to change x-axis from being plotted by means (="means") or by either 1st method (="method1") or 2nd method (="method2"). Default is "means". Anything other than "means" will switch to default mode.
 #' @param y.plot.mode (Optional) Switch to change y-axis from being plotted by difference (="difference") or by proportion magnitude of measurements (="proportion"). Default is "difference". Anything other than "proportional" will switch to default mode.
 #' @param plotProportionalBias (Optional) TRUE/FALSE switch. Plots a proportional bias line. Default is FALSE.

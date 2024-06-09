@@ -38,7 +38,7 @@ blandr.plot.ggplot(
 
 \item{normalHigh}{(Optional) If there is a normal range, entering a continuous variable will plot a vertical line on the plot to indicate its higher boundary}
 
-\item{overlapping}{(Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, deafault=FALSE. Not currently recommend until I can tweak the graphics to make them better}
+\item{overlapping}{(Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, default=FALSE. Not currently recommend until I can tweak the graphics to make them better}
 
 \item{x.plot.mode}{(Optional) Switch to change x-axis from being plotted by means (="means") or by either 1st method (="method1") or 2nd method (="method2"). Default is "means". Anything other than "means" will switch to default mode.}
 
@@ -80,5 +80,5 @@ ciDisplay = FALSE , ciShading = FALSE )
 
 }
 \author{
-Deepankar Datta <deepankar.datta@gmail.com>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

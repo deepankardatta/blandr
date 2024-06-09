@@ -57,5 +57,5 @@ blandr.plot(
 (DEPRECATED) Re-directs to blandr.draw.r
 }
 \author{
-Deepankar Datta <deepankar.datta@gmail.com>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }
