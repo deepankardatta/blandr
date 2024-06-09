@@ -2,22 +2,14 @@
 % Please edit documentation in R/blandr.statistics.r
 \name{blandr.statistics}
 \alias{blandr.statistics}
-\alias{blandr.statistics.default}
-\alias{blandr.statistics.formula}
 \title{Bland-Altman statistics for R}
 \usage{
-blandr.statistics(x, ...)
-
-\method{blandr.statistics}{default}(x, y, sig.level = 0.95, LoA.mode = 1)
-
-\method{blandr.statistics}{formula}(formula, data = parent.frame(), ...)
+blandr.statistics(method1, method2, sig.level = 0.95, LoA.mode = 1)
 }
 \arguments{
-\item{x}{Either a formula, or a vector of numbers corresponding to the results from method 1.}
+\item{method1}{Either a formula, or a vector of numbers corresponding to the results from method 1.}
 
-\item{...}{other arguments.}
-
-\item{y}{A vector of numbers corresponding to the results from method 2. Only needed if \code{X} is a vector.}
+\item{method2}{A vector of numbers corresponding to the results from method 2. Only needed if \code{X} is a vector.}
 
 \item{sig.level}{(Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.}
 
@@ -51,14 +43,14 @@ An object of class 'blandr' is returned. This is a list with the following eleme
 }
 \description{
 Bland-Altman analysis function for R. Package created as existing
-functions don't suit my needs, and don't generate 95\% confidence intervals
+functions don't suit my needs, and don't generate 95\\% confidence intervals
 for bias and limits of agreement. This base function calculates the basic
 statistics, and generates return values which can be used in the related
 \code{blandr.display} and \code{bland.altamn.plot} functions. However
 the return results can be used to generate a custom chart if desired.
 }
 \note{
-The function will give similar answers when used on the original Bland-Altman PEFR data sets. They won't be exactly the same as (a) for 95\% limits of agreement I have used +/-1.96, rather than 2, and (b) the computerised calculation means that the rounding that is present in each step of the original examples does not occur. This will give a more accurate answer, although I can understand why in 1986 rounding would occur at each step for ease of calculation.
+The function will give similar answers when used on the original Bland-Altman PEFR data sets. They won't be exactly the same as (a) for 95\\% limits of agreement I have used +/-1.96, rather than 2, and (b) the computerised calculation means that the rounding that is present in each step of the original examples does not occur. This will give a more accurate answer, although I can understand why in 1986 rounding would occur at each step for ease of calculation.
 
 The function depends on paired values.
 
@@ -81,12 +73,6 @@ measurement2 <- rnorm(100)
 # Generates Bland-Altman statistics data of the two measurements
 blandr.statistics( measurement1 , measurement2 )
 
-# Generates Bland-Altman statistics data of the two measurements using the formula interface
-
-blandr.statistics( measurement2 ~ measurement1 )
-
-# Example with a real data set
-blandr.statistics( Method.B ~ Method.A, data = giavarina.2015 )
 }
 \references{
 Based on: (1) Bland, J. M., & Altman, D. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The Lancet, 327(8476), 307-310. http://dx.doi.org/10.1016/S0140-6736(86)90837-8
@@ -94,5 +80,5 @@ Based on: (1) Bland, J. M., & Altman, D. (1986). Statistical methods for assessi
 Confidence interval work based on follow-up paper: (2) Altman, D. G., & Bland, J. M. (2002). Commentary on quantifying agreement between two methods of measurement. Clinical chemistry, 48(5), 801-802. http://www.clinchem.org/content/48/5/801.full.pdf
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

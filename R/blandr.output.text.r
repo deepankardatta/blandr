@@ -2,7 +2,7 @@
 #'
 #' @description (DEPRECATED) Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
 #'
-#' @author Deepankar Datta <deepankardatta@nhs.net>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @param method1 A list of numbers.
 #' @param method2 A list of numbers.

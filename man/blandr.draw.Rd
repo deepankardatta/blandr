@@ -30,6 +30,10 @@ blandr.draw(
 )
 }
 \arguments{
+\item{method1}{A vector of numbers corresponding to the results from method 1.}
+
+\item{method2}{A vector of numbers corresponding to the results from method 2.}
+
 \item{method1name}{(Optional) Plotting name for 1st method, default 'Method 1'}
 
 \item{method2name}{(Optional) Plotting name for 2nd method, default 'Method 2'}
@@ -56,7 +60,7 @@ blandr.draw(
 
 \item{point_size}{(Optional) Size of marker for each dot. Default is cex=0.8}
 
-\item{overlapping}{(Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, deafault=FALSE. Not currently recommend until I can tweak the graphics to make them better}
+\item{overlapping}{(Optional) TRUE/FALSE switch to increase size of plotted point if multiple values using ggplot's geom_count, default=FALSE. Not currently recommend until I can tweak the graphics to make them better}
 
 \item{plotter}{(Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'}
 
@@ -100,5 +104,5 @@ ciDisplay = FALSE , ciShading = FALSE )
 
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

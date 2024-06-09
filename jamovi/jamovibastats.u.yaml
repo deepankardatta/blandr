@@ -1,6 +1,6 @@
 title: Bland-Altman Raw Statistics
 name: jamoviBAstats
-jus: '2.0'
+jus: '3.0'
 stage: 0
 compilerMode: aggressive
 children:

@@ -30,5 +30,5 @@ pefr.data <- blandr.dataset.load( "pefr" )
 
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

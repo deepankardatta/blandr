@@ -69,5 +69,5 @@ ciDisplay = FALSE , ciShading = FALSE )
 
 }
 \author{
-Deepankar Datta <deepankardatta@nhs.net>
+Deepankar Datta \href{mailto:deepankar.datta@gmail.com}{deepankar.datta@gmail.com}
 }

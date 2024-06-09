@@ -1,19 +1,36 @@
 # http://r-pkgs.had.co.nz/release.html
 
+# Original scripts written c.2017. Need to update them to use newer version of devtolls
+
+library(devtools)
+
 # RUN-ONCE
-#devtools::use_readme_rmd()
-#devtools::use_build_ignore("NEWS.md")
-#devtools::use_cran_comments()
-#devtools::use_testthat()
+# devtools::use_readme_rmd()
+# devtools::use_build_ignore("NEWS.md")
+# devtools::use_cran_comments()
+# devtools::use_testthat()
 
 # RUN every build
+# make code to knit the README and NEWS files automatically
 devtools::document()
 devtools::document()
 devtools::test()
 devtools::build()
-devtools::check()
+devtools::build_manual() # Won't work on my other system without latex installed
 
-# RUN final build
-devtools::build_win()
-devtools::revdep_check()
+# RUN before submission for checks
+library(rhub) #see ?rhubv2 for info
+devtools::check()
+check_win_devel()
+test_coverage()
+rhub::rc_submit() # old rhub v1 way using new system, replaces check_rhub()
+
+spell_check()
+
+# RUN for submission
 devtools::release()
+
+# These are the old versions of the check
+# check_win()
+# devtools::check_win()
+# devtools::check_rhub()

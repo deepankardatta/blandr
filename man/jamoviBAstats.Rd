@@ -16,7 +16,7 @@ jamoviBAstats(data, method1, method2)
 \value{
 A results object containing:
 \tabular{llllll}{
-  \code{results$text} \tab \tab \tab \tab \tab a preformatted \cr
+\code{results$text} \tab \tab \tab \tab \tab a preformatted \cr
 }
 }
 \description{

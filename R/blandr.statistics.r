@@ -7,7 +7,7 @@
 #' \code{blandr.display} and \code{bland.altamn.plot} functions. However
 #' the return results can be used to generate a custom chart if desired.
 #'
-#' @author Deepankar Datta <deepankardatta@nhs.net>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @note The function will give similar answers when used on the original Bland-Altman PEFR data sets. They won't be exactly the same as (a) for 95\% limits of agreement I have used +/-1.96, rather than 2, and (b) the computerised calculation means that the rounding that is present in each step of the original examples does not occur. This will give a more accurate answer, although I can understand why in 1986 rounding would occur at each step for ease of calculation.
 #' @note The function depends on paired values.
@@ -21,11 +21,10 @@
 #' @references Based on: (1) Bland, J. M., & Altman, D. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The Lancet, 327(8476), 307-310. http://dx.doi.org/10.1016/S0140-6736(86)90837-8
 #' @references Confidence interval work based on follow-up paper: (2) Altman, D. G., & Bland, J. M. (2002). Commentary on quantifying agreement between two methods of measurement. Clinical chemistry, 48(5), 801-802. http://www.clinchem.org/content/48/5/801.full.pdf
 #'
-#' @param x Either a formula, or a vector of numbers corresponding to the results from method 1.
-#' @param y A vector of numbers corresponding to the results from method 2. Only needed if \code{X} is a vector.
+#' @param method1 Either a formula, or a vector of numbers corresponding to the results from method 1.
+#' @param method2 A vector of numbers corresponding to the results from method 2. Only needed if \code{X} is a vector.
 #' @param sig.level (Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.
 #' @param LoA.mode (Optional) Switch to change how accurately the limits of agreement (LoA) are calculated from the bias and its standard deviation. The default is LoA.mode=1 which calculates LoA with the more accurate 1.96x multiplier. LoA.mode=2 uses the 2x multiplier which was used in the original papers. This should really be kept at default, except to double check calculations in older papers.
-#' @param ... other arguments.
 #'
 #' @return An object of class 'blandr' is returned. This is a list with the following elements:
 #' \item{means}{List of arithmetic mean of the two methods}
@@ -52,7 +51,7 @@
 #' \item{regression.fixed.slope}{The slope value of the regression equation}
 #' \item{regression.fixed.intercept}{The intercept value of the regression equation}
 #'
-#' @importFrom stats coef cor lm na.omit qnorm qt sd t.test
+#' @importFrom stats coef cor lm na.omit qnorm qt sd t.test model.frame model.response
 #'
 #' @include blandr.data.preparation.r
 #'
@@ -65,31 +64,25 @@
 #' # Generates Bland-Altman statistics data of the two measurements
 #' blandr.statistics( measurement1 , measurement2 )
 #'
-#' # Generates Bland-Altman statistics data of the two measurements using the formula interface
-#'
-#' blandr.statistics( measurement2 ~ measurement1 )
-#'
-#' # Example with a real data set
-#' blandr.statistics( Method.B ~ Method.A, data = giavarina.2015 )
-
-
 #' @rdname blandr.statistics
 #' @export
-blandr.statistics = function(x, ...){
-  UseMethod("blandr.statistics")
-}
 
-#' @rdname blandr.statistics
-#' @export
-blandr.statistics.default <- function(x,
-                               y,
+# Hold over from 0.5.x versions of blandr - which are years old
+# The c.2024 devtools seem to choke on this and it's not clear why
+# blandr.statistics = function(x, ...){
+# UseMethod("blandr.statistics")
+# }
+# 2024-05-30: commentary after 5 years of not looking at this code
+# I think I was trying to be too clever in allowing the user to either pass two vectors
+# or pass a formula to the function. I am not clear why I felt this was necessary.
+
+blandr.statistics <- function( method1,
+                               method2,
                                sig.level = 0.95,
                                LoA.mode = 1 ) {
 
     # This sends to the preparation function, which does some sense checks on the data And
     # makes sure that the values are prepared
-    method1 = x
-    method2 = y
     ba.data <- blandr.data.preparation( method1 , method2 , sig.level )
 
     # method1 and method2 are the measurements
@@ -181,17 +174,4 @@ blandr.statistics.default <- function(x,
     return(results)
 
     # END OF FUNCTION
-}
-
-#' @rdname blandr.statistics
-#' @export
-blandr.statistics.formula = function(formula, data = parent.frame(), ...){
-  if (missing(formula) || (length(formula) != 3))
-    stop("'formula' missing or incorrect")
-
-  mf = model.frame(formula, data)
-  y = model.response(mf)
-  x = mf[,2]
-
-  blandr.statistics.default(x = x, y = y, ...)
 }

@@ -2,13 +2,16 @@
 #'
 #' @description Bland-Altman drawing function. Depends on the blandr.statistics function in the package. Will generate a plot via the standard R plotting functions.
 #'
-#' @author Deepankar Datta <deepankardatta@nhs.net>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @note Started 2015-11-14
 #' @note Last update 2015-11-19
 #' @note Originally designed for LAVAS and CVLA
 #'
 #' @param plotter (Optional- default='ggplot') Selects which graphics engine to use to plot the Bland-Altman charts. 2 options are 'ggplot' or 'rplot'. If unknown parameter sent, will default to 'ggplot'
+#'
+#' @param method1 A vector of numbers corresponding to the results from method 1.
+#' @param method2 A vector of numbers corresponding to the results from method 2.
 #'
 #' @inheritParams blandr.statistics
 #' @inheritParams blandr.plot.limits

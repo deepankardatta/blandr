@@ -7,7 +7,7 @@
 #' @note Dataset 3 ("3","fibre","darbela") - D'arbela mean velocity of circumferential fibre shortening dataset (from \code{blandr.dataset.fibre})
 #' @note Dataset 4 ("4","sbp","close") - Close systolic blood pressure dataset (from \code{blandr.dataset.sbp})
 #'
-#' @author Deepankar Datta <deepankardatta@nhs.net>
+#' @author Deepankar Datta <deepankar.datta@gmail.com>
 #'
 #' @param dataset.name Loads the requisite data set. See the description for further details.
 #'

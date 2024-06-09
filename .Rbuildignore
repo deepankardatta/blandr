@@ -7,6 +7,7 @@
 ^tests$
 ^data-raw$
 ^git-docs$
+^.github$
 ^cran-comments\.Rmd$
 ^cran-comments-.*\.png$
 ^cran-comments\.md$
@@ -18,3 +19,4 @@
 ^NEWS-.*\.png$
 ^.*blandr-report_.*$
 ^.*\.jmo$
+^CRAN-SUBMISSION$

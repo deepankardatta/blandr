@@ -1,7 +1,7 @@
 Package: blandr
 Title: Bland-Altman Method Comparison
-Version: 0.5.2
-Date: 2023-12-30
+Version: 0.6.0
+Date: 2024-06-09
 Description: Carries out Bland Altman analyses (also known as a Tukey
     mean-difference plot) as described by JM Bland and DG Altman in
     1986 <doi:10.1016/S0140-6736(86)90837-8>. This package was created in 
@@ -19,7 +19,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/deepankardatta/blandr/
 BugReports: https://github.com/deepankardatta/blandr/issues
-Imports: glue, ggplot2, knitr, stringr, jmvcore (>= 0.8.5), R6, rmarkdown
+Imports: glue, ggplot2, knitr, stringr, jmvcore (>= 0.8.5), markdown, rmarkdown
 Suggests: testthat
 SystemRequirements: pandoc (>=1.12.3)
 VignetteBuilder: knitr
@@ -43,6 +43,7 @@ Collate:
     'blandr.plot.normality.r'
     'blandr.plot.qq.r'
     'blandr.plot.r'
+    'blandr.statistics.formula.R'
     'jamovibaanalysis.b.R'
     'jamovibaanalysis.h.R'
     'jamovibaplothistogram.b.R'
@@ -52,4 +53,8 @@ Collate:
     'jamovibastats.b.R'
     'jamovibastats.h.R'
     'print.blandr.R'
-RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Language: en-GB
+
+
