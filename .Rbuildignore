@@ -19,3 +19,4 @@
 ^NEWS-.*\.png$
 ^.*blandr-report_.*$
 ^.*\.jmo$
+^CRAN-SUBMISSION$
