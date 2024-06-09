@@ -16,7 +16,7 @@ devtools::document()
 devtools::document()
 devtools::test()
 devtools::build()
-# devtools::build_manual()
+devtools::build_manual() # Won't work on my other system without latex installed
 
 # RUN before submission for checks
 library(rhub) #see ?rhubv2 for info

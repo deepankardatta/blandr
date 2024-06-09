@@ -19,7 +19,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/deepankardatta/blandr/
 BugReports: https://github.com/deepankardatta/blandr/issues
-Imports: glue, ggplot2, knitr, stringr, jmvcore (>= 0.8.5), rmarkdown
+Imports: glue, ggplot2, knitr, stringr, jmvcore (>= 0.8.5), markdown, rmarkdown
 Suggests: testthat
 SystemRequirements: pandoc (>=1.12.3)
 VignetteBuilder: knitr
