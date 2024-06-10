@@ -1,12 +1,12 @@
 library(blandr)
 context("PEFR dataset value check")
 
-test_that("In-built data is same as downloaded data", {
+test_that("Check that in-built data is same as downloaded data", {
   downloaded.data <- blandr.dataset.load("pefr")
   expect_equal( downloaded.data$wright1 , bland.altman.PEFR.1986$WrightFirst )
   expect_equal( downloaded.data$wright2 , bland.altman.PEFR.1986$WrightSecond )
   expect_equal( downloaded.data$mini1 , bland.altman.PEFR.1986$MiniWrightFirst )
-  expect_equal( downloaded.data$mini2 , bland.altman.PEFR.1986$MiniWrightSecond)
+  expect_equal( downloaded.data$mini2 , bland.altman.PEFR.1986$MiniWrightSecond )
 })
 
 test_that("Check blandr results are equal to original paper" , {

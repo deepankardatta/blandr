@@ -1,3 +1,6 @@
+## Changes 0.6.1
+The aim for 0.6.1 is to clean-up the code and remove un-needed code. However the plan is to keep deprecated libraries until version 0.7.x (which I also want to use to introduce S3/4 objects).
+
 ## Changes to 0.5.1 for version 0.6.0
 Massive apologies. I am re-submitting to CRAN after being de-listed. I will hold my hands up and say due to work I have left this to neglect.
 It has come to my attention that it was delisted due to some automated tests failing: https://github.com/deepankardatta/blandr/issues/29 and

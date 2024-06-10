@@ -76,9 +76,9 @@
 # I think I was trying to be too clever in allowing the user to either pass two vectors
 # or pass a formula to the function. I am not clear why I felt this was necessary.
 
-blandr.statistics <- function( method1,
-                               method2,
-                               sig.level = 0.95,
+blandr.statistics <- function( method1 ,
+                               method2 ,
+                               sig.level = 0.95 ,
                                LoA.mode = 1 ) {
 
     # This sends to the preparation function, which does some sense checks on the data And
@@ -102,7 +102,7 @@ blandr.statistics <- function( method1,
     # intervals, not for limits of agreement!)  We want to know in the sample what limits 95%
     # of the pop resides within The LoA.mode switch can change before the +/-1.96 multiplier
     # used in more recent papers Or the estimated +/-2 multiplier used in the original paper
-    # The default is LoA.mode which gives a LoA.multiplier of 1.96. In future we could use an
+    # The default is LoA.mode 1 which gives a LoA.multiplier of 1.96. In future we could use an
     # even more precise multipler for limits of agreement.
     if (LoA.mode == 2) {
         LoA.multiplier <- 2
