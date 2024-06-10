@@ -93,7 +93,7 @@ blandr.plot.ggplot <- function ( statistics.results ,
   colnames(plot.data)[2] <- "y.axis"
 
   # Plot using ggplot
-  ba.plot <- ggplot( plot.data , aes( x = plot.data$x.axis , y = plot.data$y.axis ) ) +
+  ba.plot <- ggplot( plot.data , aes( x = x.axis , y = y.axis ) ) +
     geom_point() +
     theme(plot.title = element_text(hjust = 0.5)) +
     geom_hline( yintercept = 0 , linetype = 1 ) + # "0" line

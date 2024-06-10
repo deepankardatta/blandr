@@ -14,7 +14,7 @@ blandr.output.text(method1, method2, sig.level = 0.95)
 \item{sig.level}{(Optional) Two-tailed significance level. Expressed from 0 to 1. Defaults to 0.95.}
 }
 \description{
-(DEPRECATED) Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package.
+(DEPRECATED) Displays results of Bland-Altman analysis in a nicer text format. Relies on the blandr.statistics function in the package. Deprecated in favour of blandr output becoming a class, and output being printed via the print generic, described in the \code{print.blandr} function
 }
 \examples{
 # Generates two random measurements

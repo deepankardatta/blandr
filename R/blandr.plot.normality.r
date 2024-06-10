@@ -30,7 +30,7 @@ blandr.plot.normality <- function( statistics.results ) {
     ..density.. <- NULL
 
     # Create the histogram
-    normality.plot <- ggplot( results , aes( x = results$differences ) ) +
+    normality.plot <- ggplot( results , aes( x = differences ) ) +
       geom_histogram( aes(y=..density..) , colour="black", fill="white" ) +
       geom_density( colour="red" ) +
       ylab( "Density" ) +

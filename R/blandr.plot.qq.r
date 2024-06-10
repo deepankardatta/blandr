@@ -27,7 +27,7 @@ blandr.plot.qq <- function( statistics.results ) {
     names(results)[1] <- "differences"
 
     # Create QQ plot
-    qq.plot <- ggplot( results , aes( sample = results$differences ) ) + #Keep this as "sample =", won't work otherwise
+    qq.plot <- ggplot( results , aes( sample = differences ) ) + #Keep this as "sample =", won't work otherwise
       stat_qq() +
       ylab( "Sample quantiles" ) +
       xlab( "Theoretical quantiles") +
